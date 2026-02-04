@@ -1,0 +1,202 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@import "tailwindcss";
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    /* --font-inter: "Inter Display Medium", sans-serif;
+    --font-inter-display: "Inter Display", sans-serif;
+    --font-title: "Inter Display ExtraBold", sans-serif;
+    --font-inter-black: "Inter Display Black", sans-serif;
+    --font-koguma: "Shorelines Script Bold", script; */
+
+    --font-inter: "SF Pro Display Medium", sans-serif;
+    --font-inter-display: "SF Pro Display Bold", sans-serif;
+    --font-title: "SF Pro Display Heavy", sans-serif;
+    --font-inter-black: "SF Pro Display Black", sans-serif;
+    --font-koguma: "Shorelines Script Bold", script;
+
+    /* THEME */
+    --color-koguma-background: oklch(89.9% 0.061 343.231);
+    --color-koguma-background-hover: oklch(82.3% 0.12 346.018);
+    --color-koguma-text-light: oklch(94.8% 0.028 342.258);
+    --color-koguma-text: oklch(25.7% 0.09 281.288);
+    --color-koguma-text-hover: oklch(35.9% 0.144 278.697);
+    --color-koguma-card: oklch(39.8% 0.195 277.366);
+}
+
+:root {
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    --sidebar: oklch(0.985 0 0);
+    --sidebar-foreground: oklch(0.145 0 0);
+    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.97 0 0);
+    --sidebar-accent-foreground: oklch(0.205 0 0);
+    --sidebar-border: oklch(0.922 0 0);
+    --sidebar-ring: oklch(0.708 0 0);
+    --radius: 0.625rem;
+    --background: var(--color-koguma-text-hover);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --chart-1: oklch(0.646 0.222 41.116);
+    --chart-2: oklch(0.6 0.118 184.704);
+    --chart-3: oklch(0.398 0.07 227.392);
+    --chart-4: oklch(0.828 0.189 84.429);
+    --chart-5: oklch(0.769 0.188 70.08);
+}
+
+.hero-background {
+    background-image: url('src/assets/kogs_records_logo_pink_rotate.svg');
+    background-repeat: repeat;
+    background-position: 0 center;
+    background-size: 100px;
+    aspect-ratio: square;
+    opacity: 50%;
+    animation: scrollDown 15s linear infinite;
+}
+
+.about-background {
+    background-image: url('src/assets/kogs_records_logo_indigo_rotate.svg');
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 100px;
+    aspect-ratio: square;
+    opacity: 90%;
+    animation: scrollDown 15s linear infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        background-position-y: 0px;
+    }
+    100% {
+        background-position-y: 100px;
+    }
+}
+
+.intro-animation {
+    animation: scrollUp 2s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scrollUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.koguma-hero-offset{
+    position: relative;
+    top: 25%;
+}
+
+.koguma-hero-art{
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 80%);
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+* {
+    transition: all;
+    animation-duration: 100ms;
+    /* box-shadow: 0 0 0 2px rgba(50, 0, 255, 0.5); */
+}
+
+@theme inline {
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+        }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+        }
+    }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+        }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+        }
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+    }
+}

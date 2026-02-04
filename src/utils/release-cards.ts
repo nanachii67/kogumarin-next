@@ -1,0 +1,38 @@
+export const ReleaseData = [
+    {
+        id: 1,
+        title: "Blue Archive Drum Covers 1",
+        releaseyear: "2024",
+        brandlink: "https://kogumarin.bandcamp.com/album/blue-archive-3rd-anniversary-drum-covers",
+        imagelink: "https://f4.bcbits.com/img/a1863888366_10.jpg",
+        catalogtype: "Extended Play",
+        description: "Koguma Rin",
+    },
+    {
+        id: 2,
+        title: "Macarons and Energy Drinks",
+        releaseyear: "2024",
+        brandlink: "https://kogumarin.bandcamp.com/album/macarons-and-energy-drinks",
+        imagelink: "https://f4.bcbits.com/img/a3362773476_10.jpg",
+        catalogtype: "Extended Play",
+        description: "Koguma Rin",
+    },
+    {
+        id: 3,
+        title: "Orenji",
+        releaseyear: "2025",
+        brandlink: "/releases/orenji/",
+        imagelink: "https://f4.bcbits.com/img/a3613598989_10.jpg",
+        catalogtype: "Single",
+        description: "Koguma Rin",
+    },
+    {
+        id: 4,
+        title: "Kirakira",
+        releaseyear: "2025",
+        brandlink: "/releases/kirakira/",
+        imagelink: "https://f4.bcbits.com/img/a0639790057_10.jpg",
+        catalogtype: "Single",
+        description: "Koguma Rin",
+    },
+]

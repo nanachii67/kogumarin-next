@@ -71,7 +71,7 @@
 }
 
 .hero-background {
-    background-image: url('src/assets/kogs_records_logo_pink_rotate.svg');
+    background-image: url("src/assets/kogs_records_logo_indigo_rotate_index.svg");
     background-repeat: repeat;
     background-position: 0 center;
     background-size: 100px;
@@ -81,7 +81,7 @@
 }
 
 .about-background {
-    background-image: url('src/assets/kogs_records_logo_indigo_rotate.svg');
+    background-image: url("src/assets/kogs_records_logo_indigo_rotate.svg");
     background-repeat: repeat;
     background-position: center;
     background-size: 100px;
@@ -115,13 +115,17 @@
     }
 }
 
-.koguma-hero-offset{
+.koguma-hero-offset {
     position: relative;
     top: 25%;
 }
 
-.koguma-hero-art{
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 80%);
+.koguma-hero-art {
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 0) 80%
+    );
 }
 
 .scrollbar-hide {
@@ -173,20 +177,20 @@
     --radius-xl: calc(var(--radius) + 4px);
     --animate-marquee: marquee var(--duration) infinite linear;
     --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
-  @keyframes marquee {
-  from {
-    transform: translateX(0);
+    @keyframes marquee {
+        from {
+            transform: translateX(0);
         }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+        to {
+            transform: translateX(calc(-100% - var(--gap)));
         }
     }
-  @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    @keyframes marquee-vertical {
+        from {
+            transform: translateY(0);
         }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+        to {
+            transform: translateY(calc(-100% - var(--gap)));
         }
     }
 }

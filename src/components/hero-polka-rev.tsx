@@ -1,18 +1,90 @@
 import AnimatedContent from "./react-bits/animated-content";
-import { NewRelease } from "@/utils/new-release";
-import { ChevronRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import IconHero from "./kogs_records_logo_hero";
-import GradualBlur from "./react-bits/gradual-blur";
+import PixelBlast from "./react-bits/pixel-blast";
 
 export function HeroPolkaRev() {
   return (
     <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-screen">
-      {/*<div className="absolute inset-0 w-full hero-background" />*/}
-      <div className="relative container max-w-9xl h-2/4 mx-auto">
-        <div className="absolute top-0 left-0 w-full h-full about-background z-10" />
-        <div className="absolute top-0 left-0 w-full h-full bg-indigo-700 z-0" />
+      <div className="absolute inset-0 w-full">
+        <PixelBlast
+          enableRipples={true}
+          variant="square"
+          pixelSize={5}
+          color="#4338ca"
+          patternScale={8}
+          patternDensity={1}
+          pixelSizeJitter={1}
+          rippleSpeed={1}
+          rippleThickness={0.2}
+          rippleIntensityScale={0.5}
+          liquid={false}
+          liquidStrength={0.12}
+          liquidRadius={1.2}
+          liquidWobbleSpeed={5}
+          speed={0.25}
+          edgeFade={0}
+        />
       </div>
+      <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
+        <div className="relative h-128 rounded-2xl overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full hero-background z-10" />
+          <div className="absolute top-0 left-0 w-full h-full bg-koguma-card z-0" />
+        </div>
+        <div className="flex flex-col text-koguma-text-light mt-5">
+          <div className="grid grid-cols-2 gap-5">
+            <div className="col-span-1">
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.2}
+              >
+                <p className="text-5xl font-koguma pt-5">kogumarin</p>
+                <p className="font-inter text-xs">EST. 2024</p>
+              </AnimatedContent>
+            </div>
+            <div className="col-span-1 justify-self-end text-right">
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.4}
+              >
+                <p className="text-5xl font-koguma py-5">welcome</p>
+              </AnimatedContent>
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.6}
+              >
+                <p className="text-xl font-inter leading-6 w-96">
+                  A musician, a gamer, and a frontend developer, and here is my
+                  repository of personal projects!
+                </p>
+              </AnimatedContent>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="relative z-1 mx-auto px-6 items-center">
         {/*<div className="mx-auto max-w-5xl text-center koguma-hero-offset">
           <AnimatedContent

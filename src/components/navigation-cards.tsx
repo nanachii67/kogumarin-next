@@ -20,7 +20,7 @@ export function NavigationCards() {
             <AnimatedContent
               distance={50}
               direction="vertical"
-              reverse={false}
+              reverse={true}
               duration={1}
               ease="power3.out"
               initialOpacity={0.0}
@@ -30,9 +30,7 @@ export function NavigationCards() {
               delay={item.id * 0.1}
             >
               <div>
-                <div className="absolute inset-0 pointer-events-none rounded-xl">
-                  
-                </div>
+                <div className="absolute inset-0 pointer-events-none rounded-xl"></div>
                 <Card
                   className="cursor-pointer md:aspect-square bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95"
                   key={index}

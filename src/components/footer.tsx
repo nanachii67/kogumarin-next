@@ -7,15 +7,15 @@ export function Footer() {
         <div className="flex flex-col gap-3 mx-auto max-w-5xl text-center">
           <div className="flex font-inter justify-end gap-5">
             <Link to={"/releases"}>
-              <p>Releases</p>
+              <p>GitHub</p>
             </Link>
             <p>•</p>
             <Link to={"/about/"}>
-              <p>About</p>
+              <p>Facebook</p>
             </Link>
             <p>•</p>
             <Link to={"/social-cards"}>
-              <p>Cards</p>
+              <p>Discord</p>
             </Link>
           </div>
           {/* <Separator /> */}
@@ -33,9 +33,7 @@ export function Footer() {
               </div> */}
               <p className="text-end">
                 © {new Date().getFullYear()}{" "}
-                <span>
-                  Kogs, on behalf of Kogumarin.
-                </span>
+                <span>Kogs, on behalf of Kogumarin.</span>
               </p>
             </div>
           </div>

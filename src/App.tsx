@@ -1,18 +1,22 @@
 import { Route, Routes, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { siteConfig } from "@/utils/site";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 import IndexPage from "./pages";
 import AboutPage from "./pages/about";
 import SocialCardsPage from "./pages/social-cards";
 import ReleasesPage from "./pages/releases";
-import TRACK_Orenji from "./pages/releases/tracks/track-orenji";
-import TRACK_Kirakira from "./pages/releases/tracks/track-kirakira";
+import TRACK_Slug from "./pages/releases/tracks/track-slug";
 
 function App() {
+  const smootherRef = useRef<ScrollSmoother | null>(null);
   const location = useLocation();
-  // const isLandingPage = location.pathname === "/";
-  // const OrenjiPage = location.pathname === "/releases/orenji/";
 
   useEffect(() => {
     const pathName = location.pathname;
@@ -25,15 +29,24 @@ function App() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // useEffect(() => {
-  //   if (isLandingPage) {
-  //     document.documentElement.style.setProperty('--primary-color', '#1e1b4b')
-  //     document.documentElement.style.setProperty('--bg-color', '#f9a8d4')
-  //   } else {
-  //     document.documentElement.style.setProperty('--primary-color', '#fbcfe8')
-  //     document.documentElement.style.setProperty('--bg-color', '#312e81')
-  //   }
-  // }, [isLandingPage])
+  useEffect(() => {
+    if (!smootherRef.current) {
+      smootherRef.current = ScrollSmoother.create({
+        smooth: 1,
+        effects: true,
+        smoothTouch: 0.1,
+      });
+    }
+    smootherRef.current.scrollTo(0, false);
+    return () => {};
+  }, []);
+
+  useEffect(() => {
+    if (smootherRef.current) {
+      smootherRef.current.scrollTo(0, true);
+      ScrollTrigger.refresh();
+    }
+  }, [location.pathname]);
 
   return (
     <div>
@@ -43,15 +56,10 @@ function App() {
         <Route element={<SocialCardsPage />} path="/cards" />
 
         <Route element={<ReleasesPage />} path="/releases" />
-
-        <Route element={<TRACK_Orenji />} path="/releases/orenji" />
-        <Route element={<TRACK_Kirakira />} path="/releases/kirakira/" />
+        <Route element={<TRACK_Slug />} path="/releases/:trackId" />
       </Routes>
     </div>
   );
 }
 
 export default App;
-
-//document.documentElement.style.setProperty('--primary-color', '#1e1b4b')
-//document.documentElement.style.setProperty('--bg-color', '#f9a8d4')

@@ -11,7 +11,7 @@ export function InspirationCards() {
             <AnimatedContent
               distance={50}
               direction="vertical"
-              reverse={false}
+              reverse={true}
               duration={1}
               ease="power3.out"
               initialOpacity={0.0}
@@ -27,7 +27,9 @@ export function InspirationCards() {
                     className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                   ></img>
                   <div className="flex flex-col mt-2 space-y-[-2px]">
-                    <p className="text-xs opacity-80">{item.catalogtype} • {item.releaseyear}</p>
+                    <p className="text-xs opacity-80">
+                      {item.catalogtype} • {item.releaseyear}
+                    </p>
                     <p className="font-inter-display text-xl">{item.title}</p>
                     <p className="text-xs opacity-80">{item.description}</p>
                   </div>

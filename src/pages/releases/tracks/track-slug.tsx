@@ -1,6 +1,43 @@
 import ReleaseLayout from "@/layouts/ReleaseLayout";
+import { useParams, Navigate } from "react-router-dom";
+import releases from "@/utils/releases.json";
 
-export default function TRACK_Kirakira() {
+interface ReleasesSlug {
+  iframe: {
+    src: string;
+    href: string;
+    label: string;
+  };
+  title: string;
+  subtitle?: string;
+  artist: string;
+  releaseDate: string;
+  releaseYear: string;
+  coverCopyright?: string;
+  releaseLabel: string;
+  coverImage: string;
+  streamingLinks: {
+    bandcamp: string;
+  };
+  tracklist?: {
+    trackNumber: number;
+    title: string;
+    subtitle?: string;
+    duration: string;
+  }[];
+}
+
+export default function TRACK_Slug() {
+  const { trackId } = useParams();
+
+  const track: ReleasesSlug | undefined = trackId
+    ? releases[trackId as keyof typeof releases]
+    : undefined;
+
+  if (!track) {
+    return <Navigate to="/releases" replace />;
+  }
+
   return (
     <ReleaseLayout>
       <div className="relative z-0">
@@ -12,23 +49,46 @@ export default function TRACK_Kirakira() {
                   <div className="space-y-2 justify-center">
                     <iframe
                       className="w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
-                      src="https://bandcamp.com/EmbeddedPlayer/track=3870354194/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/"
+                      src={track.iframe.src}
                       seamless
                     >
-                      <a href="https://kogumarin.bandcamp.com/track/kirakira-adrenaline-rashu-ver">
-                        kirakira -adrenaline rashu ver- by kogumarin
-                      </a>
+                      <a href={track.iframe.href}>{track.iframe.label}</a>
                     </iframe>
-                    <div className="flex flex-col w-sm my-10 text-wrap md:text-start text-center self-end md:items-start items-center">
-                      <p>Koguma Rin</p>
-                      <p className="text-4xl flex items-center font-inter-display line-clamp-1">
-                        Kirakira
+                    <div className="flex flex-col my-5 text-start">
+                      <p>{track.artist}</p>
+                      <p className="text-4xl font-inter-display">
+                        {track.title}{" "}
+                        <span className="font-inter">{track.subtitle}</span>
                       </p>
-                      <p className="opacity-50">
-                        ℗ 2025 Kogs, on behalf of Kogumarin
-                      </p>
+                      {track.coverCopyright && (
+                        <p className="opacity-50">℗ {track.coverCopyright}</p>
+                      )}
+                      <p className="opacity-75">℗ {track.releaseLabel}</p>
                     </div>
                   </div>
+                  {track.tracklist && (
+                    <div className="tracklist">
+                      <div className="flex flex-col text-start mb-2">
+                        <p>Featured Works</p>
+                      </div>
+                      {track.tracklist.map((track) => (
+                        <div key={track.trackNumber}>
+                          <div className="flex flex-row text-start items-center justify-between">
+                            <div className="flex flex-row gap-3 items-center">
+                              <p className="opacity-75">{track.trackNumber}</p>
+                              <p className="text-2xl font-inter-display items-center">
+                                {track.title}{" "}
+                                <span className="font-inter opacity-75">
+                                  {track.subtitle}
+                                </span>
+                              </p>
+                            </div>
+                            <p className="opacity-75">{track.duration}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

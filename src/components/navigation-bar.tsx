@@ -44,6 +44,13 @@ export const NavigationBar = () => (
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to={"/blogs"}>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                    Blogs
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
         </div>

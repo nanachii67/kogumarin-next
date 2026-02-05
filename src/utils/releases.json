@@ -1,0 +1,146 @@
+{
+  "rins-small-tunes-1": {
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/album=1954732371/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/",
+      "href": "https://kogumarin.bandcamp.com/album/rins-small-tunes-1",
+      "label": "rin&#39;s small tunes 1 by kogumarin"
+    },
+    "title": "Rin's Small Tunes",
+    "subtitle": "-Set 1-",
+    "artist": "Koguma Rin",
+    "releaseDate": "2026-1-1",
+    "releaseYear": "2026",
+    "releaseLabel": "2026 Kogs, on behalf of Kogumarin.",
+    "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
+    "streamingLinks": {
+      "bandcamp": "https://kogumarin.bandcamp.com/album/rins-small-tunes-1"
+    },
+    "tracklist": [
+      {
+        "trackNumber": 1,
+        "title": "Kirakira",
+        "duration": "2:36"
+      },
+      {
+        "trackNumber": 2,
+        "title": "Macarons",
+        "subtitle": "-full size-",
+        "duration": "2:34"
+      },
+      {
+        "trackNumber": 3,
+        "title": "Shugarashu",
+        "duration": "1:48"
+      },
+      {
+        "trackNumber": 4,
+        "title": "A Silly Interlude",
+        "duration": "1:16"
+      },
+      {
+        "trackNumber": 5,
+        "title": "Orenji",
+        "duration": "3:46"
+      }
+    ]
+  },
+  "kirakira": {
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/track=3870354194/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/",
+      "href": "https://kogumarin.bandcamp.com/track/kirakira-adrenaline-rashu-ver",
+      "label": "kirakira -adrenaline rashu ver- by kogumarin"
+    },
+    "title": "Kirakira",
+    "subtitle": "-Adrenaline Rashu Ver.-",
+    "artist": "Koguma Rin",
+    "releaseDate": "2025-07-05",
+    "releaseYear": "2025",
+    "releaseLabel": "2025 Kogs, on behalf of Kogumarin.",
+    "coverImage": "https://f4.bcbits.com/img/a0639790057_10.jpg",
+    "streamingLinks": {
+      "bandcamp": "https://kogumarin.bandcamp.com/track/kirakira-adrenaline-rashu-ver"
+    }
+  },
+  "orenji": {
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/track=3230518554/size=large/bgcol=333333/linkcol=e99708/minimal=true/transparent=true/",
+      "href": "https://kogumarin.bandcamp.com/track/orenji",
+      "label": "orenji by kogumarin"
+    },
+    "title": "Orenji",
+    "artist": "Koguma Rin",
+    "releaseDate": "2025-03-20",
+    "releaseYear": "2025",
+    "releaseLabel": "2025 Kogs, on behalf of Kogumarin.",
+    "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
+    "streamingLinks": {
+      "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
+    }
+  },
+  "macarons-energy-drinks": {
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/album=58332485/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/",
+      "href": "https://kogumarin.bandcamp.com/track/orenji",
+      "label": "orenji by kogumarin"
+    },
+    "title": "Macarons / Energy Drinks",
+    "artist": "Koguma Rin",
+    "releaseDate": "2024-12-20",
+    "releaseYear": "2024",
+    "releaseLabel": "2024 Kogs, on behalf of Kogumarin.",
+    "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
+    "streamingLinks": {
+      "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
+    },
+    "tracklist": [
+      {
+        "trackNumber": 1,
+        "title": "Macarons",
+        "duration": "1:22"
+      },
+      {
+        "trackNumber": 2,
+        "title": "Shugarashu",
+        "subtitle": "-energy drinks ver-",
+        "duration": "1:48"
+      }
+    ]
+  },
+  "blue-archive-3rd-anniversary-drum-covers": {
+    "iframe": {
+      "src": "https://bandcamp.com/EmbeddedPlayer/album=1542215806/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/",
+      "href": "https://kogumarin.bandcamp.com/album/blue-archive-3rd-anniversary-drum-covers",
+      "label": "blue archive 3rd anniversary drum covers by kogumarin"
+    },
+    "title": "Blue Archive Drum Covers 1",
+    "artist": "Koguma Rin",
+    "releaseDate": "2024-12-19",
+    "releaseYear": "2024",
+    "coverCopyright": "Original music written and produced by Mitsukiyo, via NEXON Games/Yostar.",
+    "releaseLabel": "2024 Kogs, on behalf of Kogumarin.",
+    "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
+    "streamingLinks": {
+      "bandcamp": "https://kogumarin.bandcamp.com/album/blue-archive-3rd-anniversary-drum-covers"
+    },
+    "tracklist": [
+      {
+        "trackNumber": 1,
+        "title": "Constant Moderato",
+        "subtitle": "-kogs ver-",
+        "duration": "2:21"
+      },
+      {
+        "trackNumber": 2,
+        "title": "Irasshaimase",
+        "subtitle": "-kogs ver-",
+        "duration": "2:15"
+      },
+      {
+        "trackNumber": 3,
+        "title": "Luminous Memory",
+        "subtitle": "-kogs ver-",
+        "duration": "2:21"
+      }
+    ]
+  }
+}

@@ -7,9 +7,9 @@ export function SiteMap() {
       <div className="flex flex-col px-10 py-5 my-5 max-w-5xl mx-auto">
         <div className="flex flex-col gap-4 items-start justify-center max-w-5xl font-inter">
           <div className="flex flex-col">
-            <p className="text-lg">Koguma Rin</p>
-            <p className="flex items-center text-3xl font-title">
-              Site Map{" "}
+            {/*<p className="text-lg">Koguma Rin</p>*/}
+            <p className="flex items-center text-4xl font-koguma my-4">
+              site map{" "}
               <span>
                 <ChevronRight />
               </span>
@@ -58,7 +58,7 @@ export function SiteMap() {
                   </div>
                   <div className="col-span-1">
                     <div className="grid grid-cols-1">
-                      <p>Rin's Silly Tunes</p>
+                      <p>Rin's Small Tunes 1</p>
                       <p>Macarons and Energy Drinks</p>
                       <p>BA Drum Covers 1</p>
                     </div>

@@ -4,8 +4,8 @@ import PixelBlast from "./react-bits/pixel-blast";
 export function HeroPolkaRev() {
   return (
     <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-screen">
-      <div className="absolute inset-0 w-full">
-        <PixelBlast
+      <div className="absolute inset-0 w-full opacity-50">
+        {/*<PixelBlast
           enableRipples={true}
           variant="square"
           pixelSize={5}
@@ -22,7 +22,7 @@ export function HeroPolkaRev() {
           liquidWobbleSpeed={5}
           speed={0.25}
           edgeFade={0}
-        />
+        />*/}
       </div>
       <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
         <div className="relative h-128 rounded-2xl overflow-hidden">
@@ -61,7 +61,7 @@ export function HeroPolkaRev() {
                 threshold={0}
                 delay={0.4}
               >
-                <p className="text-5xl font-koguma py-5">welcome</p>
+                <p className="text-5xl font-koguma py-5">hi there.</p>
               </AnimatedContent>
               <AnimatedContent
                 distance={10}

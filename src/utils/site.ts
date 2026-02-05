@@ -1,38 +1,41 @@
-export type SiteConfig = typeof siteConfig
+export type SiteConfig = typeof siteConfig;
 
-const baseTitle = 'Kogumarin'
+const baseTitle = "Kogumarin";
 
 export const siteConfig = {
-    name: baseTitle,
-    description:
-        'Kogumarin.',
-    title: (pageName?: string) => {
-        return pageName ? `${pageName} — ${baseTitle}` : baseTitle
+  name: baseTitle,
+  description: "Kogumarin.",
+  title: (pageName?: string) => {
+    return pageName ? `${pageName} — ${baseTitle}` : baseTitle;
+  },
+  pages: [
+    {
+      label: "Home",
+      href: "/",
     },
-    pages: [
-        {
-            label: 'Home',
-            href: '/',
-        },
-        {
-            label: 'Releases',
-            href: '/releases/',
-        },
-        {
-            label: 'About',
-            href: '/about/',
-        },
-        {
-            label: 'Cards',
-            href: '/cards/',
-        },
-        {
-            label: 'Orenji',
-            href: '/releases/orenji/',
-        },
-        {
-            label: 'Kirakira',
-            href: '/releases/kirakira/',
-        },
-    ],
-}
+    {
+      label: "Releases",
+      href: "/releases/",
+    },
+    {
+      label: "About",
+      href: "/about/",
+    },
+    {
+      label: "Cards",
+      href: "/cards/",
+    },
+    {
+      label: "Orenji",
+      href: "/releases/orenji/",
+    },
+    {
+      label: "Kirakira",
+      href: "/releases/kirakira/",
+    },
+    {
+      label: "Rin's Small Tunes 1",
+      href: "/releases/rins-small-tunes-1/",
+    },
+  ],
+};

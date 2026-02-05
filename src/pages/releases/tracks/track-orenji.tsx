@@ -2,7 +2,7 @@ import FloatingButton from "@/components/floating-button";
 import { InspirationCards } from "@/components/inspiration-cards";
 import AnimatedContent from "@/components/react-bits/animated-content";
 import ReleaseLayout from "@/layouts/ReleaseLayout";
-import { ChevronRight, Star } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export default function TRACK_Orenji() {
   return (
@@ -28,7 +28,9 @@ export default function TRACK_Orenji() {
                       <p className="text-4xl flex items-center font-inter-display line-clamp-1">
                         Orenji
                       </p>
-                      <p className="opacity-50">℗ 2025 Kogs, on behalf of Kogumarin</p>
+                      <p className="opacity-50">
+                        ℗ 2025 Kogs, on behalf of Kogumarin
+                      </p>
                     </div>
                   </div>
                   <div className="cols-span-1">

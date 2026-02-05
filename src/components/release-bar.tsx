@@ -12,11 +12,11 @@ import { ReleaseData } from "@/utils/release-cards";
 export function ReleaseBar() {
   return (
     <div className="relative bg-koguma-background flex flex-col justify-center text-koguma-text h-150">
-      <div className="flex flex-col py-5 my-5 max-w-5xl mx-auto">
+      <div className="flex flex-col py-5 my-5 max-w-9xl mx-auto">
         <div className="flex flex-col gap-4 items-start justify-center max-w-5xl font-inter">
           <div className="flex flex-col">
-            <p className="text-lg">Koguma Rin</p>
-            <p className="flex items-center text-3xl font-title">
+            {/*<p className="text-lg">Koguma Rin</p>*/}
+            <p className="flex items-center text-3xl font-koguma my-4">
               Discography{" "}
               <span>
                 <ChevronRight />
@@ -31,7 +31,10 @@ export function ReleaseBar() {
                     {ReleaseData.slice()
                       .reverse()
                       .map((item, index) => (
-                        <CarouselItem key={index} className="basis-1/3">
+                        <CarouselItem
+                          key={index}
+                          className="basis-1/3 xl:basis-1/4"
+                        >
                           <Link to={item.brandlink} key={index}>
                             <div>
                               <div className="flex flex-col">

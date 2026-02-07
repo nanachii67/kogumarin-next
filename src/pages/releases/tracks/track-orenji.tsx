@@ -1,6 +1,3 @@
-import FloatingButton from "@/components/floating-button";
-import { InspirationCards } from "@/components/inspiration-cards";
-import AnimatedContent from "@/components/react-bits/animated-content";
 import ReleaseLayout from "@/layouts/ReleaseLayout";
 import { ChevronRight } from "lucide-react";
 
@@ -34,7 +31,7 @@ export default function TRACK_Orenji() {
                     </div>
                   </div>
                   <div className="cols-span-1">
-                    <div className="grid grid-cols-2 gap-y-5">
+                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-y-5">
                       <div className="col-span-1 justify-items-start space-y-5">
                         <div className="flex flex-col text-start">
                           <p className="text-xs text-koguma-fonts uppercase opacity-75">

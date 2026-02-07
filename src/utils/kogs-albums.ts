@@ -1,10 +1,18 @@
 export const KogsAlbum = [
-    {
-        albumnum: 1,
-        title: "Kirakira",
-        subtitle: "-Adrenaline Rashu Ver.-",
-        releaseyear: "2025",
-        releaselink: "/releases/single/kirakira-adrenaline-rashu-ver",
-        releasecover: "https://f4.bcbits.com/img/a0639790057_10.jpg",
-    }
-]
+  {
+    albumnum: 1,
+    title: "Rin's Small Tunes",
+    subtitle: "-Set 1-",
+    link: "/releases/rins-small-tunes-1",
+  },
+  {
+    albumnum: 2,
+    title: "Macarons / Energy Drinks",
+    link: "/releases/macarons-energy-drinks",
+  },
+  {
+    albumnum: 3,
+    title: "Blue Archive Drum Covers 1",
+    link: "/releases/blue-archive-drum-covers-1",
+  },
+];

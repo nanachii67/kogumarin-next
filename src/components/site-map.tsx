@@ -1,3 +1,5 @@
+import { KogsAlbum } from "@/utils/kogs-albums";
+import { KogsSingleEP } from "@/utils/kogs-single-ep";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -44,7 +46,7 @@ export function SiteMap() {
                     <p>About</p>
                   </Link>
                   <Link to="/cards/">
-                    <p>Cards</p>
+                    <p>Social Cards</p>
                   </Link>
                 </div>
               </div>
@@ -52,15 +54,24 @@ export function SiteMap() {
                 <div className="grid grid-cols-2">
                   <div className="col-span-1">
                     <div className="grid grid-cols-1">
-                      <p>Kirakira -Adrenaline Rashu Ver.-</p>
-                      <p>Orenji</p>
+                      {KogsSingleEP.map((item) => (
+                        <Link to={item.link}>
+                          <p>
+                            {item.title} {item?.subtitle}
+                          </p>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                   <div className="col-span-1">
                     <div className="grid grid-cols-1">
-                      <p>Rin's Small Tunes 1</p>
-                      <p>Macarons and Energy Drinks</p>
-                      <p>BA Drum Covers 1</p>
+                      {KogsAlbum.map((item) => (
+                        <Link to={item.link}>
+                          <p>
+                            {item.title} {item?.subtitle}
+                          </p>
+                        </Link>
+                      ))}
                     </div>
                   </div>
                 </div>

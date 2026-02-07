@@ -2,8 +2,11 @@ import { ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { NewRelease } from "@/utils/new-release";
 import { Link } from "react-router-dom";
+import useCursor from "@/hooks/useCursor";
 
 export default function AnnouncementNewRelease() {
+  const cursor = useCursor(({ instance }) => instance);
+
   return (
     <div className="relative bg-koguma-card py-5 px-10">
       <div className="container max-w-9xl mx-auto">
@@ -16,12 +19,27 @@ export default function AnnouncementNewRelease() {
                 <p>{item.releasedate}</p>
               </div>
               <p className="font-inter-display text-3xl">
-                {item.title} <span className="font-inter">{item.subtitle}</span>
+                {item.title}{" "}
+                <span className="font-inter opacity-90">{item.subtitle}</span>
               </p>
             </div>
             <div className="col-span-1 justify-self-end flex items-center">
               <Link to={item.releaselink}>
-                <Button className="bg-koguma-text hover:bg-koguma-text-hover active:scale-95 text-koguma-text-light font-inter rounded-full">
+                <Button
+                  className="bg-koguma-text hover:bg-koguma-text-hover active:scale-95 text-koguma-text-light font-inter rounded-full"
+                  onMouseEnter={(e) => {
+                    if (cursor) {
+                      cursor.setStick(e.currentTarget);
+                      cursor.addState("-scale");
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (cursor) {
+                      cursor.removeState("-scale");
+                      cursor.removeStick();
+                    }
+                  }}
+                >
                   Listen <ExternalLink />
                 </Button>
               </Link>

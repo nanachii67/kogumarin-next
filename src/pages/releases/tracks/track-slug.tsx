@@ -68,7 +68,7 @@ export default function TRACK_Slug() {
                   </div>
                   {track.tracklist && (
                     <div className="tracklist">
-                      <div className="flex flex-col text-start mb-2">
+                      <div className="flex flex-col text-start mt-5 mb-2">
                         <p>Featured Works</p>
                       </div>
                       {track.tracklist.map((track) => (

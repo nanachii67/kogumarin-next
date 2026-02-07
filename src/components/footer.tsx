@@ -7,15 +7,22 @@ export function Footer() {
         <div className="flex flex-col gap-3 mx-auto max-w-5xl text-center">
           <div className="flex font-inter justify-end gap-5">
             <Link to={"/releases"}>
+              <p>Mail</p>
+            </Link>
+            <Link to={"/releases"}>
               <p>GitHub</p>
             </Link>
-            <p>•</p>
             <Link to={"/about/"}>
               <p>Facebook</p>
             </Link>
-            <p>•</p>
+            <Link to={"/about/"}>
+              <p>Instagram</p>
+            </Link>
             <Link to={"/social-cards"}>
               <p>Discord</p>
+            </Link>
+            <Link to={"/social-cards"}>
+              <p>Steam</p>
             </Link>
           </div>
           {/* <Separator /> */}

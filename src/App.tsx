@@ -6,6 +6,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
+import "mouse-follower/dist/mouse-follower.min.css";
+import MouseFollower from "mouse-follower";
+import useCursor from "@/hooks/useCursor";
+
+MouseFollower.registerGSAP(gsap);
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 import IndexPage from "./pages";
@@ -17,6 +22,13 @@ import TRACK_Slug from "./pages/releases/tracks/track-slug";
 function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);
   const location = useLocation();
+
+  useEffect(() => {
+    const cursor = new MouseFollower({
+      textClassName: "mf-cursor-text text-koguma-text-light",
+    });
+    useCursor.setState({ instance: cursor });
+  }, []);
 
   useEffect(() => {
     const pathName = location.pathname;

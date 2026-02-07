@@ -34,6 +34,18 @@ export function ReleaseBar() {
                         <CarouselItem
                           key={index}
                           className="basis-1/3 xl:basis-1/4"
+                          onMouseEnter={(e) => {
+                            if (cursor) {
+                              cursor.setStick(e.currentTarget);
+                              cursor.addState("-scale");
+                            }
+                          }}
+                          onMouseLeave={() => {
+                            if (cursor) {
+                              cursor.removeState("-scale");
+                              cursor.removeStick();
+                            }
+                          }}
                         >
                           <Link to={item.brandlink} key={index}>
                             <div>

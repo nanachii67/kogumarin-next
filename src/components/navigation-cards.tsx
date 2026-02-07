@@ -10,8 +10,11 @@ import {
 import { SquareArrowOutUpRight } from "lucide-react";
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
+import useCursor from "@/hooks/useCursor";
 
 export function NavigationCards() {
+  const cursor = useCursor(({ instance }) => instance);
+
   return (
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl my-5">
@@ -34,9 +37,21 @@ export function NavigationCards() {
                 <Card
                   className="cursor-pointer md:aspect-square bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95"
                   key={index}
+                  onMouseEnter={(e) => {
+                    if (cursor) {
+                      cursor.setStick(e.currentTarget);
+                      cursor.addState("-scale");
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (cursor) {
+                      cursor.removeState("-scale");
+                      cursor.removeStick();
+                    }
+                  }}
                 >
                   <CardHeader>
-                    <CardDescription className="font-inter z-1">
+                    <CardDescription className="font-inter z-1 opacity-80">
                       {item.entry}
                     </CardDescription>
                     <CardTitle className="text-4xl font-inter-display z-1">
@@ -47,7 +62,7 @@ export function NavigationCards() {
                     </CardAction>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="font-inter z-1 text-xl">
+                    <CardDescription className="font-inter z-1 text-2xl leading-7 opacity-90">
                       {item.description}
                     </CardDescription>
                   </CardContent>

@@ -15,6 +15,15 @@
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/album/rins-small-tunes-1"
     },
+    "production": {
+      "producer": "Koguma Rin",
+      "orchestrator": "Koguma Rin",
+      "programming": "Koguma Rin",
+      "synthesizer": "Koguma Rin",
+      "recording_engineer": "Koguma Rin",
+      "mix_mastering_engineer": "Hotarusento Ei",
+      "record_label": "KOGS"
+    },
     "tracklist": [
       {
         "trackNumber": 1,
@@ -59,6 +68,14 @@
     "coverImage": "https://f4.bcbits.com/img/a0639790057_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/kirakira-adrenaline-rashu-ver"
+    },
+    "production": {
+      "producer": "Koguma Rin",
+      "programming": "Koguma Rin",
+      "synthesizer": "Koguma Rin",
+      "recording_engineer": "Koguma Rin",
+      "mix_mastering_engineer": "Hotarusento Ei",
+      "record_label": "KOGS"
     }
   },
   "orenji": {
@@ -69,12 +86,21 @@
     },
     "title": "Orenji",
     "artist": "Koguma Rin",
-    "releaseDate": "2025-03-20",
+    "releaseDate": "20 March 2025",
     "releaseYear": "2025",
     "releaseLabel": "2025 Kogs, on behalf of Kogumarin.",
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
+    },
+    "production": {
+      "producer": "Koguma Rin",
+      "executive_producer": "Jane Cerys",
+      "programming": "Koguma Rin",
+      "synthesizer": "Koguma Rin",
+      "recording_engineer": "Koguma Rin",
+      "mix_mastering_engineer": "Hotarusento Ei",
+      "record_label": "KOGS"
     }
   },
   "macarons-energy-drinks": {
@@ -91,6 +117,14 @@
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
+    },
+    "production": {
+      "producer": "Koguma Rin",
+      "programming": "Koguma Rin",
+      "synthesizer": "Koguma Rin",
+      "recording_engineer": "Koguma Rin",
+      "mix_mastering_engineer": "Hotarusento Ei",
+      "record_label": "KOGS"
     },
     "tracklist": [
       {
@@ -121,6 +155,12 @@
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/album/blue-archive-3rd-anniversary-drum-covers"
+    },
+    "production": {
+      "programming": "Koguma Rin",
+      "recording_engineer": "Koguma Rin",
+      "mix_mastering_engineer": "Hotarusento Ei",
+      "record_label": "KOGS"
     },
     "tracklist": [
       {

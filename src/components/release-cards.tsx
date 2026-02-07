@@ -1,8 +1,11 @@
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { ReleaseData } from "@/utils/release-cards";
+import useCursor from "@/hooks/useCursor";
 
 export function ReleaseCards() {
+  const cursor = useCursor(({ instance }) => instance);
+
   return (
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl my-5">
@@ -22,11 +25,23 @@ export function ReleaseCards() {
                 threshold={0.2}
                 delay={item.id * 0.1}
               >
-                <div>
+                <div data-magnetic>
                   <div className="flex flex-col">
                     <img
                       src={item.imagelink}
                       className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                      onMouseEnter={(e) => {
+                        if (cursor) {
+                          cursor.setStick(e.currentTarget);
+                          cursor.addState("-scale");
+                        }
+                      }}
+                      onMouseLeave={() => {
+                        if (cursor) {
+                          cursor.removeState("-scale");
+                          cursor.removeStick();
+                        }
+                      }}
                     ></img>
                     <div className="flex flex-col mt-2 space-y-[-2px]">
                       <p className="text-xs opacity-80">

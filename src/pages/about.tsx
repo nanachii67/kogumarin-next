@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="relative z-0">
         <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-9xl font-inter text-center justify-center">
           <div className="flex flex-col mb-30 gap-6 text-2xl justify-center text-left w-4xl mx-auto">
-            <p>Hello! I'm Koguma Rin, and I make music, nice to meet you!~</p>
+            <p>Hewwo! I'm Koguma Rin, and I make music, nice to meet you!~</p>
             <p>
               For 11 years in music production, I've wanted to start a personal
               page to document my venture through music, although I'm not always
@@ -29,6 +29,10 @@ export default function AboutPage() {
                 ,{" "}
                 <a href="https://open.spotify.com/artist/0cdpFI2dZC34peIkjI1rLs">
                   Mitsukiyo
+                </a>
+                ,{" "}
+                <a href="https://music.apple.com/ph/artist/kotomi/1702107932">
+                  Kotomi
                 </a>
               </span>
               , or something akin to the aesthetics of their genre. Sometimes

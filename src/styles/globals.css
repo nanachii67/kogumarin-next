@@ -115,6 +115,10 @@
     }
 }
 
+.mf-cursor.-scale {
+    transform: scale(1.5);
+}
+
 .koguma-hero-offset {
     position: relative;
     top: 25%;
@@ -202,5 +206,6 @@
 
     body {
         @apply bg-background text-foreground;
+        /*cursor: none;*/
     }
 }

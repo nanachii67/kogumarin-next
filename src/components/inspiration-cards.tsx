@@ -20,7 +20,7 @@ export function InspirationCards() {
               threshold={0}
               delay={item.id * 0.1}
             >
-              <div>
+              <div data-magnetic>
                 <div className="flex flex-col">
                   <img
                     src={item.imagelink}

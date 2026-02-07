@@ -8,8 +8,12 @@ import {
   CarouselNext,
 } from "./ui/carousel";
 import { ReleaseData } from "@/utils/release-cards";
+import { DelayedLink } from "./delayed-link";
+import useCursor from "@/hooks/useCursor";
 
 export function ReleaseBar() {
+  const cursor = useCursor(({ instance }) => instance);
+
   return (
     <div className="relative bg-koguma-background flex flex-col justify-center text-koguma-text h-150">
       <div className="flex flex-col py-5 my-5 max-w-9xl mx-auto">
@@ -47,7 +51,12 @@ export function ReleaseBar() {
                             }
                           }}
                         >
-                          <Link to={item.brandlink} key={index}>
+                          <DelayedLink
+                            to={item.brandlink}
+                            key={index}
+                            delay={200}
+                            refresh
+                          >
                             <div>
                               <div className="flex flex-col">
                                 <img
@@ -64,7 +73,7 @@ export function ReleaseBar() {
                                 </div>
                               </div>
                             </div>
-                          </Link>
+                          </DelayedLink>
                         </CarouselItem>
                       ))}
                   </CarouselContent>

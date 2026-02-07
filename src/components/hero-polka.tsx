@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import IconHero from "./kogs_records_logo_hero";
 import PolkaDotBackground from "@/assets/polka-test";
 import IconHeroTile from "./kogs_records_logo_rotate";
+import { DelayedLink } from "./delayed-link";
 
 export function HeroPolka() {
   return (
@@ -64,11 +65,11 @@ export function HeroPolka() {
               <div className="flex flex-col mx-auto justify-center items-center text-center">
                 <p className="flex text-5xl md:text-8xl font-title items-center">
                   {item.title}
-                  <Link to={item.releaselink}>
+                  <DelayedLink to={item.releaselink} delay={100}>
                     <span>
                       <ChevronRight size={65} />
                     </span>
-                  </Link>
+                  </DelayedLink>
                 </p>
                 <p className="text-xl font-inter">{item.subtitle}</p>
               </div>

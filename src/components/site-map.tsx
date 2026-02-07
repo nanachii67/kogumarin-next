@@ -2,6 +2,7 @@ import { KogsAlbum } from "@/utils/kogs-albums";
 import { KogsSingleEP } from "@/utils/kogs-single-ep";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { DelayedLink } from "./delayed-link";
 
 export function SiteMap() {
   return (
@@ -23,9 +24,9 @@ export function SiteMap() {
                 <p className="font-title text-sm">GENERAL</p>
               </div>
               <div className="col-span-2">
-                <Link to="/releases/">
+                <DelayedLink to="/releases/" delay={100}>
                   <p className="font-title text-sm">RELEASES</p>
-                </Link>
+                </DelayedLink>
                 <div className="grid grid-cols-2">
                   <div className="col-span-1">
                     <p className="font-inter-display text-sm">TRACKS</p>
@@ -39,15 +40,15 @@ export function SiteMap() {
             <div className="grid grid-cols-3 gap-5 w-5xl">
               <div className="col-span-1">
                 <div className="grid grid-cols-1">
-                  <Link to="/">
+                  <DelayedLink to="/" delay={100}>
                     <p>Home</p>
-                  </Link>
-                  <Link to="/about/">
+                  </DelayedLink>
+                  <DelayedLink to="/about/" delay={100}>
                     <p>About</p>
-                  </Link>
-                  <Link to="/cards/">
+                  </DelayedLink>
+                  <DelayedLink to="/cards/" delay={100}>
                     <p>Social Cards</p>
-                  </Link>
+                  </DelayedLink>
                 </div>
               </div>
               <div className="col-span-2">
@@ -55,22 +56,22 @@ export function SiteMap() {
                   <div className="col-span-1">
                     <div className="grid grid-cols-1">
                       {KogsSingleEP.map((item) => (
-                        <Link to={item.link}>
+                        <DelayedLink to={item.link} delay={100}>
                           <p>
                             {item.title} {item?.subtitle}
                           </p>
-                        </Link>
+                        </DelayedLink>
                       ))}
                     </div>
                   </div>
                   <div className="col-span-1">
                     <div className="grid grid-cols-1">
                       {KogsAlbum.map((item) => (
-                        <Link to={item.link}>
+                        <DelayedLink to={item.link} delay={100}>
                           <p>
                             {item.title} {item?.subtitle}
                           </p>
-                        </Link>
+                        </DelayedLink>
                       ))}
                     </div>
                   </div>

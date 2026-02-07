@@ -23,6 +23,8 @@ function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);
   const location = useLocation();
 
+  const key = location.state?._refresh || location.pathname;
+
   useEffect(() => {
     const cursor = new MouseFollower({
       textClassName: "mf-cursor-text text-koguma-text-light",
@@ -62,7 +64,7 @@ function App() {
 
   return (
     <div>
-      <Routes location={location}>
+      <Routes location={location} key={key}>
         <Route element={<IndexPage />} path="/" />
         <Route element={<AboutPage />} path="/about/" />
         <Route element={<SocialCardsPage />} path="/cards" />

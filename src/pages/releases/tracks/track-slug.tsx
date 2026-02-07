@@ -15,6 +15,7 @@ interface ReleasesSlug {
   releaseYear: string;
   coverCopyright?: string;
   releaseLabel: string;
+  releaseType: string;
   coverImage: string;
   streamingLinks: {
     bandcamp: string;
@@ -60,10 +61,7 @@ export default function TRACK_Slug() {
                         {track.title}{" "}
                         <span className="font-inter">{track.subtitle}</span>
                       </p>
-                      {track.coverCopyright && (
-                        <p className="opacity-50">℗ {track.coverCopyright}</p>
-                      )}
-                      <p className="opacity-75">℗ {track.releaseLabel}</p>
+                      <p className="opacity-80">{track.releaseType}</p>
                     </div>
                   </div>
                   {track.tracklist && (

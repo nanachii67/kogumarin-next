@@ -1,13 +1,17 @@
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { InspirationData } from "@/utils/inspiration-cards";
+import useCursor from "@/hooks/useCursor";
+import { DelayedLink } from "./delayed-link";
 
 export function InspirationCards() {
+  const cursor = useCursor(({ instance }) => instance);
+
   return (
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl my-5">
         {InspirationData.map((item, index) => (
-          <Link to={item.brandlink} key={index}>
+          <DelayedLink to={item.brandlink} key={index} delay={100}>
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -20,12 +24,26 @@ export function InspirationCards() {
               threshold={0}
               delay={item.id * 0.1}
             >
-              <div data-magnetic>
-                <div className="flex flex-col">
+              <div>
+                <div
+                  className="flex flex-col"
+                  onMouseEnter={(e) => {
+                    if (cursor) {
+                      cursor.setStick(e.currentTarget);
+                      cursor.addState("-scale");
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (cursor) {
+                      cursor.removeState("-scale");
+                      cursor.removeStick();
+                    }
+                  }}
+                >
                   <img
                     src={item.imagelink}
                     className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
-                  ></img>
+                  />
                   <div className="flex flex-col mt-2 space-y-[-2px]">
                     <p className="text-xs opacity-80">
                       {item.catalogtype} • {item.releaseyear}
@@ -36,7 +54,7 @@ export function InspirationCards() {
                 </div>
               </div>
             </AnimatedContent>
-          </Link>
+          </DelayedLink>
         ))}
       </div>
     </div>

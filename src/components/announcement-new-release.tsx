@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { NewRelease } from "@/utils/new-release";
 import { Link } from "react-router-dom";
 import useCursor from "@/hooks/useCursor";
+import { DelayedLink } from "./delayed-link";
 
 export default function AnnouncementNewRelease() {
   const cursor = useCursor(({ instance }) => instance);
@@ -24,7 +25,7 @@ export default function AnnouncementNewRelease() {
               </p>
             </div>
             <div className="col-span-1 justify-self-end flex items-center">
-              <Link to={item.releaselink}>
+              <DelayedLink to={item.releaselink} delay={100}>
                 <Button
                   className="bg-koguma-text hover:bg-koguma-text-hover active:scale-95 text-koguma-text-light font-inter rounded-full"
                   onMouseEnter={(e) => {
@@ -42,7 +43,7 @@ export default function AnnouncementNewRelease() {
                 >
                   Listen <ExternalLink />
                 </Button>
-              </Link>
+              </DelayedLink>
             </div>
           </div>
         ))}

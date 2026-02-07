@@ -11,6 +11,7 @@ import { SquareArrowOutUpRight } from "lucide-react";
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import useCursor from "@/hooks/useCursor";
+import { DelayedLink } from "./delayed-link";
 
 export function NavigationCards() {
   const cursor = useCursor(({ instance }) => instance);
@@ -19,7 +20,7 @@ export function NavigationCards() {
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl my-5">
         {NavigationData.map((item, index) => (
-          <Link to={item.brandlink} key={index}>
+          <DelayedLink to={item.brandlink} key={index} delay={100}>
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -62,14 +63,14 @@ export function NavigationCards() {
                     </CardAction>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="font-inter z-1 text-2xl leading-7 opacity-90">
+                    <CardDescription className="font-inter z-1 text-xl leading-7 opacity-90">
                       {item.description}
                     </CardDescription>
                   </CardContent>
                 </Card>
               </div>
             </AnimatedContent>
-          </Link>
+          </DelayedLink>
         ))}
       </div>
     </div>

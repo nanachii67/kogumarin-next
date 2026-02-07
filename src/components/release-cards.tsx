@@ -2,6 +2,7 @@ import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { ReleaseData } from "@/utils/release-cards";
 import useCursor from "@/hooks/useCursor";
+import { DelayedLink } from "./delayed-link";
 
 export function ReleaseCards() {
   const cursor = useCursor(({ instance }) => instance);
@@ -12,7 +13,7 @@ export function ReleaseCards() {
         {ReleaseData.slice()
           .reverse()
           .map((item, index) => (
-            <Link to={item.brandlink} key={index}>
+            <DelayedLink to={item.brandlink} key={index} delay={100}>
               <AnimatedContent
                 distance={50}
                 direction="vertical"
@@ -52,7 +53,7 @@ export function ReleaseCards() {
                   </div>
                 </div>
               </AnimatedContent>
-            </Link>
+            </DelayedLink>
           ))}
       </div>
     </div>

@@ -11,12 +11,14 @@
     "releaseDate": "2026-1-1",
     "releaseYear": "2026",
     "releaseLabel": "2026 Kogs, on behalf of Kogumarin.",
+    "releaseType": "Album",
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/album/rins-small-tunes-1"
     },
     "production": {
       "producer": "Koguma Rin",
+      "executive_producer": "Jane Cerys",
       "orchestrator": "Koguma Rin",
       "programming": "Koguma Rin",
       "synthesizer": "Koguma Rin",
@@ -65,6 +67,7 @@
     "releaseDate": "2025-07-05",
     "releaseYear": "2025",
     "releaseLabel": "2025 Kogs, on behalf of Kogumarin.",
+    "releaseType": "Single",
     "coverImage": "https://f4.bcbits.com/img/a0639790057_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/kirakira-adrenaline-rashu-ver"
@@ -89,6 +92,7 @@
     "releaseDate": "20 March 2025",
     "releaseYear": "2025",
     "releaseLabel": "2025 Kogs, on behalf of Kogumarin.",
+    "releaseType": "Single",
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
@@ -114,6 +118,7 @@
     "releaseDate": "2024-12-20",
     "releaseYear": "2024",
     "releaseLabel": "2024 Kogs, on behalf of Kogumarin.",
+    "releaseType": "Album",
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
@@ -152,6 +157,7 @@
     "releaseYear": "2024",
     "coverCopyright": "Original music written and produced by Mitsukiyo, via NEXON Games/Yostar.",
     "releaseLabel": "2024 Kogs, on behalf of Kogumarin.",
+    "releaseType": "Album",
     "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
     "streamingLinks": {
       "bandcamp": "https://kogumarin.bandcamp.com/album/blue-archive-3rd-anniversary-drum-covers"

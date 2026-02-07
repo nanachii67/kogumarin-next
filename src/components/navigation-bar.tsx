@@ -38,8 +38,8 @@ const items = [
     hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
   },
   {
-    label: "contact",
-    href: "#",
+    label: "cards",
+    href: "/cards",
     ariaLabel: "Contact",
     rotation: -8,
     hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },

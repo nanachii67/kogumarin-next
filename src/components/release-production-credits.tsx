@@ -14,6 +14,7 @@ interface ProductionSlug {
   releaseYear: string;
   coverCopyright?: string;
   releaseLabel: string;
+  releaseType: string;
   coverImage: string;
   streamingLinks: {
     bandcamp: string;
@@ -58,14 +59,6 @@ export default function ReleaseProductionCredits() {
               <p className="text-sm items-center capitalize">producer</p>
             </div>
           )}
-          {track?.production?.orchestrator && (
-            <div className="col-span-1">
-              <p className="text-xs text-koguma-fonts uppercase opacity-75">
-                {track?.production?.orchestrator}
-              </p>
-              <p className="text-sm items-center capitalize">orchestrator</p>
-            </div>
-          )}
           {track?.production?.executive_producer && (
             <div className="col-span-1">
               <p className="text-xs text-koguma-fonts uppercase opacity-75">
@@ -74,6 +67,14 @@ export default function ReleaseProductionCredits() {
               <p className="text-sm items-center capitalize">
                 executive producer
               </p>
+            </div>
+          )}
+          {track?.production?.orchestrator && (
+            <div className="col-span-1">
+              <p className="text-xs text-koguma-fonts uppercase opacity-75">
+                {track?.production?.orchestrator}
+              </p>
+              <p className="text-sm items-center capitalize">orchestrator</p>
             </div>
           )}
           {track?.production?.programming && (
@@ -137,6 +138,14 @@ export default function ReleaseProductionCredits() {
               </Link>
             </span>
           </p>
+        </div>
+        {track?.coverCopyright && (
+          <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light opacity-50">
+            <p>℗ {track?.coverCopyright}</p>
+          </div>
+        )}
+        <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light opacity-75">
+          <p>℗ {track?.releaseLabel}</p>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@ import { NewRelease } from "@/utils/new-release";
 import { ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import IconHero from "./kogs_records_logo_hero";
+import { DelayedLink } from "./delayed-link";
 
 export function Hero() {
   return (
@@ -70,11 +71,11 @@ export function Hero() {
               <div className="flex flex-col mx-auto justify-center items-center text-center">
                 <p className="flex text-5xl md:text-7xl font-title items-center">
                   {item.title}
-                  <Link to={item.releaselink}>
+                  <DelayedLink to={item.releaselink} delay={100}>
                     <span>
                       <ChevronRight size={50} />
                     </span>
-                  </Link>
+                  </DelayedLink>
                 </p>
                 <p className="text-xl font-inter">{item.subtitle}</p>
               </div>
@@ -98,11 +99,11 @@ export function Hero() {
                 <img
                   src={item.releasecover}
                   style={{
-                    animation: 'floatEmphasis 5s ease-in-out infinite'
+                    animation: "floatEmphasis 5s ease-in-out infinite",
                   }}
                   className="w-80 xl:w-170 aspect-square rounded-xl object-cover justify-center items-center"
                 />
-                
+
                 <style>
                   {`
                     @keyframes floatEmphasis {
@@ -113,7 +114,7 @@ export function Hero() {
                         transform: translateY(0.1px);
                       }
                     }
-                    
+
                     .animate-bounce-gentle {
                       animation: floatEmphasis 5s ease-in-out infinite;
                     }

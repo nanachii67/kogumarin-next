@@ -38,35 +38,35 @@ const DEFAULT_ITEMS: MenuItem[] = [
     href: "#",
     ariaLabel: "Home",
     rotation: -8,
-    hoverStyles: { bgColor: "#3b82f6", textColor: "#ffffff" },
+    hoverStyles: { bgColor: "#4338ca", textColor: "#ffffff" },
   },
   {
     label: "about",
     href: "#",
     ariaLabel: "About",
     rotation: 8,
-    hoverStyles: { bgColor: "#10b981", textColor: "#ffffff" },
+    hoverStyles: { bgColor: "#4338ca", textColor: "#ffffff" },
   },
   {
     label: "projects",
     href: "#",
     ariaLabel: "Documentation",
     rotation: 8,
-    hoverStyles: { bgColor: "#f59e0b", textColor: "#ffffff" },
+    hoverStyles: { bgColor: "#4338ca", textColor: "#ffffff" },
   },
   {
     label: "blog",
     href: "#",
     ariaLabel: "Blog",
     rotation: 8,
-    hoverStyles: { bgColor: "#ef4444", textColor: "#ffffff" },
+    hoverStyles: { bgColor: "#4338ca", textColor: "#ffffff" },
   },
   {
     label: "contact",
     href: "#",
     ariaLabel: "Contact",
     rotation: -8,
-    hoverStyles: { bgColor: "#8b5cf6", textColor: "#ffffff" },
+    hoverStyles: { bgColor: "#4338ca", textColor: "#ffffff" },
   },
 ];
 
@@ -451,7 +451,7 @@ export default function BubbleMenu({
                   }}
                 >
                   <span
-                    className="pill-label inline-block text-5xl"
+                    className="pill-label inline-block md:text-5xl"
                     style={{
                       willChange: "transform, opacity",
                       height: "1.2em",

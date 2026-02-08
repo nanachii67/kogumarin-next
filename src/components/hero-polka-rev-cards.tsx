@@ -11,14 +11,33 @@ import {
 } from "./ui/card";
 import useCursor from "@/hooks/useCursor";
 import { Avatar, AvatarImage } from "./ui/avatar";
-import { Link } from "react-router-dom";
-import { ArrowCircleUpRightIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowCircleUpRightIcon,
+  CopyIcon,
+} from "@phosphor-icons/react/dist/ssr";
+import { ArrowUpRightIcon } from "@phosphor-icons/react";
+import { Button } from "./ui/button";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "./ui/tooltip";
+import { useState } from "react";
 
 export function HeroPolkaRevCards() {
   const cursor = useCursor(({ instance }) => instance);
+  const [copiedId, setCopiedId] = useState<number | null>(null);
+
+  const handleCopy = (text: string, id: number, e: React.MouseEvent) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(text);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
 
   return (
-    <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-screen">
+    <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 min-h-screen py-10">
       <div className="absolute inset-0 w-full opacity-50">
         <DotGrid
           dotSize={5}
@@ -33,63 +52,132 @@ export function HeroPolkaRevCards() {
         />
       </div>
       <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
-        <div className="relative h-180 rounded-2xl overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full hero-background z-10" />
-          <div className="absolute top-0 left-0 w-full h-full bg-koguma-card z-0" />
-
-          <div className="absolute z-20 inset-0 p-4">
-            <div className="grid grid-cols-3 gap-4 h-full">
-              {SocialCards.map((item, index) => (
-                <div
-                  className="col-span-1 relative overflow-hidden rounded-lg"
-                  key={index}
+        <TooltipProvider delayDuration={0}>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {SocialCards.map((item) => (
+              <AnimatedContent
+                key={item.id}
+                distance={50}
+                direction="vertical"
+                reverse={true}
+                duration={1.2}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={item.id * 0.1}
+              >
+                <Card
+                  className="group cursor-pointer h-full min-h-[350px] bg-indigo-600 hover:bg-indigo-700 text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95 relative overflow-hidden"
+                  onMouseEnter={(e) => {
+                    if (cursor) {
+                      cursor.setStick(e.currentTarget);
+                      cursor.addState("-scale");
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (cursor) {
+                      cursor.removeState("-scale");
+                      cursor.removeStick();
+                    }
+                  }}
+                  onClick={() => window.open(item.socialMediaLink, "_blank")}
                 >
-                  {/*<div className="absolute inset-0 hero-background z-0" />*/}
-                  <Link
-                    to={item.socialMediaLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Card
-                      className="cursor-pointer h-full bg-indigo-600 hover:bg-koguma-text text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95 relative z-10"
-                      onMouseEnter={(e) => {
-                        if (cursor) {
-                          cursor.setStick(e.currentTarget);
-                          cursor.addState("-scale");
-                        }
-                      }}
-                      onMouseLeave={() => {
-                        if (cursor) {
-                          cursor.removeState("-scale");
-                          cursor.removeStick();
-                        }
-                      }}
-                    >
-                      <CardHeader className="-space-y-2">
-                        <CardTitle className="font-inter-display text-3xl">
-                          {item.socialMediaAppName}
-                        </CardTitle>
-                        <CardDescription className="font-inter text-xl opacity-80">
-                          @{item.socialMediaHandler}
-                        </CardDescription>
-                        <CardAction>
-                          <ArrowCircleUpRightIcon weight="fill" size={24} />
-                        </CardAction>
-                      </CardHeader>
-                      <CardContent>
-                        <Avatar>
-                          <AvatarImage
-                            src={item.socialMediaCurrentAvatar}
-                          ></AvatarImage>
+                  <div className="absolute top-0 left-0 w-full h-full about-background z-0" />
+                  <div className="relative z-10 flex flex-col h-full">
+                    <CardHeader className="-space-y-2">
+                      <div className="flex flex-row items-center gap-2 mb-1">
+                        <item.SocialMediaIcon />
+                        <Avatar className="w-10 h-10">
+                          <AvatarImage src={item.socialMediaCurrentAvatar} />
                         </Avatar>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </div>
-              ))}
-            </div>
+                      </div>
+                      <CardTitle className="font-inter-black text-3xl">
+                        {item.socialMediaAppName}
+                      </CardTitle>
+                      <CardDescription className="font-inter text-xl opacity-80 -space-y-1">
+                        <p className="font-inter-display">
+                          {item.socialMediaHandlerFullName}
+                        </p>
+                        <p className="flex flex-row items-center gap-2">
+                          @{item.socialMediaHandler}
+                          <Tooltip
+                            open={copiedId === item.id ? true : undefined}
+                          >
+                            <TooltipTrigger asChild className="bg-koguma-card">
+                              <Button
+                                size="icon-xs"
+                                variant="link"
+                                aria-label="Copy username"
+                                title="Copy username"
+                                className="text-koguma-text-light opacity-0 group-hover:opacity-100 transition-opacity"
+                                onClick={(e) =>
+                                  handleCopy(
+                                    item.socialMediaHandler,
+                                    item.id,
+                                    e,
+                                  )
+                                }
+                              >
+                                <CopyIcon weight="fill" />
+                              </Button>
+                            </TooltipTrigger>
+                            <TooltipContent
+                              side="bottom"
+                              className=" text-koguma-text-light select-none shadow"
+                            >
+                              <p>{copiedId === item.id ? "Copied!" : "Copy"}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </p>
+                      </CardDescription>
+                      <CardAction>
+                        <Button
+                          size="icon"
+                          className="text-koguma-text-light bg-koguma-card/75 rounded-full hover:bg-koguma-card"
+                          aria-label="Open externally"
+                          title="Open externally"
+                          asChild
+                        >
+                          <div>
+                            <ArrowCircleUpRightIcon
+                              weight="fill"
+                              className="w-6 h-6"
+                            />
+                          </div>
+                        </Button>
+                      </CardAction>
+                    </CardHeader>
+                    <CardContent className="flex-1 flex items-end">
+                      {item.relevantLinks &&
+                        item.relevantLinks.map((link) => (
+                          <div key={link.relevantLinkId}>
+                            <p className="text-sm opacity-80">Also check out</p>
+                            <a
+                              href={link.relevantLinkReferral}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="font-inter-display text-xl leading-6 flex items-center gap-1 underline underline-offset-3 hover:text-rose-200 transition-colors"
+                              aria-label={link.relevantLinkName}
+                              title={`${link.relevantLinkName} - ${link.relevantLinkAppName}`}
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {link.relevantLinkName}
+                              <ArrowUpRightIcon className="w-5 h-5" />
+                            </a>
+                            <p className="text-sm opacity-80">
+                              {link.relevantLinkAppName}
+                            </p>
+                          </div>
+                        ))}
+                    </CardContent>
+                  </div>
+                </Card>
+              </AnimatedContent>
+            ))}
           </div>
-        </div>
+        </TooltipProvider>
         <div className="flex flex-col text-koguma-text-light mt-5">
           <div className="grid grid-cols-2 gap-5">
             <div className="col-span-1">

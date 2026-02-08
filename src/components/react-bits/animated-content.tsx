@@ -17,6 +17,7 @@ interface AnimatedContentProps {
   threshold?: number;
   delay?: number;
   onComplete?: () => void;
+  className?: string;
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({

@@ -13,9 +13,6 @@ export function SiteMap() {
             {/*<p className="text-lg">Koguma Rin</p>*/}
             <p className="flex items-center text-4xl font-koguma my-4">
               site map{" "}
-              <span>
-                <ChevronRight />
-              </span>
             </p>
           </div>
           <div className="flex flex-col gap-1">

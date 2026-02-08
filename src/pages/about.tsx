@@ -6,7 +6,7 @@ export default function AboutPage() {
     <AboutLayout pageTitle="about" pageDescription="Revised 5th February 2026">
       <div className="relative z-0">
         <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-9xl font-inter text-center justify-center">
-          <div className="flex flex-col mb-30 gap-6 text-2xl justify-center text-left w-4xl mx-auto">
+          <div className="flex flex-col mb-20 gap-6 text-2xl justify-center text-left w-4xl mx-auto">
             <p>Hewwo! I'm Koguma Rin, and I make music, nice to meet you!~</p>
             <p>
               For 11 years in music production, I've wanted to start a personal
@@ -47,9 +47,16 @@ export default function AboutPage() {
           <div className="flex flex-col opacity-75">
             <p>Koguma Rin's</p>
           </div>
-          <h1 id="next-section" className="text-7xl font-koguma py-10">
-            Inspirations
-          </h1>
+          <div className="flex mx-auto gap-2">
+            <p className="text-7xl font-koguma py-10">Inspirations</p>
+            <p className="font-inter opacity-75 translate-y-10">*</p>
+          </div>
+          <div className="flex gap-2 opacity-75 items-center">
+            <p className="font-inter-display">*</p>
+            <p className="text-xs ">
+              Interacting with these cards redirects to Apple Music.
+            </p>
+          </div>
           <div>
             <InspirationCards />
           </div>

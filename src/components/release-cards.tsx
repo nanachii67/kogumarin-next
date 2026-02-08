@@ -23,7 +23,7 @@ export function ReleaseCards() {
                 initialOpacity={0.0}
                 animateOpacity
                 scale={1.0}
-                threshold={0.2}
+                threshold={0.1}
                 delay={item.id * 0.1}
               >
                 <div data-magnetic>
@@ -45,10 +45,12 @@ export function ReleaseCards() {
                       }}
                     ></img>
                     <div className="flex flex-col mt-2 space-y-[-2px]">
-                      <p className="text-xs opacity-80">
+                      <p className="text-xs opacity-80 font-inter">
                         {item.catalogtype} • {item.releaseyear}
                       </p>
-                      <p className="font-inter-display text-xl">{item.title}</p>
+                      <p className="font-inter-display text-xl leading-6">
+                        {item.title}
+                      </p>
                     </div>
                   </div>
                 </div>

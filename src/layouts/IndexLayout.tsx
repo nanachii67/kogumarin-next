@@ -14,9 +14,7 @@ export default function IndexLayout({
       <AnnouncementNewRelease />
       <NavigationBar />
       <div className="relative z-1 bg-koguma-text-hover mx-auto">
-        <main className="flex mx-auto max-w-5xl xl:max-w-7xl pt-10 px-10">
-          {children}
-        </main>
+        <main className="flex mx-auto pt-10 px-10">{children}</main>
       </div>
       <Footer />
     </div>

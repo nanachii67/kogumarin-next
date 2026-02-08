@@ -1,0 +1,36 @@
+{
+  "facebook": {
+    "social_id": 1,
+    "social_name": "Facebook",
+    "social_link": "",
+    "details": {
+      "handler_name": "nanachii67",
+      "handler_avatar_link": "https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024"
+    },
+    "relevant_links": [
+      {
+        "relevant_link_id": 1,
+        "relevant_social_name": "Facebook Page",
+        "relevant_social_handler": "",
+        "relevant_social_link": ""
+      }
+    ]
+  },
+  "instagram": {
+    "social_id": 1,
+    "social_name": "Instagram",
+    "social_link": "",
+    "details": {
+      "handler_name": "nanachii67",
+      "handler_avatar_link": "https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024"
+    },
+    "relevant_links": [
+      {
+        "relevant_link_id": 1,
+        "relevant_social_name": "Facebook Page",
+        "relevant_social_handler": "",
+        "relevant_social_link": ""
+      }
+    ]
+  }
+}

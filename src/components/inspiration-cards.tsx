@@ -49,7 +49,9 @@ export function InspirationCards() {
                       {item.catalogtype} • {item.releaseyear}
                     </p>
                     <p className="font-inter-display text-xl">{item.title}</p>
-                    <p className="text-xs opacity-80">{item.description}</p>
+                    <p className="text-xs opacity-80 font-inter">
+                      {item.description}
+                    </p>
                   </div>
                 </div>
               </div>

@@ -4,23 +4,28 @@ import {
   CardAction,
   CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SquareArrowOutUpRight } from "lucide-react";
 import AnimatedContent from "./react-bits/animated-content";
-import { Link } from "react-router-dom";
 import useCursor from "@/hooks/useCursor";
 import { DelayedLink } from "./delayed-link";
+import { ArrowCircleUpRightIcon } from "@phosphor-icons/react";
 
 export function NavigationCards() {
   const cursor = useCursor(({ instance }) => instance);
 
   return (
     <div className="relative flex flex-col mx-auto">
-      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-5 max-w-5xl my-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 max-w-9xl my-5">
         {NavigationData.map((item, index) => (
-          <DelayedLink to={item.brandlink} key={index} delay={100}>
+          <DelayedLink
+            to={item.brandlink}
+            key={index}
+            delay={100}
+            className="w-full"
+          >
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -33,10 +38,10 @@ export function NavigationCards() {
               threshold={0.2}
               delay={item.id * 0.1}
             >
-              <div>
+              <div className="w-full h-full">
                 <div className="absolute inset-0 pointer-events-none rounded-xl"></div>
                 <Card
-                  className="cursor-pointer md:aspect-square bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95"
+                  className="cursor-pointer w-full h-75 bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95 flex flex-col"
                   key={index}
                   onMouseEnter={(e) => {
                     if (cursor) {
@@ -53,20 +58,18 @@ export function NavigationCards() {
                 >
                   <CardHeader>
                     <CardDescription className="font-inter z-1 opacity-80">
-                      {item.entry}
+                      <p>{item.entry}</p>
                     </CardDescription>
-                    <CardTitle className="text-4xl font-inter-display z-1">
+                    <CardTitle className="text-5xl font-koguma mt-6 z-1">
                       {item.title}
                     </CardTitle>
                     <CardAction>
-                      <SquareArrowOutUpRight />
+                      <ArrowCircleUpRightIcon weight="fill" size={24} />
                     </CardAction>
                   </CardHeader>
-                  <CardContent>
-                    <CardDescription className="font-inter z-1 text-xl leading-7 opacity-90">
-                      {item.description}
-                    </CardDescription>
-                  </CardContent>
+                  <CardFooter className="font-inter items-end text-xs opacity-90 mt-auto">
+                    {item.description}
+                  </CardFooter>
                 </Card>
               </div>
             </AnimatedContent>

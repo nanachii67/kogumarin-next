@@ -1,7 +1,7 @@
 import { Footer } from "@/components/footer";
 import { NavigationBar } from "@/components/navigation-bar";
 import DotGrid from "@/components/react-bits/dot-grid";
-import { ReleaseBar } from "@/components/release-bar";
+import ReleaseDiscographyBar from "@/components/release-bar-new";
 import ReleaseProductionCredits from "@/components/release-production-credits";
 
 export default function ReleaseLayout({
@@ -27,7 +27,7 @@ export default function ReleaseLayout({
       </div>
       <main className="flex flex-col mx-auto">{children}</main>
       <ReleaseProductionCredits />
-      <ReleaseBar />
+      <ReleaseDiscographyBar />
       <Footer />
     </div>
   );

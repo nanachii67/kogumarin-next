@@ -1,6 +1,9 @@
 import ReleaseLayout from "@/layouts/ReleaseLayout";
 import { useParams, Navigate } from "react-router-dom";
 import releases from "@/utils/releases.json";
+import AnimatedContent from "@/components/react-bits/animated-content";
+import { ArrowLeftIcon } from "@phosphor-icons/react";
+import { DelayedLink } from "@/components/delayed-link";
 
 interface ReleasesSlug {
   iframe: {
@@ -47,9 +50,17 @@ export default function TRACK_Slug() {
             <div className="flex flex-col items-center justify-center">
               <div className="flex flex-col items-center justify-center space-y-8 font-inter py-5">
                 <div className="flex flex-col">
+                  <div className="flex flex-row mb-2 justify-start items-center gap-2 text-koguma-text-light/80">
+                    <ArrowLeftIcon />
+                    <DelayedLink to="/releases" delay={200}>
+                      <p className="underline underline-offset-3 decoration-0">
+                        Releases
+                      </p>
+                    </DelayedLink>
+                  </div>
                   <div className="space-y-2 justify-center">
                     <iframe
-                      className="w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
+                      className="w-md xl:w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
                       src={track.iframe.src}
                       seamless
                     >
@@ -61,7 +72,9 @@ export default function TRACK_Slug() {
                         {track.title}{" "}
                         <span className="font-inter">{track.subtitle}</span>
                       </p>
-                      <p className="opacity-80">{track.releaseType}</p>
+                      <p className="opacity-80">
+                        {track.releaseType} • {track.releaseYear}
+                      </p>
                     </div>
                   </div>
                   {track.tracklist && (
@@ -70,20 +83,35 @@ export default function TRACK_Slug() {
                         <p>Featured Works</p>
                       </div>
                       {track.tracklist.map((track) => (
-                        <div key={track.trackNumber}>
-                          <div className="flex flex-row text-start items-center justify-between">
-                            <div className="flex flex-row gap-3 items-center">
-                              <p className="opacity-75">{track.trackNumber}</p>
-                              <p className="text-2xl font-inter-display items-center">
-                                {track.title}{" "}
-                                <span className="font-inter opacity-75">
-                                  {track.subtitle}
-                                </span>
-                              </p>
+                        <AnimatedContent
+                          distance={25}
+                          direction="vertical"
+                          reverse={true}
+                          duration={2}
+                          ease="power3.out"
+                          initialOpacity={0.0}
+                          animateOpacity
+                          scale={1.0}
+                          threshold={0}
+                          delay={track.trackNumber * 0.1}
+                        >
+                          <div key={track.trackNumber}>
+                            <div className="flex flex-row text-start items-center justify-between">
+                              <div className="flex flex-row gap-3 items-center">
+                                <p className="opacity-75">
+                                  {track.trackNumber}
+                                </p>
+                                <p className="text-2xl font-inter-display items-center">
+                                  {track.title}{" "}
+                                  <span className="font-inter opacity-75">
+                                    {track.subtitle}
+                                  </span>
+                                </p>
+                              </div>
+                              <p className="opacity-75">{track.duration}</p>
                             </div>
-                            <p className="opacity-75">{track.duration}</p>
                           </div>
-                        </div>
+                        </AnimatedContent>
                       ))}
                     </div>
                   )}

@@ -2,7 +2,6 @@ import { NavigationData } from "@/utils/navigation-cards";
 import {
   Card,
   CardAction,
-  CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
@@ -10,8 +9,9 @@ import {
 } from "@/components/ui/card";
 import AnimatedContent from "./react-bits/animated-content";
 import useCursor from "@/hooks/useCursor";
-import { DelayedLink } from "./delayed-link";
+
 import { ArrowCircleUpRightIcon } from "@phosphor-icons/react";
+import { Link } from "react-router-dom";
 
 export function NavigationCards() {
   const cursor = useCursor(({ instance }) => instance);
@@ -20,12 +20,7 @@ export function NavigationCards() {
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 max-w-9xl my-5">
         {NavigationData.map((item, index) => (
-          <DelayedLink
-            to={item.brandlink}
-            key={index}
-            delay={100}
-            className="w-full"
-          >
+          <Link to={item.brandlink} key={index} className="w-full">
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -73,7 +68,7 @@ export function NavigationCards() {
                 </Card>
               </div>
             </AnimatedContent>
-          </DelayedLink>
+          </Link>
         ))}
       </div>
     </div>

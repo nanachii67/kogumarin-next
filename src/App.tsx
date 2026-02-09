@@ -25,6 +25,7 @@ function App() {
 
   const key = location.state?._refresh || location.pathname;
 
+  // Initialize cursor once
   useEffect(() => {
     const cursor = new MouseFollower({
       textClassName: "mf-cursor-text text-koguma-text-light",
@@ -32,17 +33,14 @@ function App() {
     useCursor.setState({ instance: cursor });
   }, []);
 
+  // Update document title on route change
   useEffect(() => {
     const pathName = location.pathname;
     const page = siteConfig.pages.find((i) => i.href === pathName);
-
     document.title = siteConfig.title(page?.label);
   }, [location]);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
+  // Initialize ScrollSmoother once
   useEffect(() => {
     if (!smootherRef.current) {
       smootherRef.current = ScrollSmoother.create({
@@ -51,14 +49,31 @@ function App() {
         smoothTouch: 0.1,
       });
     }
-    smootherRef.current.scrollTo(0, false);
-    return () => {};
+
+    return () => {
+      // Cleanup on unmount
+      if (smootherRef.current) {
+        smootherRef.current.kill();
+        smootherRef.current = null;
+      }
+    };
   }, []);
 
+  // Handle scroll reset on route change - CONSOLIDATED
   useEffect(() => {
-    if (smootherRef.current) {
-      smootherRef.current.scrollTo(0, true);
-      ScrollTrigger.refresh();
+    const smoother = smootherRef.current;
+
+    if (smoother) {
+      // Instantly scroll to top without animation
+      smoother.scrollTo(0, false);
+
+      // Small delay to ensure DOM is ready, then refresh ScrollTrigger
+      requestAnimationFrame(() => {
+        ScrollTrigger.refresh();
+      });
+    } else {
+      // Fallback if smoother isn't ready yet
+      window.scrollTo(0, 0);
     }
   }, [location.pathname]);
 
@@ -68,7 +83,6 @@ function App() {
         <Route element={<IndexPage />} path="/" />
         <Route element={<AboutPage />} path="/about/" />
         <Route element={<SocialCardsPage />} path="/cards" />
-
         <Route element={<ReleasesPage />} path="/releases" />
         <Route element={<TRACK_Slug />} path="/releases/:trackId" />
       </Routes>

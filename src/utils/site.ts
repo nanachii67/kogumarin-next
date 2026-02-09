@@ -15,15 +15,23 @@ export const siteConfig = {
     },
     {
       label: "Releases",
-      href: "/releases/",
+      href: "/releases",
     },
     {
       label: "About",
-      href: "/about/",
+      href: "/about",
     },
     {
-      label: "Cards",
-      href: "/cards/",
+      label: "Socials",
+      href: "/cards",
+    },
+    {
+      label: "Blue Archive Drum Covers 1",
+      href: "/releases/blue-archive-3rd-anniversary-drum-covers/",
+    },
+    {
+      label: "Macarons / Energy Drinks",
+      href: "/releases/macarons-energy-drinks/",
     },
     {
       label: "Orenji",

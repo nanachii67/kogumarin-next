@@ -9,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "./ui/card";
-import useCursor from "@/hooks/useCursor";
+
 import { Avatar, AvatarImage } from "./ui/avatar";
 import {
   ArrowCircleUpRightIcon,
@@ -26,7 +26,6 @@ import {
 import { useState } from "react";
 
 export function HeroPolkaRevCards() {
-  const cursor = useCursor(({ instance }) => instance);
   const [copiedId, setCopiedId] = useState<number | null>(null);
 
   const handleCopy = (text: string, id: number, e: React.MouseEvent) => {
@@ -37,7 +36,7 @@ export function HeroPolkaRevCards() {
   };
 
   return (
-    <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 min-h-screen py-10">
+    <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 min-h-screen py-10 px-10">
       <div className="absolute inset-0 w-full opacity-50">
         <DotGrid
           dotSize={5}
@@ -51,9 +50,63 @@ export function HeroPolkaRevCards() {
           returnDuration={2.5}
         />
       </div>
-      <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
+      <div className="container max-w-9xl mx-auto z-10 md:px-10 mt-20 lg:mt-0 lg:px-0">
+        <div className="flex flex-col text-koguma-text-light mb-5">
+          <div className="grid grid-cols-2 gap-5">
+            <div className="col-span-1">
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.2}
+              >
+                <p className="text-5xl font-koguma pt-5">kogumarin</p>
+                <p className="font-inter text-xs">EST. 2024</p>
+              </AnimatedContent>
+            </div>
+            <div className="col-span-1 justify-self-end text-right">
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.4}
+              >
+                <p className="text-5xl font-koguma py-5">socials</p>
+              </AnimatedContent>
+              <AnimatedContent
+                distance={10}
+                direction="vertical"
+                reverse={true}
+                duration={2.0}
+                ease="power3.out"
+                initialOpacity={0.0}
+                animateOpacity
+                scale={1.0}
+                threshold={0}
+                delay={0.6}
+              >
+                <p className="text-xl font-inter leading-6 w-96">
+                  Feel free to look at these platforms, and consider giving a
+                  follow!~
+                </p>
+              </AnimatedContent>
+            </div>
+          </div>
+        </div>
         <TooltipProvider delayDuration={0}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 lg:mb-0">
             {SocialCards.map((item) => (
               <AnimatedContent
                 key={item.id}
@@ -68,22 +121,7 @@ export function HeroPolkaRevCards() {
                 threshold={0}
                 delay={item.id * 0.1}
               >
-                <Card
-                  className="group cursor-pointer h-full min-h-[350px] bg-indigo-600 hover:bg-indigo-700 text-koguma-text-light border-0 shadow-xl rounded-lg transition-all active:scale-95 relative overflow-hidden"
-                  onMouseEnter={(e) => {
-                    if (cursor) {
-                      cursor.setStick(e.currentTarget);
-                      cursor.addState("-scale");
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (cursor) {
-                      cursor.removeState("-scale");
-                      cursor.removeStick();
-                    }
-                  }}
-                  onClick={() => window.open(item.socialMediaLink, "_blank")}
-                >
+                <Card className="group cursor-pointer h-full lg:min-h-[350px] min-h-[275px] bg-indigo-500 hover:bg-indigo-600 text-koguma-text-light border-0 shadow-2xl shadow-koguma-text/50 rounded-lg transition-all active:scale-95 relative overflow-hidden">
                   <div className="absolute top-0 left-0 w-full h-full about-background z-0" />
                   <div className="relative z-10 flex flex-col h-full">
                     <CardHeader className="-space-y-2">
@@ -93,10 +131,10 @@ export function HeroPolkaRevCards() {
                           <AvatarImage src={item.socialMediaCurrentAvatar} />
                         </Avatar>
                       </div>
-                      <CardTitle className="font-inter-black text-3xl">
+                      <CardTitle className="font-title text-3xl">
                         {item.socialMediaAppName}
                       </CardTitle>
-                      <CardDescription className="font-inter text-xl opacity-80 -space-y-1">
+                      <CardDescription className="font-inter text-lg opacity-80 -space-y-1">
                         <p className="font-inter-display">
                           {item.socialMediaHandlerFullName}
                         </p>
@@ -110,7 +148,6 @@ export function HeroPolkaRevCards() {
                                 size="icon-xs"
                                 variant="link"
                                 aria-label="Copy username"
-                                title="Copy username"
                                 className="text-koguma-text-light opacity-0 group-hover:opacity-100 transition-opacity"
                                 onClick={(e) =>
                                   handleCopy(
@@ -178,60 +215,24 @@ export function HeroPolkaRevCards() {
             ))}
           </div>
         </TooltipProvider>
-        <div className="flex flex-col text-koguma-text-light mt-5">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="col-span-1">
-              <AnimatedContent
-                distance={10}
-                direction="vertical"
-                reverse={true}
-                duration={2.0}
-                ease="power3.out"
-                initialOpacity={0.0}
-                animateOpacity
-                scale={1.0}
-                threshold={0}
-                delay={0.2}
-              >
-                <p className="text-5xl font-koguma pt-5">kogumarin</p>
-                <p className="font-inter text-xs">EST. 2024</p>
-              </AnimatedContent>
-            </div>
-            <div className="col-span-1 justify-self-end text-right">
-              <AnimatedContent
-                distance={10}
-                direction="vertical"
-                reverse={true}
-                duration={2.0}
-                ease="power3.out"
-                initialOpacity={0.0}
-                animateOpacity
-                scale={1.0}
-                threshold={0}
-                delay={0.4}
-              >
-                <p className="text-5xl font-koguma py-5">socials</p>
-              </AnimatedContent>
-              <AnimatedContent
-                distance={10}
-                direction="vertical"
-                reverse={true}
-                duration={2.0}
-                ease="power3.out"
-                initialOpacity={0.0}
-                animateOpacity
-                scale={1.0}
-                threshold={0}
-                delay={0.6}
-              >
-                <p className="text-xl font-inter leading-6 w-96">
-                  Feel free to look at these platforms, and consider giving a
-                  follow!~
-                </p>
-              </AnimatedContent>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className="absolute flex flex-col gap-3 bottom-8 left-1/2 transform -translate-x-1/2 justify-center items-center font-inter text-koguma-text-light/40">
+        <AnimatedContent
+          distance={12.5}
+          direction="vertical"
+          reverse={true}
+          duration={1.2}
+          ease="power3.out"
+          initialOpacity={0.0}
+          animateOpacity
+          threshold={0}
+          delay={0.8}
+        >
+          <p className="text-xs md:text-base">
+            © {new Date().getFullYear()}{" "}
+            <span>Kogs, on behalf of Kogumarin.</span>{" "}
+          </p>
+        </AnimatedContent>
       </div>
     </div>
   );

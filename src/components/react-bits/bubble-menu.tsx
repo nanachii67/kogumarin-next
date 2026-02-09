@@ -408,7 +408,7 @@ export default function BubbleMenu({
                   "box-border",
                 ].join(" ")}
               >
-                <DelayedLink
+                <Link
                   role="menuitem"
                   to={item.href}
                   aria-label={item.ariaLabel || item.label}
@@ -451,7 +451,7 @@ export default function BubbleMenu({
                   }}
                 >
                   <span
-                    className="pill-label inline-block md:text-5xl"
+                    className="pill-label inline-block md:text-5xl text-3xl"
                     style={{
                       willChange: "transform, opacity",
                       height: "1.2em",
@@ -463,7 +463,7 @@ export default function BubbleMenu({
                   >
                     {item.label}
                   </span>
-                </DelayedLink>
+                </Link>
               </li>
             ))}
           </ul>

@@ -86,7 +86,7 @@
     background-position: center;
     background-size: 100px;
     aspect-ratio: square;
-    opacity: 90%;
+    opacity: 60%;
     animation: scrollDown 15s linear infinite;
 }
 

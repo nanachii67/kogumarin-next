@@ -8,7 +8,7 @@ export default function ReleasesPage() {
       pageDescription="All major music releases of Koguma Rin!"
     >
       <div className="relative z-0">
-        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light nax-w-4xl font-inter text-center justify-center">
+        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 md:px-10 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
           {/*<div className="flex mx-auto justify-center items-center text-center gap-5">
             <IconHero />
             <p className="text-5xl font-koguma mr-5">|</p>

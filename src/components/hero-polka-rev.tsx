@@ -3,7 +3,7 @@ import DotGrid from "./react-bits/dot-grid";
 
 export function HeroPolkaRev() {
   return (
-    <div className="relative z-0 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-screen">
+    <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 h-screen">
       <div className="absolute inset-0 w-full opacity-50">
         <DotGrid
           dotSize={5}
@@ -17,14 +17,14 @@ export function HeroPolkaRev() {
           returnDuration={2.5}
         />
       </div>
-      <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
+      <div className="container max-w-9xl mx-auto z-10 mt-20 lg:mt-0 px-10 xl:px-0">
         <div className="relative h-128 rounded-2xl overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full hero-background z-10" />
-          <div className="absolute top-0 left-0 w-full h-full bg-koguma-card z-0" />
+          <div className="absolute top-0 left-0 w-full h-full about-background z-10" />
+          <div className="absolute top-0 left-0 w-full h-full bg-indigo-500 z-0" />
         </div>
         <div className="flex flex-col text-koguma-text-light mt-5">
-          <div className="grid grid-cols-2 gap-5">
-            <div className="col-span-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="col-span-1 text-left md:justify-self-start md:text-left">
               <AnimatedContent
                 distance={10}
                 direction="vertical"
@@ -41,7 +41,7 @@ export function HeroPolkaRev() {
                 <p className="font-inter text-xs">EST. 2024</p>
               </AnimatedContent>
             </div>
-            <div className="col-span-1 justify-self-end text-right">
+            <div className="col-span-1 text-left md:justify-self-end md:text-right">
               <AnimatedContent
                 distance={10}
                 direction="vertical"
@@ -68,7 +68,7 @@ export function HeroPolkaRev() {
                 threshold={0}
                 delay={0.6}
               >
-                <p className="text-xl font-inter leading-6 w-96">
+                <p className="text-xl font-inter leading-6 w-96 mx-auto">
                   A musician, a gamer, and a frontend developer, and here is my
                   repository of personal projects!
                 </p>

@@ -1,17 +1,13 @@
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { InspirationData } from "@/utils/inspiration-cards";
-import useCursor from "@/hooks/useCursor";
-import { DelayedLink } from "./delayed-link";
 
 export function InspirationCards() {
-  const cursor = useCursor(({ instance }) => instance);
-
   return (
     <div className="relative flex flex-col mx-auto">
-      <div className="relative grid grid-cols-2 md:grid-cols-3 gap-8 max-w-7xl my-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5">
         {InspirationData.map((item, index) => (
-          <DelayedLink to={item.brandlink} key={index} delay={100}>
+          <Link to={item.brandlink} key={index}>
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -25,24 +21,10 @@ export function InspirationCards() {
               delay={item.id * 0.1}
             >
               <div>
-                <div
-                  className="flex flex-col"
-                  onMouseEnter={(e) => {
-                    if (cursor) {
-                      cursor.setStick(e.currentTarget);
-                      cursor.addState("-scale");
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (cursor) {
-                      cursor.removeState("-scale");
-                      cursor.removeStick();
-                    }
-                  }}
-                >
+                <div className="flex flex-col">
                   <img
                     src={item.imagelink}
-                    className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                    className="max-w-96 aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                   />
                   <div className="flex flex-col mt-2 space-y-[-2px]">
                     <p className="text-xs opacity-80">
@@ -56,7 +38,7 @@ export function InspirationCards() {
                 </div>
               </div>
             </AnimatedContent>
-          </DelayedLink>
+          </Link>
         ))}
       </div>
     </div>

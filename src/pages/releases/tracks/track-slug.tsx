@@ -1,9 +1,8 @@
 import ReleaseLayout from "@/layouts/ReleaseLayout";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, Link } from "react-router-dom";
 import releases from "@/utils/releases.json";
 import AnimatedContent from "@/components/react-bits/animated-content";
 import { ArrowLeftIcon } from "@phosphor-icons/react";
-import { DelayedLink } from "@/components/delayed-link";
 
 interface ReleasesSlug {
   iframe: {
@@ -45,78 +44,76 @@ export default function TRACK_Slug() {
   return (
     <ReleaseLayout>
       <div className="relative z-0">
-        <div className="relative z-1 flex flex-col mx-auto text-koguma-text-light max-w-7xl font-inter text-center justify-center h-screen">
-          <div className="flex flex-col">
-            <div className="flex flex-col items-center justify-center">
-              <div className="flex flex-col items-center justify-center space-y-8 font-inter py-5">
-                <div className="flex flex-col">
-                  <div className="flex flex-row mb-2 justify-start items-center gap-2 text-koguma-text-light/80">
-                    <ArrowLeftIcon />
-                    <DelayedLink to="/releases" delay={200}>
-                      <p className="underline underline-offset-3 decoration-0">
-                        Releases
-                      </p>
-                    </DelayedLink>
+        <div className="relative z-1 flex flex-col mt-10 md:mt-0 px-10 md:px-0 mx-auto text-koguma-text-light max-w-7xl font-inter text-center justify-center h-screen">
+          <div className="flex flex-col items-center justify-center space-y-8 font-inter py-5">
+            <div className="flex flex-col">
+              <div className="flex flex-row mb-2 justify-start items-center gap-2 text-koguma-text-light/80">
+                <ArrowLeftIcon />
+                <Link to="/releases">
+                  <p className="underline underline-offset-3 decoration-0">
+                    Releases
+                  </p>
+                </Link>
+              </div>
+              <div className="space-y-2 justify-center">
+                <iframe
+                  className="w-[350px] lg:w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
+                  src={track.iframe.src}
+                  seamless
+                >
+                  <a href={track.iframe.href}>{track.iframe.label}</a>
+                </iframe>
+                <div className="flex flex-col my-5 text-start">
+                  <p>{track.artist}</p>
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-1">
+                    <p className="text-4xl font-inter-display">
+                      {track.title}{" "}
+                    </p>
+                    <p className="text-2xl md:text-4xl font-inter opacity-80">
+                      {track.subtitle}
+                    </p>
                   </div>
-                  <div className="space-y-2 justify-center">
-                    <iframe
-                      className="w-md xl:w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
-                      src={track.iframe.src}
-                      seamless
-                    >
-                      <a href={track.iframe.href}>{track.iframe.label}</a>
-                    </iframe>
-                    <div className="flex flex-col my-5 text-start">
-                      <p>{track.artist}</p>
-                      <p className="text-4xl font-inter-display">
-                        {track.title}{" "}
-                        <span className="font-inter">{track.subtitle}</span>
-                      </p>
-                      <p className="opacity-80">
-                        {track.releaseType} • {track.releaseYear}
-                      </p>
-                    </div>
-                  </div>
-                  {track.tracklist && (
-                    <div className="tracklist">
-                      <div className="flex flex-col text-start mt-5 mb-2">
-                        <p>Featured Works</p>
-                      </div>
-                      {track.tracklist.map((track) => (
-                        <AnimatedContent
-                          distance={25}
-                          direction="vertical"
-                          reverse={true}
-                          duration={2}
-                          ease="power3.out"
-                          initialOpacity={0.0}
-                          animateOpacity
-                          scale={1.0}
-                          threshold={0}
-                          delay={track.trackNumber * 0.1}
-                        >
-                          <div key={track.trackNumber}>
-                            <div className="flex flex-row text-start items-center justify-between">
-                              <div className="flex flex-row gap-3 items-center">
-                                <p className="opacity-75">
-                                  {track.trackNumber}
-                                </p>
-                                <p className="text-2xl font-inter-display items-center">
-                                  {track.title}{" "}
-                                  <span className="font-inter opacity-75">
-                                    {track.subtitle}
-                                  </span>
-                                </p>
-                              </div>
-                              <p className="opacity-75">{track.duration}</p>
-                            </div>
-                          </div>
-                        </AnimatedContent>
-                      ))}
-                    </div>
-                  )}
+                  <p className="opacity-80">
+                    {track.releaseType} • {track.releaseYear}
+                  </p>
                 </div>
               </div>
+              {track.tracklist && (
+                <div className="tracklist">
+                  <div className="flex flex-col text-start mt-5 mb-2">
+                    <p>Featured Works</p>
+                  </div>
+                  {track.tracklist.map((track) => (
+                    <AnimatedContent
+                      distance={25}
+                      direction="vertical"
+                      reverse={true}
+                      duration={2}
+                      ease="power3.out"
+                      initialOpacity={0.0}
+                      animateOpacity
+                      scale={1.0}
+                      threshold={0}
+                      delay={track.trackNumber * 0.1}
+                    >
+                      <div key={track.trackNumber}>
+                        <div className="flex flex-row text-start items-center justify-between">
+                          <div className="flex flex-row gap-3 items-center">
+                            <p className="opacity-75">{track.trackNumber}</p>
+                            <p className="text-2xl font-inter-display items-center">
+                              {track.title}{" "}
+                              <span className="font-inter opacity-75">
+                                {track.subtitle}
+                              </span>
+                            </p>
+                          </div>
+                          <p className="opacity-75">{track.duration}</p>
+                        </div>
+                      </div>
+                    </AnimatedContent>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function AboutLayout({
       />
       <NavigationBar />
       <div className="absolute inset-0 w-full about-background z-0" />
-      <main className="flex flex-col mx-auto pt-10">{children}</main>
+      <main className="flex flex-col mx-auto pt-10 px-10">{children}</main>
       <SiteMap />
       <Footer />
     </div>

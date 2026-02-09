@@ -10,7 +10,7 @@ export function HeroPolkaRevHeader({
   pageDescription,
 }: PageHeaderProps) {
   return (
-    <div className="relative z-1 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-40 pt-30 pb-14">
+    <div className="relative z-1 bg-indigo-900 flex flex-col justify-center text-indigo-950 h-40 pt-35 md:pt-30 pb-20 md:pb-14">
       <div className="absolute inset-0 w-full opacity-50">
         <DotGrid
           dotSize={5}
@@ -26,7 +26,7 @@ export function HeroPolkaRevHeader({
       </div>
       <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
         <div className="flex flex-col text-koguma-text-light mt-5">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
             <div className="col-span-1">
               <p className="text-4xl font-koguma pt-5 -translate-y-4">
                 {pageTitle}

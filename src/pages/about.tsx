@@ -5,8 +5,8 @@ export default function AboutPage() {
   return (
     <AboutLayout pageTitle="about" pageDescription="Revised 5th February 2026">
       <div className="relative z-0">
-        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-9xl font-inter text-center justify-center">
-          <div className="flex flex-col mb-20 gap-6 text-2xl justify-center text-left w-4xl mx-auto">
+        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 md:px-10 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
+          <div className="flex flex-col mb-20 gap-6 md:text-2xl justify-center text-left mx-auto">
             <p>Hewwo! I'm Koguma Rin, and I make music, nice to meet you!~</p>
             <p>
               For 11 years in music production, I've wanted to start a personal
@@ -48,13 +48,18 @@ export default function AboutPage() {
             <p>Koguma Rin's</p>
           </div>
           <div className="flex mx-auto gap-2">
-            <p className="text-7xl font-koguma py-10">Inspirations</p>
+            <p className="text-4xl md:text-7xl font-koguma py-10">
+              Inspirations
+            </p>
             <p className="font-inter opacity-75 translate-y-10">*</p>
           </div>
-          <div className="flex gap-2 opacity-75 items-center">
+          <div className="flex opacity-75">
             <p className="font-inter-display">*</p>
-            <p className="text-xs ">
-              Interacting with these cards redirects to Apple Music.
+            <p className="text-xs font-inter">
+              Interacting with these cards redirects to Apple Music.{" "}
+              <span className="opacity-80">
+                Apple Music is a trademark of Apple Inc.
+              </span>
             </p>
           </div>
           <div>

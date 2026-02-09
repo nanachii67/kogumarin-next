@@ -48,14 +48,14 @@ export default function AboutPage() {
             <p>Koguma Rin's</p>
           </div>
           <div className="flex mx-auto gap-2">
-            <p className="text-4xl md:text-7xl font-koguma py-10">
+            <p className="text-5xl md:text-7xl font-koguma py-10">
               Inspirations
             </p>
             <p className="font-inter opacity-75 translate-y-10">*</p>
           </div>
-          <div className="flex opacity-75">
+          <div className="flex opacity-75 gap-2">
             <p className="font-inter-display">*</p>
-            <p className="text-xs font-inter">
+            <p className="text-xs font-inter text-start">
               Interacting with these cards redirects to Apple Music.{" "}
               <span className="opacity-80">
                 Apple Music is a trademark of Apple Inc.

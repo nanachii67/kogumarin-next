@@ -52,7 +52,7 @@ export function HeroPolkaRevCards() {
       </div>
       <div className="container max-w-9xl mx-auto z-10 md:px-10 mt-20 lg:mt-0 lg:px-0">
         <div className="flex flex-col text-koguma-text-light mb-5">
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="col-span-1">
               <AnimatedContent
                 distance={10}
@@ -70,7 +70,7 @@ export function HeroPolkaRevCards() {
                 <p className="font-inter text-xs">EST. 2024</p>
               </AnimatedContent>
             </div>
-            <div className="col-span-1 justify-self-end text-right">
+            <div className="col-span-1 text-left md:justify-self-end md:text-right">
               <AnimatedContent
                 distance={10}
                 direction="vertical"

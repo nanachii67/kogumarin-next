@@ -27,12 +27,12 @@ export function HeroPolkaRevHeader({
       <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
         <div className="flex flex-col text-koguma-text-light mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
-            <div className="col-span-1">
+            <div className="col-span-1 justify-self-center md:justify-self-start">
               <p className="text-4xl font-koguma pt-5 -translate-y-4">
                 {pageTitle}
               </p>
             </div>
-            <div className="col-span-1 justify-self-end text-right">
+            <div className="col-span-1 justify-self-center md:justify-self-end text-center md:text-right">
               <p className="text-lg font-inter leading-6 w-96">
                 {pageDescription}
               </p>

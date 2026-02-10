@@ -24,7 +24,7 @@ export function HeroPolkaRevHeader({
           returnDuration={2.5}
         />
       </div>
-      <div className="container max-w-9xl mx-auto z-10 md:px-10 xl:px-0">
+      <div className="container max-w-9xl mx-auto z-10 px-10 md:px-0">
         <div className="flex flex-col text-koguma-text-light mt-5">
           <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
             <div className="col-span-1 justify-self-center md:justify-self-start">

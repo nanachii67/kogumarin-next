@@ -16,8 +16,12 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 import IndexPage from "./pages";
 import AboutPage from "./pages/about";
 import SocialCardsPage from "./pages/social-cards";
+
 import ReleasesPage from "./pages/releases";
 import TRACK_Slug from "./pages/releases/tracks/track-slug";
+
+import BlogsIndexPage from "./pages/blogs/blogs-index";
+import BLOGS_Slug from "./pages/blogs/blogs-slug";
 
 function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);
@@ -82,9 +86,13 @@ function App() {
       <Routes location={location} key={key}>
         <Route element={<IndexPage />} path="/" />
         <Route element={<AboutPage />} path="/about/" />
-        <Route element={<SocialCardsPage />} path="/cards" />
+        <Route element={<SocialCardsPage />} path="/socials" />
+
         <Route element={<ReleasesPage />} path="/releases" />
         <Route element={<TRACK_Slug />} path="/releases/:trackId" />
+
+        <Route element={<BlogsIndexPage />} path="/notes" />
+        <Route element={<BLOGS_Slug />} path="/notes/:blogId" />
       </Routes>
     </div>
   );

@@ -88,7 +88,7 @@ export default function TRACK_Slug() {
                       distance={25}
                       direction="vertical"
                       reverse={true}
-                      duration={2}
+                      duration={1.2}
                       ease="power3.out"
                       initialOpacity={0.0}
                       animateOpacity

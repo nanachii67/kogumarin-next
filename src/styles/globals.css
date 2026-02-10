@@ -21,6 +21,8 @@
     --font-title: "SF Pro Display Heavy", sans-serif;
     --font-inter-black: "SF Pro Display Black", sans-serif;
     --font-koguma: "Shorelines Script Bold", script;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-notes: "Gaegu", sans-serif;
 
     /* THEME */
     --color-koguma-background: oklch(89.9% 0.061 343.231);
@@ -116,7 +118,7 @@
 }
 
 .mf-cursor.-scale {
-    transform: scale(1.5);
+    transform: scale(1);
 }
 
 .koguma-hero-offset {
@@ -206,6 +208,5 @@
 
     body {
         @apply bg-background text-foreground;
-        /*cursor: none;*/
     }
 }

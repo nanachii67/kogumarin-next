@@ -23,7 +23,7 @@ export const siteConfig = {
     },
     {
       label: "Socials",
-      href: "/cards",
+      href: "/socials",
     },
     {
       label: "Blue Archive Drum Covers 1",

@@ -1,6 +1,7 @@
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { InspirationData } from "@/utils/inspiration-cards";
+import { motion } from "framer-motion";
 
 export function InspirationCards() {
   return (
@@ -20,7 +21,11 @@ export function InspirationCards() {
               threshold={0}
               delay={item.id * 0.1}
             >
-              <div>
+              <motion.div
+                whileHover={{ scale: 1.025 }}
+                whileTap={{ scale: 0.975 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
                 <div className="flex flex-col">
                   <img
                     src={item.imagelink}
@@ -36,7 +41,7 @@ export function InspirationCards() {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </AnimatedContent>
           </Link>
         ))}

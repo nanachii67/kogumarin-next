@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import releases from "@/utils/releases.json";
+import { formatDate } from "@/lib/formatDate";
 
 interface ProductionSlug {
   iframe: {
@@ -38,20 +39,6 @@ export default function ReleaseProductionCredits() {
     ? releases[trackId as keyof typeof releases]
     : undefined;
 
-  const formatReleaseDate = (dateString: string | undefined): string => {
-    if (!dateString) return "TBA";
-
-    const date = new Date(dateString);
-
-    const options: Intl.DateTimeFormatOptions = {
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    };
-
-    return date.toLocaleDateString("en-US", options);
-  };
-
   return (
     <div className="relative bg-koguma-card py-5 px-10">
       <div className="container max-w-9xl mx-auto">
@@ -64,7 +51,7 @@ export default function ReleaseProductionCredits() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4 gap-x-8">
           {track?.production?.producer && (
             <div className="col-span-1">
               <p className="text-xs text-koguma-fonts uppercase opacity-75">
@@ -115,7 +102,7 @@ export default function ReleaseProductionCredits() {
                 {track?.production?.recording_engineer}
               </p>
               <p className="text-sm items-center capitalize">
-                recording engineer
+                recording engineer, editing engineer
               </p>
             </div>
           )}
@@ -139,7 +126,7 @@ export default function ReleaseProductionCredits() {
           )}
         </div>
         <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light/80">
-          <p>Released on {formatReleaseDate(track?.releaseDate)}</p>
+          <p>Released on {formatDate(track?.releaseDate)}</p>
         </div>
 
         {track?.coverCopyright && (

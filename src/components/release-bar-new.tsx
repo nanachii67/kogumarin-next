@@ -1,6 +1,7 @@
 import AnimatedContent from "./react-bits/animated-content";
 import { Link } from "react-router-dom";
 import { ReleaseData } from "@/utils/release-cards";
+import { motion } from "framer-motion";
 
 export default function ReleaseDiscographyBar() {
   return (
@@ -28,7 +29,11 @@ export default function ReleaseDiscographyBar() {
                     threshold={0.1}
                     delay={item.id * 0.1}
                   >
-                    <div data-magnetic>
+                    <motion.div
+                      whileHover={{ scale: 1.025 }}
+                      whileTap={{ scale: 0.975 }}
+                      transition={{ type: "spring", stiffness: 200 }}
+                    >
                       <div className="flex flex-col">
                         <img
                           src={item.imagelink}
@@ -43,7 +48,7 @@ export default function ReleaseDiscographyBar() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </AnimatedContent>
                 </Link>
               ))}

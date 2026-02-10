@@ -1,29 +1,28 @@
-import React, { useState } from 'react';
-import { Button } from './ui/button';
-import { ArrowDown } from 'lucide-react';
+import React, { useState } from "react";
+import { Button } from "./ui/button";
+import { ArrowDown } from "lucide-react";
 
 const FloatingButton: React.FC = () => {
-    const scrollToNextSection = () => {
-        const nextSection = document.getElementById('next-section');
-        if (nextSection) {
-          window.scrollTo({ top: nextSection.offsetTop - 100, behavior: 'smooth' });
-        }
-      };
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById("next-section");
+    if (nextSection) {
+      window.scrollTo({ top: nextSection.offsetTop - 100, behavior: "smooth" });
+    }
+  };
 
   const [isClicked] = useState(false);
-
 
   return (
     <div className="flex items-center justify-center">
       <Button
         onClick={scrollToNextSection}
         className={`
-          rounded-full bg-koguma-text hover:bg-koguma-text-hover text-koguma-text-light active:scale-95
+          rounded-full bg-koguma-text hover:bg-koguma-text-hover text-koguma-text-light
           animate-bounce-gentle
-          ${isClicked ? 'animate-pulse' : ''}
+          ${isClicked ? "animate-pulse" : ""}
         `}
         style={{
-          animation: 'floatEmphasis 3s ease-in-out infinite'
+          animation: "floatEmphasis 3s ease-in-out infinite",
         }}
         size="icon"
       >
@@ -40,7 +39,7 @@ const FloatingButton: React.FC = () => {
             transform: translateY(-8px);
           }
         }
-        
+
         @keyframes glow {
           from {
             transform: scale(0.9);
@@ -51,7 +50,7 @@ const FloatingButton: React.FC = () => {
             opacity: 0.6;
           }
         }
-        
+
         .animate-bounce-gentle {
           animation: floatEmphasis 3s ease-in-out infinite;
         }

@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import useCursor from "@/hooks/useCursor";
 import { Link } from "react-router-dom";
-import { DelayedLink } from "../delayed-link";
 
 type MenuItem = {
   label: string;
@@ -412,7 +411,6 @@ export default function BubbleMenu({
                   role="menuitem"
                   to={item.href}
                   aria-label={item.ariaLabel || item.label}
-                  delay={300}
                   className={[
                     "pill-link",
                     "w-full",

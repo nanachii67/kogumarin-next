@@ -1,4 +1,3 @@
-import { NavigationData } from "@/utils/navigation-cards";
 import {
   Card,
   CardAction,
@@ -11,13 +10,14 @@ import AnimatedContent from "./react-bits/animated-content";
 
 import { ArrowCircleUpRightIcon } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
+import { BlogNavigationData } from "@/utils/blog-entries";
 
-export function NavigationCards() {
+export default function BlogNavigationCards() {
   return (
     <div className="relative flex flex-col mx-auto">
       <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 max-w-9xl my-5">
-        {NavigationData.map((item, index) => (
-          <Link to={item.brandlink} key={index} className="w-full">
+        {BlogNavigationData.map((item, index) => (
+          <Link to={item.brandlink} key={index}>
             <AnimatedContent
               distance={50}
               direction="vertical"
@@ -30,25 +30,31 @@ export function NavigationCards() {
               threshold={0.2}
               delay={item.id * 0.1}
             >
-              <div className="w-full h-full">
+              <div>
                 <div className="absolute inset-0 pointer-events-none rounded-xl"></div>
                 <Card
-                  className="cursor-pointer w-full h-75 bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all flex flex-col"
+                  className="cursor-pointer w-full max-w-[500px] h-75 bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all flex flex-col"
                   key={index}
                 >
                   <CardHeader>
                     <CardDescription className="font-inter z-1 opacity-80">
                       <p>{item.entry}</p>
                     </CardDescription>
-                    <CardTitle className="text-5xl font-koguma mt-6 z-1">
+                    <CardTitle className="text-5xl font-notes z-1 leading-9 tracking-tighter">
                       {item.title}
                     </CardTitle>
                     <CardAction>
                       <ArrowCircleUpRightIcon weight="fill" size={24} />
                     </CardAction>
                   </CardHeader>
-                  <CardFooter className="font-inter items-end text-xs opacity-90 mt-auto">
-                    {item.description}
+                  <CardFooter className="font-inter items-end text-xs opacity-80 mt-auto">
+                    <div className="flex flex-col">
+                      <p>
+                        {item.entryDate}{" "}
+                        <span className="opacity-75">{item.entryLength}</span>
+                      </p>
+                      <p>{item.description}</p>
+                    </div>
                   </CardFooter>
                 </Card>
               </div>

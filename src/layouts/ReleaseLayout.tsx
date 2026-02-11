@@ -7,7 +7,7 @@ import { Easing, motion } from "framer-motion";
 const variants = {
   initial: { opacity: 0, filter: "blur(2px)" },
   animate: { opacity: 1, filter: "blur(0px)" },
-  exit: { opacity: 0, filter: "blur(2px)" },
+  exit: { opacity: 0, filter: "blur(3px)" },
 };
 
 const transition = {

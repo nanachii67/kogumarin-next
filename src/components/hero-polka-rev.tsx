@@ -8,8 +8,8 @@ export function HeroPolkaRev() {
         <DotGrid
           dotSize={5}
           gap={30}
-          baseColor="#1e1b4b"
-          activeColor="#6366f1"
+          baseColor="#312e81"
+          activeColor="#312e81"
           proximity={50}
           shockRadius={50}
           shockStrength={1}
@@ -17,7 +17,7 @@ export function HeroPolkaRev() {
           returnDuration={2.5}
         />
       </div>
-      <div className="container max-w-9xl mx-auto z-10 mt-20 lg:mt-0 px-10 xl:px-0">
+      <div className="container max-w-9xl mx-auto z-10 my-10 lg:my-0 px-10 xl:px-0">
         <div className="relative h-128 rounded-2xl overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full about-background z-10" />
           <div className="absolute top-0 left-0 w-full h-full bg-indigo-500 z-0" />

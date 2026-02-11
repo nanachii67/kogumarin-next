@@ -57,7 +57,7 @@ export default function TRACK_Slug() {
               </div>
               <div className="space-y-2 justify-center">
                 <iframe
-                  className="w-[350px] lg:w-xl aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
+                  className="w-[350px] md:min-w-[500px] aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
                   src={track.iframe.src}
                   seamless
                 >

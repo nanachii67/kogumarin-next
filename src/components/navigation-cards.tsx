@@ -11,11 +11,12 @@ import AnimatedContent from "./react-bits/animated-content";
 
 import { ArrowCircleUpRightIcon } from "@phosphor-icons/react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export function NavigationCards() {
   return (
     <div className="relative flex flex-col mx-auto">
-      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-5 max-w-9xl my-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl md:min-w-9xl my-5">
         {NavigationData.map((item, index) => (
           <Link to={item.brandlink} key={index} className="w-full">
             <AnimatedContent
@@ -30,17 +31,20 @@ export function NavigationCards() {
               threshold={0.2}
               delay={item.id * 0.1}
             >
-              <div className="w-full h-full">
-                <div className="absolute inset-0 pointer-events-none rounded-xl"></div>
+              <motion.div
+                whileHover={{ scale: 1.025 }}
+                whileTap={{ scale: 0.975 }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
                 <Card
-                  className="cursor-pointer w-full h-75 bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all flex flex-col"
+                  className="cursor-pointer w-full h-70 bg-koguma-card hover:bg-koguma-text font-ceribri text-koguma-text-light border-0 shadow-xl rounded-lg transition-all flex flex-col"
                   key={index}
                 >
                   <CardHeader>
                     <CardDescription className="font-inter z-1 opacity-80">
                       <p>{item.entry}</p>
                     </CardDescription>
-                    <CardTitle className="text-5xl font-koguma mt-6 z-1">
+                    <CardTitle className="text-4xl font-koguma mt-6 z-1">
                       {item.title}
                     </CardTitle>
                     <CardAction>
@@ -51,7 +55,7 @@ export function NavigationCards() {
                     {item.description}
                   </CardFooter>
                 </Card>
-              </div>
+              </motion.div>
             </AnimatedContent>
           </Link>
         ))}

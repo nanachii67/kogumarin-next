@@ -5,7 +5,7 @@ export default function AboutPage() {
   return (
     <AboutLayout pageTitle="about" pageDescription="Revised 5th February 2026">
       <div className="relative z-0">
-        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 md:px-10 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
+        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
           <div className="flex flex-col mb-20 gap-6 md:text-2xl justify-center text-left mx-auto">
             <p>Hewwo! I'm Koguma Rin, and I make music, nice to meet you!~</p>
             <p>

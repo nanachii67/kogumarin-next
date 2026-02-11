@@ -2,12 +2,15 @@ import notes from "@/utils/notes.json";
 import { Navigate, useParams } from "react-router-dom";
 import NotesLayout from "@/layouts/NotesLayout";
 import { formatDate } from "@/lib/formatDate";
+import { ArrowUpRightIcon } from "@phosphor-icons/react";
 
 interface EntryContent {
   content_index: number;
   paragraph_content?: string;
   image_content?: string;
   link_content?: string;
+  credit_content?: string;
+  credit_link?: string;
 }
 
 interface BlogsSlugs {
@@ -45,13 +48,27 @@ export default function BLOGS_Slug() {
                 )}
                 {item.image_content && (
                   <img
-                    className="mx-auto rounded-2xl max-w-[500px]"
+                    className="mx-auto rounded-2xl md:max-w-[500px]"
                     src={item.image_content}
                     alt={blogs.entry_title}
                   />
                 )}
                 {item.link_content && (
                   <a href={item.link_content}>{item.link_content}</a>
+                )}
+                {item.credit_content && (
+                  <a
+                    href={item.credit_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <p className="container text-base opacity-80 flex flex-row items-center gap-1">
+                      {item.credit_content}{" "}
+                      <span>
+                        <ArrowUpRightIcon />
+                      </span>
+                    </p>
+                  </a>
                 )}
               </div>
             ))}

@@ -6,9 +6,14 @@ import { motion } from "framer-motion";
 export function InspirationCards() {
   return (
     <div className="relative flex flex-col mx-auto">
-      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5 px-10 lg:px-0">
         {InspirationData.map((item, index) => (
-          <Link to={item.brandlink} key={index}>
+          <Link
+            to={item.brandlink}
+            key={index}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <AnimatedContent
               distance={50}
               direction="vertical"

@@ -9,41 +9,76 @@ export const siteConfig = {
     return pageName ? `${pageName} — ${baseTitle}` : baseTitle;
   },
   pages: [
+    /*
+
+      KOGUMA MAIN PAGES
+
+    */
     {
-      label: "Home",
+      label: `Home`,
       href: "/",
     },
     {
-      label: "Releases",
+      label: `Releases`,
       href: "/releases",
     },
     {
-      label: "About",
+      label: `About`,
       href: "/about",
     },
     {
-      label: "Socials",
-      href: "/socials",
+      label: `Notes`,
+      href: "/notes",
     },
     {
-      label: "Blue Archive Drum Covers 1",
+      label: `Socials`,
+      href: "/socials",
+    },
+    /*
+
+        KOGUMA RELEASES
+
+    */
+    {
+      label: `Blue Archive Drum Covers 1`,
       href: "/releases/blue-archive-3rd-anniversary-drum-covers/",
     },
     {
-      label: "Macarons / Energy Drinks",
+      label: `Macarons / Energy Drinks`,
       href: "/releases/macarons-energy-drinks/",
     },
     {
-      label: "Orenji",
+      label: `Orenji`,
       href: "/releases/orenji/",
     },
     {
-      label: "Kirakira",
+      label: `Kirakira`,
       href: "/releases/kirakira/",
     },
     {
-      label: "Rin's Small Tunes 1",
+      label: `Rin's Small Tunes 1`,
       href: "/releases/rins-small-tunes-1/",
+    },
+    /*
+
+        KOGUMA NOTES
+
+    */
+    {
+      label: `Why I have been inactive`,
+      href: "/notes/why-i-have-been-inactive",
+    },
+    {
+      label: `Regarding the album "Rin's Silly Tunes"`,
+      href: "/notes/regarding-the-album-rins-silly-tunes",
+    },
+    {
+      label: `Happy New Year! (2026)`,
+      href: "/notes/happy-new-year-2026",
+    },
+    {
+      label: `Regarding a name change`,
+      href: "/notes/regarding-a-name-change",
     },
   ],
 };

@@ -56,5 +56,77 @@
         "paragraph_content": "Koguma Rin / KOGS Label"
       }
     ]
+  },
+  "happy-new-year-2026": {
+    "entry_index": 3,
+    "entry_date": "2025-12-31",
+    "entry_title": "Happy New Year! (2026)",
+    "entry_contents": [
+      {
+        "content_index": 1,
+        "image_content": "https://scontent.fmnl32-1.fna.fbcdn.net/v/t39.30808-6/605428331_122187260552376530_303848529456652174_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG6WpnPhhoDUqnRERxIwYeJVK6-fBUESbxUrr58FQRJvPM19-r4irQZfa8B3brCJ3HvVngoPYsDjIx6X1HBN8y0&_nc_ohc=f_R07PiIBgwQ7kNvwENJJW3&_nc_oc=AdknxwyHSnq3IbQ83xIp4o_t3E5ZvVX_Us9wDq-hEPelWDSgPfKouGw7bJOSZ1b7Gk8&_nc_zt=23&_nc_ht=scontent.fmnl32-1.fna&_nc_gid=uwVN88Kt0rExeTfaAJ1dxw&oh=00_Afu855Gvc5k0yltk4hSnUnA09umOSxvuuEQlKYBI-LbiZA&oe=699220FB"
+      },
+      {
+        "content_index": 2,
+        "paragraph_content": "Mass mention ahead once again!~"
+      },
+      {
+        "content_index": 3,
+        "paragraph_content": "As a part of Koguma Rin's 1.5 Anniversary, I just wanted to give a New Year's message for all of the events that happened this year. Last year, it was a couple of friends; now there are more. I consider them as friends who really supported me throughout the months of my service~"
+      },
+      {
+        "content_index": 4,
+        "paragraph_content": "To Poru Romi, Akunawa Kes, and Reneua Kurosaki, I still admire your works as much this year, even though we do not interact as much. Keep on creating arts and music next. I look forward to seeing them."
+      },
+      {
+        "content_index": 5,
+        "paragraph_content": "To Ruri Yoshinova, Kinoshita Kaede, Jasneer Mondejar Payabyab, Bocchi Waif, Luna Senchi, Naoyuki Ishizaki, Jane Cerys, Llennsie San, Ruby Liessfeldt, Fuyuhime Akito, Shino Yoruzeki, thank you for keeping tabs and sticking with me this year, even though I am so bad at playing Left 4 Dead 2 XDDDDD"
+      },
+      {
+        "content_index": 6,
+        "paragraph_content": "And to old friends, Kairo Sicarion, Ryn Auvergne, Brian Raver Cajigal, we might not have interacted that much this year, but I hope you're alright against your silent battles."
+      },
+      {
+        "content_index": 7,
+        "paragraph_content": "See you all in 2026! Happy New Year! !"
+      },
+      {
+        "content_index": 8,
+        "paragraph_content": "- Koguma Rin"
+      },
+      {
+        "content_index": 9,
+        "credit_content": "art via qralto(鈴くら)/Pixiv",
+        "credit_link": "https://www.pixiv.net/en/artworks/115560642"
+      }
+    ]
+  },
+  "regarding-a-name-change": {
+    "entry_index": 4,
+    "entry_date": "2026-1-20",
+    "entry_title": "Regarding a name change",
+    "entry_contents": [
+      {
+        "content_index": 1,
+        "paragraph_content": "I've always wanted to do a name change since I wanted to detach a bit of Kogs from me. Of course having this name is an honor, though it has been iconic enough that it is something that I cannot really take off from me completely. As a result, I just immortalised Kogs as a nod to \"Cogs and Gears Factory\" server name."
+      },
+      {
+        "content_index": 2,
+        "paragraph_content": "How did I even come up with \"Koguma Rin\"? Well it is a nod to the two Slice of Life (SOL) anime references: Super Cub and Yuru Camp, respectively; Koguma, and Shima Rin. SOL animes I think are the best of genres out there."
+      },
+      {
+        "content_index": 3,
+        "paragraph_content": "I still love being called Kogs or Koguma Rin. It is who I am after all, that started since 2024. But of course I want to move on and change my title, just to have a change of pace at the internet life."
+      },
+      {
+        "content_index": 4,
+        "image_content": "https://cdn.donmai.us/sample/dd/21/__shima_rin_and_koguma_yurucamp_and_1_more_drawn_by_samenoido__sample-dd215e0390fd8c7fd80feed67164b34e.jpg"
+      },
+      {
+        "content_index": 5,
+        "credit_content": "via samenoido/Pixiv",
+        "credit_link": "https://www.pixiv.net/artworks/89059843"
+      }
+    ]
   }
 }

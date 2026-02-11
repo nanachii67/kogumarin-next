@@ -40,7 +40,7 @@ export const SocialCards = [
     relevantLinks: [
       {
         relevantLinkId: 1,
-        relevantLinkAppName: "Official Discord Server",
+        relevantLinkAppName: "Koguma's Discord Server",
         relevantLinkName: "Cogs and Gears Factory",
         relevantLinkReferral: "https://discord.gg/M6upQzKuJ5",
       },
@@ -54,6 +54,15 @@ export const SocialCards = [
     socialMediaLink: "https://kogumarin.bandcamp.com/",
     SocialMediaIcon: "FacebookLogoIcon",
     socialMediaCurrentAvatar: "https://f4.bcbits.com/img/0038132641_20.jpg",
+    relevantLinks: [
+      {
+        relevantLinkId: 1,
+        relevantLinkAppName: "Koguma's Apple Music Playlist",
+        relevantLinkName: "Rin's Silly Japanese Mixtape",
+        relevantLinkReferral:
+          "https://music.apple.com/ph/playlist/rins-silly-japanese-mixtape/pl.u-xlyNEdYFokEmAZb",
+      },
+    ],
   },
   {
     id: 5,

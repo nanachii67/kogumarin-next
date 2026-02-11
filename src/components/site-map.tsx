@@ -12,8 +12,8 @@ const generalLinks = [
 export function SiteMap() {
   return (
     <>
-      <div className="relative bg-indigo-600 text-koguma-text-light py-5 px-10 md:px-0">
-        <div className="container max-w-5xl mx-auto px-10 md:px-0">
+      <div className="relative bg-indigo-600 text-koguma-text-light py-5 px-10 lg:px-0">
+        <div className="container max-w-5xl mx-auto px-10 lg:px-0">
           <div className="flex flex-row gap-2 items-center text-3xl font-koguma my-4 ">
             <p>site map</p>
           </div>

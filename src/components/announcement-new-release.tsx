@@ -25,7 +25,7 @@ export default function AnnouncementNewRelease() {
               </p>
             </div>
             <div className="col-span-1 justify-self-start md:justify-self-end flex items-center">
-              <Link to={item.releaselink} reloadDocument>
+              <Link to={item.releaselink}>
                 <Button
                   className="bg-koguma-text hover:bg-koguma-text-hover text-koguma-text-light font-inter rounded-full"
                   onMouseEnter={(e) => {

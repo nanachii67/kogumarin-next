@@ -25,7 +25,7 @@ export default function BlogsIndexPage() {
               >
                 <Link to={entry.brandlink} className="block w-full">
                   {/* Row: stacks vertically on mobile, horizontal on md+ */}
-                  <div className="flex flex-col md:flex-row md:items-baseline gap-1 md:gap-4 md:min-w-5xl py-3">
+                  <div className="flex flex-col md:flex-row md:items-baseline gap-1 lg:gap-4 lg:min-w-5xl py-3">
                     {/* Index */}
                     <span className="text-sm opacity-80 md:w-24 shrink-0">
                       Entry #{index + 1}

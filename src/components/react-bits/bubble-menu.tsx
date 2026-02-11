@@ -115,10 +115,14 @@ export default function BubbleMenu({
     onMenuClick?.(nextState);
   };
 
+  const handleClose = () => {
+    setIsMenuOpen(false);
+    onMenuClick?.(false);
+  };
+
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (e.target === e.currentTarget) {
-      setIsMenuOpen(false);
-      onMenuClick?.(false);
+      handleClose();
     }
   };
 
@@ -411,6 +415,7 @@ export default function BubbleMenu({
                   role="menuitem"
                   to={item.href}
                   aria-label={item.ariaLabel || item.label}
+                  onClick={handleClose}
                   className={[
                     "pill-link",
                     "w-full",

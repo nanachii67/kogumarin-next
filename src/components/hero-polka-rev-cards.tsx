@@ -4,8 +4,8 @@ import DotGrid from "./react-bits/dot-grid";
 import {
   Card,
   CardAction,
-  CardContent,
   CardDescription,
+  CardFooter,
   CardHeader,
   CardTitle,
 } from "./ui/card";
@@ -124,13 +124,12 @@ export function HeroPolkaRevCards() {
               >
                 <motion.div
                   whileHover={{ scale: 1.025 }}
-                  whileTap={{ scale: 0.975 }}
                   transition={{ type: "spring", stiffness: 200 }}
                 >
                   <Card className="group cursor-pointer h-full lg:min-h-[350px] min-h-[275px] bg-indigo-500 hover:bg-indigo-600 text-koguma-text-light border-0 shadow-2xl shadow-koguma-text/50 rounded-lg transition-all relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full about-background z-0" />
-                    <div className="relative z-10 flex flex-col h-full">
-                      <CardHeader className="-space-y-2 mb-20">
+                    <div className="relative container z-10 flex flex-col h-full">
+                      <CardHeader className="-space-y-2">
                         <div className="flex flex-row items-center gap-2 mb-1">
                           <item.SocialMediaIcon />
                           <Avatar className="w-10 h-10">
@@ -197,7 +196,7 @@ export function HeroPolkaRevCards() {
                           </Button>
                         </CardAction>
                       </CardHeader>
-                      <CardContent className="flex-1 flex items-end ">
+                      <CardFooter className="flex-none items-end">
                         {item.relevantLinks &&
                           item.relevantLinks.map((link) => (
                             <div key={link.relevantLinkId}>
@@ -221,7 +220,7 @@ export function HeroPolkaRevCards() {
                               </p>
                             </div>
                           ))}
-                      </CardContent>
+                      </CardFooter>
                     </div>
                   </Card>
                 </motion.div>

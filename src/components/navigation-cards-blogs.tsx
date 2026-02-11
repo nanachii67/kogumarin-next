@@ -37,9 +37,7 @@ export default function BlogNavigationCards() {
                   key={index}
                 >
                   <CardHeader>
-                    <CardDescription className="font-inter z-1 opacity-80">
-                      <p>{item.entry}</p>
-                    </CardDescription>
+                    <CardDescription className="font-inter z-1 opacity-80"></CardDescription>
                     <CardTitle className="text-5xl font-notes z-1 leading-9 tracking-tighter">
                       {item.title}
                     </CardTitle>
@@ -53,7 +51,6 @@ export default function BlogNavigationCards() {
                         {item.entryDate}{" "}
                         <span className="opacity-75">{item.entryLength}</span>
                       </p>
-                      <p>{item.description}</p>
                     </div>
                   </CardFooter>
                 </Card>

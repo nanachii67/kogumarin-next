@@ -22,6 +22,9 @@ import TRACK_Slug from "./pages/releases/tracks/track-slug";
 
 import BlogsIndexPage from "./pages/blogs/blogs-index";
 import BLOGS_Slug from "./pages/blogs/blogs-slug";
+import { AnimatePresence } from "framer-motion";
+import { NavigationBar } from "./components/navigation-bar";
+import { ScrollToTop } from "./components/scroll-to-top";
 
 function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);
@@ -29,7 +32,6 @@ function App() {
 
   const key = location.state?._refresh || location.pathname;
 
-  // Initialize cursor once
   useEffect(() => {
     const cursor = new MouseFollower({
       textClassName: "mf-cursor-text text-koguma-text-light",
@@ -37,14 +39,12 @@ function App() {
     useCursor.setState({ instance: cursor });
   }, []);
 
-  // Update document title on route change
   useEffect(() => {
     const pathName = location.pathname;
     const page = siteConfig.pages.find((i) => i.href === pathName);
     document.title = siteConfig.title(page?.label);
   }, [location]);
 
-  // Initialize ScrollSmoother once
   useEffect(() => {
     if (!smootherRef.current) {
       smootherRef.current = ScrollSmoother.create({
@@ -55,7 +55,6 @@ function App() {
     }
 
     return () => {
-      // Cleanup on unmount
       if (smootherRef.current) {
         smootherRef.current.kill();
         smootherRef.current = null;
@@ -63,37 +62,34 @@ function App() {
     };
   }, []);
 
-  // Handle scroll reset on route change - CONSOLIDATED
-  useEffect(() => {
-    const smoother = smootherRef.current;
-
-    if (smoother) {
-      // Instantly scroll to top without animation
-      smoother.scrollTo(0, false);
-
-      // Small delay to ensure DOM is ready, then refresh ScrollTrigger
-      requestAnimationFrame(() => {
-        ScrollTrigger.refresh();
-      });
-    } else {
-      // Fallback if smoother isn't ready yet
-      window.scrollTo(0, 0);
-    }
-  }, [location.pathname]);
-
   return (
     <div>
-      <Routes location={location} key={key}>
-        <Route element={<IndexPage />} path="/" />
-        <Route element={<AboutPage />} path="/about/" />
-        <Route element={<SocialCardsPage />} path="/socials" />
+      <ScrollToTop />
+      <NavigationBar />
 
-        <Route element={<ReleasesPage />} path="/releases" />
-        <Route element={<TRACK_Slug />} path="/releases/:trackId" />
+      <AnimatePresence
+        mode="wait"
+        onExitComplete={() => {
+          if (smootherRef.current) {
+            smootherRef.current.scrollTo(0, false);
+            requestAnimationFrame(() => ScrollTrigger.refresh());
+          } else {
+            window.scrollTo(0, 0);
+          }
+        }}
+      >
+        <Routes location={location} key={key}>
+          <Route element={<IndexPage />} path="/" />
+          <Route element={<AboutPage />} path="/about/" />
+          <Route element={<SocialCardsPage />} path="/socials" />
 
-        <Route element={<BlogsIndexPage />} path="/notes" />
-        <Route element={<BLOGS_Slug />} path="/notes/:blogId" />
-      </Routes>
+          <Route element={<ReleasesPage />} path="/releases" />
+          <Route element={<TRACK_Slug />} path="/releases/:trackId" />
+
+          <Route element={<BlogsIndexPage />} path="/notes" />
+          <Route element={<BLOGS_Slug />} path="/notes/:blogId" />
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

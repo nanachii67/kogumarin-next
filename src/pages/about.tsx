@@ -56,9 +56,12 @@ export default function AboutPage() {
           <div className="flex opacity-75 gap-2">
             <p className="font-inter-display">*</p>
             <p className="text-xs font-inter text-start">
-              Interacting with these cards redirects to Apple Music.{" "}
+              Interacting with these cards redirects to Apple Music and Apple Music Classical.{" "}
               <span className="opacity-80">
                 Apple Music is a trademark of Apple Inc.
+              </span>{" "}
+              <span className="opacity-80">
+                Apple Music Classical is a trademark of Apple Inc.
               </span>
             </p>
           </div>

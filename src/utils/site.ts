@@ -52,11 +52,11 @@ export const siteConfig = {
       href: "/releases/orenji/",
     },
     {
-      label: `Kirakira`,
+      label: `Kirakira -Adrenaline Rashu Ver.-`,
       href: "/releases/kirakira/",
     },
     {
-      label: `Rin's Small Tunes 1`,
+      label: `Rin's Small Tunes -Set 1-`,
       href: "/releases/rins-small-tunes-1/",
     },
     /*

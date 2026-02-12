@@ -26,6 +26,7 @@ import {
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { IconProvider } from "@/utils/icon-provider";
+import { Link } from "react-router-dom";
 
 export function HeroPolkaRevCards() {
   const [copiedId, setCopiedId] = useState<number | null>(null);
@@ -193,20 +194,26 @@ export function HeroPolkaRevCards() {
                             </p>
                           </CardDescription>
                           <CardAction>
-                            <Button
-                              size="icon"
-                              className="text-koguma-text-light bg-koguma-card/75 rounded-full hover:bg-koguma-card"
-                              aria-label="Open externally"
-                              title="Open externally"
-                              asChild
+                            <Link
+                              to={item.socialMediaLink}
+                              target="_blank"
+                              rel="noopener noreferrer"
                             >
-                              <div>
-                                <ArrowCircleUpRightIcon
-                                  weight="fill"
-                                  className="w-6 h-6"
-                                />
-                              </div>
-                            </Button>
+                              <Button
+                                size="icon"
+                                className="text-koguma-text-light bg-koguma-card/75 rounded-full hover:bg-koguma-card"
+                                aria-label="Open externally"
+                                title="Open externally"
+                                asChild
+                              >
+                                <div>
+                                  <ArrowCircleUpRightIcon
+                                    weight="fill"
+                                    className="w-6 h-6"
+                                  />
+                                </div>
+                              </Button>
+                            </Link>
                           </CardAction>
                         </CardHeader>
                         <CardFooter className="flex-none items-end">

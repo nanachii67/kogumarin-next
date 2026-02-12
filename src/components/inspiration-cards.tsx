@@ -34,7 +34,7 @@ export function InspirationCards() {
                 <div className="flex flex-col">
                   <img
                     src={item.imagelink}
-                    className="max-w-96 aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                    className="max-w-96 mx-auto aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                   />
                   <div className="flex flex-col mt-2 space-y-[-2px]">
                     <p className="text-xs opacity-80">

@@ -4,6 +4,7 @@ import { NewRelease } from "@/utils/new-release";
 import useCursor from "@/hooks/useCursor";
 
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function AnnouncementNewRelease() {
   const cursor = useCursor(({ instance }) => instance);
@@ -26,23 +27,25 @@ export default function AnnouncementNewRelease() {
             </div>
             <div className="col-span-1 justify-self-start md:justify-self-end flex items-center">
               <Link to={item.releaselink}>
-                <Button
-                  className="bg-koguma-text-hover hover:bg-koguma-card text-koguma-text-light font-inter rounded-full"
-                  onMouseEnter={(e) => {
-                    if (cursor) {
-                      cursor.setStick(e.currentTarget);
-                      cursor.addState("-scale");
-                    }
-                  }}
-                  onMouseLeave={() => {
-                    if (cursor) {
-                      cursor.removeState("-scale");
-                      cursor.removeStick();
-                    }
-                  }}
-                >
-                  Listen <ExternalLink />
-                </Button>
+                <motion.div>
+                  <Button
+                    className="bg-koguma-text-hover hover:bg-koguma-card text-koguma-text-light font-inter rounded-full"
+                    onMouseEnter={(e) => {
+                      if (cursor) {
+                        cursor.setStick(e.currentTarget);
+                        cursor.addState("-scale");
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (cursor) {
+                        cursor.removeState("-scale");
+                        cursor.removeStick();
+                      }
+                    }}
+                  >
+                    Listen <ExternalLink />
+                  </Button>
+                </motion.div>
               </Link>
             </div>
           </div>

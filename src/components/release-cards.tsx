@@ -38,7 +38,8 @@ export function ReleaseCards() {
                         {item.catalogtype} • {item.releaseyear}
                       </p>
                       <p className="font-inter-display text-xl leading-6">
-                        {item.title}
+                        {item.title}{" "}
+                        <span className="font-inter">{item?.subtitle}</span>
                       </p>
                     </div>
                   </div>

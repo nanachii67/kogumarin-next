@@ -29,6 +29,7 @@ export const ReleaseData = [
   {
     id: 4,
     title: `Kirakira`,
+    subtitle: `-Adrenaline Rashu Ver.-`,
     releaseyear: "2025",
     brandlink: "/releases/kirakira/",
     imagelink: "https://f4.bcbits.com/img/a0639790057_10.jpg",
@@ -37,7 +38,8 @@ export const ReleaseData = [
   },
   {
     id: 5,
-    title: `Rin's Small Tunes 1`,
+    title: `Rin's Small Tunes`,
+    subtitle: `-Set 1-`,
     releaseyear: "2026",
     brandlink: "/releases/rins-small-tunes-1/",
     imagelink: "https://f4.bcbits.com/img/a3645927830_10.jpg",

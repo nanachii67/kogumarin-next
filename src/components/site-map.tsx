@@ -31,9 +31,12 @@ export function SiteMap() {
             </div>
             <div className="col-span-1 md:col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <p className="col-span-1 md:col-span-2 font-inter-display">
-                  Releases
-                </p>
+                <Link to={"/releases"}>
+                  <p className="col-span-1 md:col-span-2 font-inter-display">
+                    Releases
+                  </p>
+                </Link>
+
                 <div className="col-span-1 flex flex-col mb-4">
                   <p className="font-inter-display">Singles</p>
                   {KogsSingleEP.map((item) => (

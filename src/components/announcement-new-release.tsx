@@ -27,7 +27,7 @@ export default function AnnouncementNewRelease() {
             <div className="col-span-1 justify-self-start md:justify-self-end flex items-center">
               <Link to={item.releaselink}>
                 <Button
-                  className="bg-koguma-text hover:bg-koguma-text-hover text-koguma-text-light font-inter rounded-full"
+                  className="bg-koguma-text-hover hover:bg-koguma-card text-koguma-text-light font-inter rounded-full"
                   onMouseEnter={(e) => {
                     if (cursor) {
                       cursor.setStick(e.currentTarget);

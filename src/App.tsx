@@ -10,6 +10,10 @@ import "mouse-follower/dist/mouse-follower.min.css";
 import MouseFollower from "mouse-follower";
 import useCursor from "@/hooks/useCursor";
 
+import { AnimatePresence } from "framer-motion";
+import { NavigationBar } from "./components/navigation-bar";
+import { ScrollToTop } from "./components/scroll-to-top";
+
 MouseFollower.registerGSAP(gsap);
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -22,9 +26,6 @@ import TRACK_Slug from "./pages/releases/tracks/track-slug";
 
 import BlogsIndexPage from "./pages/blogs/blogs-index";
 import BLOGS_Slug from "./pages/blogs/blogs-slug";
-import { AnimatePresence } from "framer-motion";
-import { NavigationBar } from "./components/navigation-bar";
-import { ScrollToTop } from "./components/scroll-to-top";
 
 function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);

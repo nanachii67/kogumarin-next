@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export function InspirationCards() {
   return (
     <div className="relative flex flex-col mx-auto">
-      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5 px-10 lg:px-0">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5 md:px-10 lg:px-0">
         {InspirationData.map((item, index) => (
           <Link
             to={item.brandlink}

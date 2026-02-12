@@ -20,7 +20,7 @@ export default function CardsLayout({
 }) {
   return (
     <motion.div
-      className="relative flex flex-col select-none mx-0"
+      className="relative flex flex-col select-none mx-0 scroll-gutter"
       variants={variants}
       initial="initial"
       animate="animate"

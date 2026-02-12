@@ -139,10 +139,18 @@
     scrollbar-width: none;
 }
 
+.scroll-gutter {
+    -ms-overflow-style: none;
+    scrollbar-gutter: auto;
+}
+
 * {
     transition: all;
     animation-duration: 100ms;
     /*box-shadow: oklch(82.3% 0.12 346.018);*/
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: thin;
+    scrollbar-color: #312e81 #6366f1;
 }
 
 @theme inline {

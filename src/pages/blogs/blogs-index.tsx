@@ -103,7 +103,7 @@ export default function BlogsIndexPage() {
                         </span>
 
                         {/* Title */}
-                        <span className="flex-1 text-2xl md:text-3xl font-notes font-bold tracking-tight leading-7">
+                        <span className="flex-1 text-4xl md:text-3xl font-notes font-bold tracking-tight md:leading-7">
                           {entry.title}
                         </span>
 
@@ -121,7 +121,7 @@ export default function BlogsIndexPage() {
                         </span>
                       </div>
 
-                      <Separator className="opacity-50 hidden md:block" />
+                      <Separator className="opacity-50" />
                     </Link>
                   </motion.div>
                 ))}

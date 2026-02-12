@@ -54,7 +54,7 @@ export default function AboutLayout({
       )}
       {/*<NavigationBar />*/}
       <div className="absolute inset-0 w-full about-background z-0" />
-      <main className="flex flex-col mx-auto pt-10 px-10 min-h-[calc(100vh-20rem)]">
+      <main className="flex flex-col mx-auto pt-10 px-10 min-h-[calc(100vh-50vh)]">
         {children}
       </main>
       <SiteMap />

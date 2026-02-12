@@ -2,22 +2,13 @@ import notes from "@/utils/notes.json";
 import { Navigate, useParams } from "react-router-dom";
 import NotesLayout from "@/layouts/NotesLayout";
 import { formatDate } from "@/lib/formatDate";
-import { ArrowUpRightIcon } from "@phosphor-icons/react";
-
-interface EntryContent {
-  content_index: number;
-  paragraph_content?: string;
-  image_content?: string;
-  link_content?: string;
-  credit_content?: string;
-  credit_link?: string;
-}
+import { NotionNote } from "@/components/notion-note";
 
 interface BlogsSlugs {
   entry_index: number;
   entry_date: string;
   entry_title: string;
-  entry_contents: EntryContent[];
+  entry_notion_id: string;
 }
 
 export default function BLOGS_Slug() {
@@ -39,39 +30,9 @@ export default function BLOGS_Slug() {
       noteDescription={`Written ${formatDate(blogs.entry_date)}`}
     >
       <div className="relative z-0">
-        <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 md:pt-0 md:px-10 lg:px-0 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
-          <div className="flex flex-col gap-8 w-full mx-auto my-10 md:text-xl text-left">
-            {blogs.entry_contents.map((item) => (
-              <div key={item.content_index}>
-                {item.paragraph_content && (
-                  <p className="container">{item.paragraph_content}</p>
-                )}
-                {item.image_content && (
-                  <img
-                    className="mx-auto rounded-2xl md:max-w-[500px]"
-                    src={item.image_content}
-                    alt={blogs.entry_title}
-                  />
-                )}
-                {item.link_content && (
-                  <a href={item.link_content}>{item.link_content}</a>
-                )}
-                {item.credit_content && (
-                  <a
-                    href={item.credit_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <p className="container text-base opacity-80 flex flex-row items-center gap-1">
-                      {item.credit_content}{" "}
-                      <span>
-                        <ArrowUpRightIcon />
-                      </span>
-                    </p>
-                  </a>
-                )}
-              </div>
-            ))}
+        <div className="relative z-1 flex flex-col mx-auto pb-10 md:pt-0 md:px-10 lg:px-0 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
+          <div className="flex flex-col gap-8 w-full mx-auto md:py-5 md:text-xl text-left">
+            <NotionNote pageId={blogs.entry_notion_id} />
           </div>
         </div>
       </div>

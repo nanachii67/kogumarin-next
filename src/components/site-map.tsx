@@ -20,7 +20,7 @@ export function SiteMap() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 font-inter">
             <div className="col-span-1 flex flex-col mb-4">
-              <p className="font-title">General</p>
+              <p className="font-inter-display">General</p>
               {generalLinks.map((link) => (
                 <Link key={link.path} to={link.path}>
                   <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
@@ -31,9 +31,11 @@ export function SiteMap() {
             </div>
             <div className="col-span-1 md:col-span-2">
               <div className="grid grid-cols-1 md:grid-cols-2">
-                <p className="col-span-1 md:col-span-2 font-title">Releases</p>
+                <p className="col-span-1 md:col-span-2 font-inter-display">
+                  Releases
+                </p>
                 <div className="col-span-1 flex flex-col mb-4">
-                  <p className="font-title">Singles</p>
+                  <p className="font-inter-display">Singles</p>
                   {KogsSingleEP.map((item) => (
                     <Link to={item.link}>
                       <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
@@ -43,7 +45,7 @@ export function SiteMap() {
                   ))}
                 </div>
                 <div className="col-span-1 flex flex-col mb-4">
-                  <p className="font-title">Albums and EPs</p>
+                  <p className="font-inter-display">Albums and EPs</p>
                   {KogsAlbum.map((item) => (
                     <Link to={item.link}>
                       <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">

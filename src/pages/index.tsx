@@ -1,4 +1,4 @@
-import { NavigationCards } from "@/components/navigation-cards";
+import { NavigationCardsRev } from "@/components/navigation-cards-rev";
 import IndexLayout from "@/layouts/IndexLayout";
 
 export default function IndexPage() {
@@ -10,7 +10,7 @@ export default function IndexPage() {
             Pick a card to explore my repository!
           </h1>
           <div className="text-start">
-            <NavigationCards />
+            <NavigationCardsRev />
           </div>
         </div>
       </div>

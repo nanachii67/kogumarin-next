@@ -130,3 +130,5 @@ export default function Track() {
         </ReleaseLayout>
     );
 }
+
+export const runtime = 'edge';

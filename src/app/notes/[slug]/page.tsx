@@ -41,3 +41,5 @@ export default function Blog() {
         </NotesLayout>
     );
 }
+
+export const runtime = 'edge';

@@ -23,6 +23,7 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         ".next/dev/types/**/*.ts",
+        ".contentlayer/**/*",
         "**/*.mts"
     ],
     "exclude": ["node_modules"]

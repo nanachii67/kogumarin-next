@@ -58,7 +58,7 @@ export function ReleaseBar() {
                                                     }}
                                                 >
                                                     <Link
-                                                        to={item.brandlink}
+                                                        href={item.brandlink}
                                                         key={index}
                                                     >
                                                         <div>

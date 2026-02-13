@@ -41,7 +41,7 @@ export default function ReleaseLayout({
                 />
             </div>
             <main className="flex flex-col mx-auto">{children}</main>
-            <ReleaseProductionCredits />
+            {/*<ReleaseProductionCredits />*/}
             <ReleaseDiscographyBar />
             <Footer />
         </motion.div>

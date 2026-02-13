@@ -1,5 +1,6 @@
 import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
     Carousel,
     CarouselContent,
@@ -63,12 +64,13 @@ export function ReleaseBar() {
                                                     >
                                                         <div>
                                                             <div className="flex flex-col">
-                                                                <img
+                                                                <Image
+                                                                    alt={''}
                                                                     src={
                                                                         item.imagelink
                                                                     }
                                                                     className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
-                                                                ></img>
+                                                                />
                                                                 <div className="flex flex-col mt-2 space-y-[-2px]">
                                                                     <p className="text-xs opacity-80">
                                                                         {

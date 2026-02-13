@@ -2,6 +2,7 @@ import AnimatedContent from '@/components/react-bits/animated-content';
 import { ReleaseData } from '@/utils/release-cards';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ReleaseDiscographyBar() {
     return (
@@ -16,10 +17,7 @@ export default function ReleaseDiscographyBar() {
                         {ReleaseData.slice()
                             .reverse()
                             .map((item, index) => (
-                                <Link
-                                    href={item.brandlink}
-                                    key={index}
-                                >
+                                <Link href={item.brandlink} key={index}>
                                     <AnimatedContent
                                         distance={50}
                                         direction="vertical"
@@ -41,11 +39,11 @@ export default function ReleaseDiscographyBar() {
                                             }}
                                         >
                                             <div className="flex flex-col">
-                                                <img
+                                                <Image
                                                     src={item.imagelink}
                                                     alt={`${item.title} ${item?.subtitle} - ${item.description}`}
                                                     className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
-                                                ></img>
+                                                />
                                                 <div className="flex flex-col mt-2 space-y-[-2px] text-koguma-text">
                                                     <p className="text-xs opacity-80 font-inter">
                                                         {item.catalogtype} •{' '}

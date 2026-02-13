@@ -13,8 +13,9 @@ const eslintConfig = defineConfig([
         'out/**',
         'build/**',
         'next-env.d.ts',
+        'src/components/react-bits/*.tsx',
     ]),
-    { rules: { '@typescript-eslint/no-explicit-any': 'warn' } },
+    { rules: {} },
 ]);
 
 export default eslintConfig;

@@ -4,6 +4,7 @@ import AnimatedContent from '@/components/react-bits/animated-content';
 import { ReleaseData } from '@/utils/release-cards';
 import * as motion from 'motion/react-client';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function ReleaseCards() {
     return (
@@ -34,11 +35,11 @@ export function ReleaseCards() {
                                     }}
                                 >
                                     <div className="flex flex-col">
-                                        <img
+                                        <Image
                                             src={item.imagelink}
                                             alt={`${item.title} ${item?.subtitle} - ${item.description}`}
                                             className="max-w-96 aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
-                                        ></img>
+                                        />
                                         <div className="flex flex-col mt-2 space-y-[-2px]">
                                             <p className="text-xs opacity-80 font-inter">
                                                 {item.catalogtype} •{' '}

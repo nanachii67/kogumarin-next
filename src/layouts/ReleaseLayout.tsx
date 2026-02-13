@@ -1,7 +1,6 @@
 import { Footer } from '@/components/footer';
 import DotGrid from '@/components/react-bits/dot-grid';
 import ReleaseDiscographyBar from '@/components/release/release-bar-new';
-import ReleaseProductionCredits from '@/components/release-production-credits';
 import { Easing, motion } from 'framer-motion';
 
 const variants = {

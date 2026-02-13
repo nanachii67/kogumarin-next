@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import useCursor from '@/hooks/useCursor';
 import Link from 'next/link';
+import Image from 'next/image';
 
 type MenuItem = {
     label: string;
@@ -298,7 +299,7 @@ export default function BubbleMenu({
                         }
                     >
                         {typeof logo === 'string' ? (
-                            <img
+                            <Image
                                 src={logo}
                                 alt="Logo"
                                 className="bubble-logo max-h-[60%] max-w-full object-contain block"

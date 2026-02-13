@@ -4,6 +4,7 @@ import AnimatedContent from '@/components/react-bits/animated-content';
 import { InspirationData } from '@/utils/inspiration-cards';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function InspirationCards() {
     return (
@@ -34,7 +35,7 @@ export function InspirationCards() {
                                 transition={{ type: 'spring', stiffness: 200 }}
                             >
                                 <div className="flex flex-col">
-                                    <img
+                                    <Image
                                         src={item.imagelink}
                                         alt={`${item.title} - ${item.description}`}
                                         className="max-w-96 mx-auto aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"

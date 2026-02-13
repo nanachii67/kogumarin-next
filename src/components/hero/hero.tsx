@@ -5,6 +5,7 @@ import { NewRelease } from '@/utils/new-release';
 import { ChevronRight } from 'lucide-react';
 import IconHero from '@/components/kogs_records_logo_hero';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function Hero() {
     return (
@@ -101,7 +102,8 @@ export function Hero() {
                             delay={0.8}
                         >
                             <div className="flex mx-auto justify-center items-center text-center mt-10">
-                                <img
+                                <Image
+                                    alt={"release cover"}
                                     src={item.releasecover}
                                     style={{
                                         animation:

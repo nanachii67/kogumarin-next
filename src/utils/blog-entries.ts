@@ -1,0 +1,58 @@
+export const BlogNavigationData = [
+    {
+        id: 1,
+        title: `Why I have been inactive`,
+        brandlink: '/notes/why-i-have-been-inactive',
+        entryDate: '2025-12-16',
+        entryLength: `~8 min read`,
+    },
+    {
+        id: 2,
+        title: `Regarding the album "Rin's Silly Tunes"`,
+        brandlink: '/notes/regarding-the-album-rins-silly-tunes',
+        entryDate: '2025-12-1',
+        entryLength: `~7 min read`,
+    },
+    {
+        id: 3,
+        title: `Happy New Year! (2026)`,
+        brandlink: '/notes/happy-new-year-2026',
+        entryDate: '2025-12-31',
+        entryLength: `~8 min read`,
+    },
+    {
+        id: 4,
+        title: `Regarding a name change`,
+        brandlink: '/notes/regarding-a-name-change',
+        entryDate: '2026-1-20',
+        entryLength: `~4 min read`,
+    },
+    // {
+    //   id: 5,
+    //   title: `Making a site...`,
+    //   brandlink: "/notes/making-a-site",
+    //   entryDate: "2026-2-11",
+    //   entryLength: `~7 min read`,
+    // },
+    // {
+    //   id: 6,
+    //   title: `To whom I thank and credit...`,
+    //   brandlink: "/notes/to-whom-i-thank-and-credit",
+    //   entryDate: "2026-2-11",
+    //   entryLength: `~7 min read`,
+    // },
+    // {
+    //   id: 7,
+    //   title: `More about Koguma Rin`,
+    //   brandlink: "/notes/more-about-koguma-rin",
+    //   entryDate: "2026-2-11",
+    //   entryLength: `~7 min read`,
+    // },
+    // {
+    //   id: 8,
+    //   title: `Regarding with my Discord Server`,
+    //   brandlink: "/notes/regarding-with-my-discord-server",
+    //   entryDate: "2026-2-11",
+    //   entryLength: `~7 min read`,
+    // },
+];

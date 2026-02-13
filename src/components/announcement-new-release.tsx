@@ -20,14 +20,18 @@ export default function AnnouncementNewRelease() {
                 <p>•</p>
                 <p>{item.releasedate}</p>
               </div>
-              <p className="font-inter-display text-3xl">
+              <h1 className="font-inter-display text-3xl">
                 {item.title}{" "}
                 <span className="font-inter opacity-90">{item.subtitle}</span>
-              </p>
+              </h1>
             </div>
             <div className="col-span-1 justify-self-start md:justify-self-end flex items-center">
               <Link to={item.releaselink}>
-                <motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.025 }}
+                  whileTap={{ scale: 0.975 }}
+                  transition={{ type: "spring", stiffness: 200 }}
+                >
                   <Button
                     className="bg-koguma-text-hover hover:bg-koguma-card text-koguma-text-light font-inter rounded-full"
                     onMouseEnter={(e) => {

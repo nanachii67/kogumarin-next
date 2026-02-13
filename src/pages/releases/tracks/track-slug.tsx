@@ -50,7 +50,7 @@ export default function TRACK_Slug() {
               <div className="flex flex-row mb-2 justify-start items-center gap-2 text-koguma-text-light/80">
                 <ArrowLeftIcon />
                 <Link to="/releases">
-                  <p className="underline underline-offset-3 decoration-0">
+                  <p className="hover:underline underline-offset-3 decoration-0">
                     Releases
                   </p>
                 </Link>
@@ -66,12 +66,12 @@ export default function TRACK_Slug() {
                 <div className="flex flex-col my-5 text-start">
                   <p>{track.artist}</p>
                   <div className="flex flex-col md:flex-row items-start md:items-center gap-1">
-                    <p className="text-4xl font-inter-display">
+                    <h1 className="text-4xl font-inter-display">
                       {track.title}{" "}
-                    </p>
-                    <p className="text-2xl md:text-4xl font-inter opacity-80">
+                    </h1>
+                    <h2 className="text-2xl md:text-4xl font-inter opacity-80">
                       {track.subtitle}
-                    </p>
+                    </h2>
                   </div>
                   <p className="opacity-80">
                     {track.releaseType} • {track.releaseYear}
@@ -100,12 +100,12 @@ export default function TRACK_Slug() {
                         <div className="flex flex-row text-start items-center justify-between">
                           <div className="flex flex-row gap-3 items-center">
                             <p className="opacity-75">{track.trackNumber}</p>
-                            <p className="md:text-2xl font-inter-display items-center">
+                            <h3 className="md:text-2xl font-inter-display items-center">
                               {track.title}{" "}
                               <span className="font-inter opacity-75">
                                 {track.subtitle}
                               </span>
-                            </p>
+                            </h3>
                           </div>
                           <p className="opacity-75">{track.duration}</p>
                         </div>

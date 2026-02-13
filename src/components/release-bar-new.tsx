@@ -8,7 +8,7 @@ export default function ReleaseDiscographyBar() {
     <div className="relative bg-koguma-background py-5 px-10">
       <div className="container max-w-9xl mx-auto">
         <div className="flex flex-row gap-2 items-center text-3xl font-koguma my-4 text-koguma-text">
-          <p>Releases</p>
+          <h2>Releases</h2>
         </div>
 
         <div className="relative flex flex-col mx-auto">
@@ -37,6 +37,7 @@ export default function ReleaseDiscographyBar() {
                       <div className="flex flex-col">
                         <img
                           src={item.imagelink}
+                          alt={`${item.title} ${item?.subtitle} - ${item.description}`}
                           className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                         ></img>
                         <div className="flex flex-col mt-2 space-y-[-2px] text-koguma-text">

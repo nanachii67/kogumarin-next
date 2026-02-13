@@ -32,7 +32,9 @@ export function NavigationCardsRev() {
                   <div className="flex flex-row md:min-w-92 aspect-square rounded-2xl bg-koguma-text shadow-2xl p-6">
                     <div className="flex flex-col font-inter grow">
                       <p className="font-inter-display">{item.entry}</p>
-                      <p className="text-5xl font-koguma py-8 grow w-40">{item.title}</p>
+                      <h1 className="text-5xl font-koguma py-8 grow w-40">
+                        {item.title}
+                      </h1>
                       <p className="text-sm">{item.description}</p>
                     </div>
                     <div>

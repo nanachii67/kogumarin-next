@@ -13,9 +13,9 @@ export function Footer() {
       <div className="relative mx-auto px-6 items-center w-full">
         <div className="flex flex-col gap-3 mx-auto max-w-xl text-center">
           <div className="flex flex-col pt-6">
-            <p className="text-5xl md:text-8xl font-koguma pb-10 lg:pb-0">
+            <h1 className="text-5xl md:text-8xl font-koguma pb-10 lg:pb-0">
               kogumarin.
-            </p>
+            </h1>
             <div className="flex flex-row justify-center md:justify-end gap-4">
               <a
                 target="_blank"

@@ -20,7 +20,7 @@ export function NotesHeader({
             <ArrowLeftIcon />
             <Link to="/notes">
               <div className="flex flex-row gap-2 items-center">
-                <p className="underline underline-offset-3 decoration-0">
+                <p className="hover:underline underline-offset-2 decoration-0">
                   Notes <span></span>
                 </p>
                 <p>•</p>
@@ -29,16 +29,16 @@ export function NotesHeader({
             </Link>
           </div>
 
-          <p className="text-center md:text-start"></p>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-5 mt-5 md:mt-0">
             <div className="col-span-1 justify-self-center md:justify-self-start self-center">
-              <p className="text-5xl font-notes font-bold leading-11 text-center md:text-left">
+              <h1 className="text-5xl font-notes font-bold leading-11 text-center md:text-left">
                 {pageTitle}
-              </p>
+              </h1>
             </div>
             <div className="col-span-1 justify-self-center mt-3 md:mt-0 md:justify-self-end text-center md:text-right">
-              <p className="text-lg font-inter leading-6">{pageDescription}</p>
+              <h2 className="text-lg font-inter leading-6">
+                {pageDescription}
+              </h2>
             </div>
           </div>
         </div>

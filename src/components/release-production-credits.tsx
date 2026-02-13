@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import releases from "@/utils/releases.json";
 import { formatDate } from "@/lib/formatDate";
 
@@ -139,16 +139,7 @@ export default function ReleaseProductionCredits() {
         </div>
         <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light/80">
           <p>
-            Source:{" "}
-            <span className="font-inter-display">
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                to={track?.streamingLinks.bandcamp || "#"}
-              >
-                Bandcamp
-              </Link>
-            </span>
+            Source: <span className="font-inter-display">Bandcamp</span>
           </p>
         </div>
       </div>

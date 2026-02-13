@@ -48,6 +48,7 @@ export const NavigationBar = () => (
         logo={
           <Link to="/" className="opacity-75 hover:opacity-100">
             <Icon />
+            <p className="hidden">Home</p>
           </Link>
         }
         items={items}

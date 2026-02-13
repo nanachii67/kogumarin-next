@@ -39,7 +39,7 @@ export function HeroPolkaRev() {
                 threshold={0}
                 delay={0.2}
               >
-                <p className="text-5xl font-koguma pt-5">kogumarin</p>
+                <h1 className="text-5xl font-koguma pt-5">kogumarin</h1>
                 <p className="font-inter text-xs">EST. 2024</p>
               </AnimatedContent>
             </div>
@@ -56,7 +56,7 @@ export function HeroPolkaRev() {
                 threshold={0}
                 delay={0.4}
               >
-                <p className="text-5xl font-koguma py-5">hi there.</p>
+                <h1 className="text-5xl font-koguma py-5">hi there.</h1>
               </AnimatedContent>
               <AnimatedContent
                 distance={10}
@@ -103,7 +103,7 @@ export function HeroPolkaRev() {
               }}
               className="flex flex-row gap-1"
             >
-              <ArrowDownIcon size={25}/>
+              <ArrowDownIcon size={25} />
             </motion.div>
           </div>
         </AnimatedContent>

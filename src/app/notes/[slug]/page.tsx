@@ -23,6 +23,7 @@ export default function Blog() {
 
     if (!note) notFound();
 
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const MDXContent = useMDXComponent(note.body.code);
 
     return (

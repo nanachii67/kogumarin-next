@@ -82,7 +82,7 @@ export default function TRACK_Orenji() {
                                                         Album
                                                     </p>
                                                     <p className="flex items-center">
-                                                        Rin's Silly Tunes
+                                                        Rin&apos;s Silly Tunes
                                                     </p>
                                                 </div>
                                             </div>

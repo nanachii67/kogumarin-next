@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "contentlayer2 dev & vite dev",
-    "build": "contentlayer2 build && tsc -b && vite build",
+    "dev": "vite dev",
+    "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "tsx watch server/index.ts",

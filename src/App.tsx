@@ -26,7 +26,6 @@ import TRACK_Slug from "./pages/releases/tracks/track-slug";
 
 import BlogsIndexPage from "./pages/blogs/blogs-index";
 import BLOGS_Slug from "./pages/blogs/blogs-slug";
-import MDXTesting from "./pages/mdx-testing";
 
 function App() {
   const smootherRef = useRef<ScrollSmoother | null>(null);

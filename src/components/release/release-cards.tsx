@@ -10,7 +10,7 @@ import * as motion from 'motion/react-client';
 export function ReleaseCards() {
     return (
         <div className="relative flex flex-col mx-auto">
-            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl my-5 md:px-10 lg:px-0">
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
                 {ReleaseData.slice()
                     .reverse()
                     .map((item, index) => (
@@ -37,9 +37,11 @@ export function ReleaseCards() {
                                 >
                                     <div className="flex flex-col">
                                         <Image
+                                            height={512}
+                                            width={512}
                                             src={item.imagelink}
                                             alt={`${item.title} ${item?.subtitle} - ${item.description}`}
-                                            className="max-w-96 aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                                            className="object-cover aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                                         />
                                         <div className="flex flex-col mt-2 space-y-[-2px]">
                                             <p className="text-xs opacity-80 font-inter">

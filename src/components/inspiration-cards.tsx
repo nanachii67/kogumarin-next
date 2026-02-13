@@ -40,7 +40,9 @@ export function InspirationCards() {
                                     <Image
                                         src={item.imagelink}
                                         alt={`${item.title} - ${item.description}`}
-                                        className="max-w-96 mx-auto aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                                        height={0}
+                                        width={512}
+                                        className="mx-auto object-cover aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                                     />
                                     <div className="flex flex-col mt-2 space-y-[-2px]">
                                         <p className="text-xs opacity-80">

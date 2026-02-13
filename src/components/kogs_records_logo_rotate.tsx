@@ -1,8 +1,4 @@
-import { useLocation } from 'react-router-dom';
-
 const usePageStroke = () => {
-    const location = useLocation();
-
     const strokeColors = {
         '/': 'stroke-koguma-text',
         '/about/': 'stroke-koguma-background',

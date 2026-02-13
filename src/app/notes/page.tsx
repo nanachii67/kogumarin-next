@@ -1,6 +1,6 @@
 'use client';
 
-import { BlogNavigationData } from '@/utils/blog-entries';
+// import { BlogNavigationData } from '@/utils/blog-entries';
 import {
     ArrowUpRightIcon,
     CaretLeftIcon,
@@ -13,17 +13,20 @@ import { formatDate } from '@/lib/formatDate';
 import { useState, useMemo } from 'react';
 import NotesLayout from '@/layouts/NotesLayout';
 import Link from 'next/link';
+import { allNotes } from 'contentlayer/generated';
+import { compareDesc } from 'date-fns';
 
 const ENTRIES_PER_PAGE = 10;
 
 export default function Blogs() {
     const [currentPage, setCurrentPage] = useState(1);
-
-    const totalPages = Math.ceil(BlogNavigationData.length / ENTRIES_PER_PAGE);
-
+    const totalPages = Math.ceil(allNotes.length / ENTRIES_PER_PAGE);
     const paginatedEntries = useMemo(() => {
+        const posts = allNotes.sort((a, b) =>
+            compareDesc(new Date(b.date), new Date(a.date)),
+        );
         const start = (currentPage - 1) * ENTRIES_PER_PAGE;
-        return BlogNavigationData.slice(start, start + ENTRIES_PER_PAGE);
+        return posts.slice(start, start + ENTRIES_PER_PAGE);
     }, [currentPage]);
 
     const globalStartIndex = (currentPage - 1) * ENTRIES_PER_PAGE;
@@ -101,11 +104,11 @@ export default function Blogs() {
                                             type: 'spring',
                                             stiffness: 200,
                                         }}
-                                        key={entry.brandlink}
+                                        key={entry._id}
                                         className="w-full"
                                     >
                                         <Link
-                                            href={entry.brandlink}
+                                            href={entry.url}
                                             className="block w-full"
                                         >
                                             <div className="flex flex-col md:flex-row md:items-baseline gap-1 lg:gap-4 lg:min-w-5xl py-3">
@@ -124,15 +127,13 @@ export default function Blogs() {
 
                                                 {/* Date */}
                                                 <span className="text-sm font-inter opacity-80 shrink-0">
-                                                    {formatDate(
-                                                        entry.entryDate,
-                                                    )}
+                                                    {formatDate(entry.date)}
                                                 </span>
 
                                                 {/* Read length + arrow */}
                                                 <span className="text-sm md:text font-inter opacity-80 shrink-0">
                                                     <span className="flex flex-row items-center gap-1">
-                                                        {entry.entryLength}
+                                                        {entry.readingTime}
                                                         <ArrowUpRightIcon />
                                                     </span>
                                                 </span>
@@ -210,7 +211,7 @@ export default function Blogs() {
                             {/* Page counter */}
                             <p className="text-xs opacity-40 font-inter select-none">
                                 Page {currentPage} of {totalPages} &mdash;{' '}
-                                {BlogNavigationData.length} entries total
+                                {allNotes.length} entries total
                             </p>
                         </div>
                     )}

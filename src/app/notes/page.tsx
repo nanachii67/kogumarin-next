@@ -1,6 +1,5 @@
 'use client';
 
-// import { BlogNavigationData } from '@/utils/blog-entries';
 import { compareDesc } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -24,9 +23,10 @@ export default function Blogs() {
     const [currentPage, setCurrentPage] = useState(1);
     const totalPages = Math.ceil(allNotes.length / ENTRIES_PER_PAGE);
     const paginatedEntries = useMemo(() => {
-        const posts = allNotes.sort((a, b) =>
-            compareDesc(new Date(b.date), new Date(a.date)),
-        );
+        const posts = allNotes
+            .sort((a, b) => compareDesc(new Date(b.date), new Date(a.date)))
+            .map((v, i) => ({ value: v, index: i }))
+            .reverse();
         const start = (currentPage - 1) * ENTRIES_PER_PAGE;
         return posts.slice(start, start + ENTRIES_PER_PAGE);
     }, [currentPage]);
@@ -98,7 +98,7 @@ export default function Blogs() {
                                 }}
                                 className="flex flex-col w-full"
                             >
-                                {paginatedEntries.map((entry, index) => (
+                                {paginatedEntries.map((entry,) => (
                                     <motion.div
                                         whileHover={{ scale: 1.00625 }}
                                         whileTap={{ scale: 0.9625 }}
@@ -106,11 +106,11 @@ export default function Blogs() {
                                             type: 'spring',
                                             stiffness: 200,
                                         }}
-                                        key={entry._id}
+                                        key={entry.value._id}
                                         className="w-full"
                                     >
                                         <Link
-                                            href={entry.url}
+                                            href={entry.value.url}
                                             className="block w-full"
                                         >
                                             <div className="flex flex-col md:flex-row md:items-baseline gap-1 lg:gap-4 lg:min-w-5xl py-3">
@@ -118,24 +118,29 @@ export default function Blogs() {
                                                 <span className="text-sm opacity-80 md:w-24 shrink-0">
                                                     Entry #
                                                     {globalStartIndex +
-                                                        index +
+                                                        entry.index +
                                                         1}
                                                 </span>
 
                                                 {/* Title */}
                                                 <span className="flex-1 text-4xl md:text-3xl font-gaegu font-bold tracking-tight md:leading-7">
-                                                    {entry.title}
+                                                    {entry.value.title}
                                                 </span>
 
                                                 {/* Date */}
                                                 <span className="text-sm font-inter opacity-80 shrink-0">
-                                                    {formatDate(entry.date)}
+                                                    {formatDate(
+                                                        entry.value.date,
+                                                    )}
                                                 </span>
 
                                                 {/* Read length + arrow */}
                                                 <span className="text-sm md:text font-inter opacity-80 shrink-0">
                                                     <span className="flex flex-row items-center gap-1">
-                                                        {entry.readingTime}
+                                                        {
+                                                            entry.value
+                                                                .readingTime
+                                                        }
                                                         <ArrowUpRightIcon />
                                                     </span>
                                                 </span>

@@ -5,6 +5,7 @@ import { formatDate } from '@/lib/formatDate';
 import { useParams, notFound } from 'next/navigation';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { allNotes } from 'contentlayer/generated';
+import { compareDesc } from 'date-fns';
 
 export default function Blog() {
     const params = useParams<{ slug: string }>();
@@ -13,6 +14,12 @@ export default function Blog() {
     const { slug } = params;
 
     const note = allNotes.find((n) => n._raw.flattenedPath === `notes/${slug}`);
+    const posts = allNotes.sort((a, b) =>
+        compareDesc(new Date(b.date), new Date(a.date)),
+    );
+    const index = posts.findIndex(
+        (n) => n._raw.flattenedPath === `notes/${slug}`,
+    );
 
     if (!note) notFound();
 
@@ -21,17 +28,13 @@ export default function Blog() {
     return (
         <NotesLayout
             pageTitle="notes"
-            noteIndex={`Entry #0`}
+            noteIndex={`Entry #${index}`}
             noteTitle={note.title}
             noteDescription={`Written ${formatDate(note.date)}`}
         >
-            <div className="relative z-0">
-                <div className="relative z-1 flex flex-col mx-auto pb-10 md:pt-0 md:px-10 lg:px-0 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
-                    <div className="flex flex-col gap-8 w-full mx-auto md:py-5 md:text-xl text-left">
-                        <MDXContent />
-                    </div>
-                </div>
-            </div>
+            <article className="mx-auto max-w-none w-full font-inter prose prose-headings:text-zinc-200 lg:prose-xl text-zinc-200">
+                <MDXContent />
+            </article>
         </NotesLayout>
     );
 }

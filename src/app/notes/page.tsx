@@ -121,7 +121,7 @@ export default function Blogs() {
                                                 </span>
 
                                                 {/* Title */}
-                                                <span className="flex-1 text-4xl md:text-3xl font-notes font-bold tracking-tight md:leading-7">
+                                                <span className="flex-1 text-4xl md:text-3xl font-gaegu font-bold tracking-tight md:leading-7">
                                                     {entry.title}
                                                 </span>
 

@@ -1,15 +1,11 @@
-@layer theme, base, components, utilities;
-@import 'tailwindcss/theme.css' layer(theme);
-@import 'tailwindcss/preflight.css' layer(base);
-@import 'tailwindcss/utilities.css' layer(utilities);
-
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography"; 
 
 /*@import 'tw-animate-css';*/
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
+@theme inline {
     /* --font-inter: "Inter Display Medium", sans-serif;
     --font-inter-display: "Inter Display", sans-serif;
     --font-title: "Inter Display ExtraBold", sans-serif;
@@ -21,8 +17,8 @@
     --font-title: 'SF Pro Display Heavy', sans-serif;
     --font-inter-black: 'SF Pro Display Black', sans-serif;
     --font-koguma: 'Shorelines Script Bold', script;
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-notes: 'Gaegu', sans-serif;
+    --font-mono: var(--font-jetbrains-mono);
+    --font-gaegu: var(--font-gaegu);
 
     /* THEME */
     --color-koguma-background: oklch(89.9% 0.061 343.231);

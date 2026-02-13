@@ -35,7 +35,7 @@ export default function Blog() {
             noteTitle={note.title}
             noteDescription={`Written ${formatDate(note.date)}`}
         >
-            <article className="mx-auto max-w-none w-full font-inter prose prose-headings:text-zinc-200 lg:prose-xl text-zinc-200">
+            <article className="mx-auto max-w-none w-full font-inter prose prose-headings:text-zinc-200 prose-code:text-zinc-300 prose-strong:text-zinc-100 prose-a:text-zinc-300 lg:prose-xl text-zinc-200">
                 <MDXContent />
             </article>
         </NotesLayout>

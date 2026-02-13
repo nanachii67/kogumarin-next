@@ -1,10 +1,10 @@
-// import './globals.css';
 import '@/styles/globals.css';
 import '@/styles/fonts.css';
 
 import type { Metadata } from 'next';
 import { Inter, Gaegu, JetBrains_Mono } from 'next/font/google';
-import { NavigationBar } from '@/components/navigation/navigation-bar';
+
+import Client from '@/app/client';
 
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 const gaegu = Gaegu({
@@ -27,9 +27,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable} ${gaegu.variable} ${mono.variable} antialiased`}>
-                <NavigationBar />
-                {children}
+            <body
+                className={`${inter.variable} ${gaegu.variable} ${mono.variable} antialiased`}
+            >
+                <Client>{children}</Client>
             </body>
         </html>
     );

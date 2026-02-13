@@ -1,20 +1,22 @@
 'use client';
 
 // import { BlogNavigationData } from '@/utils/blog-entries';
+import { compareDesc } from 'date-fns';
+import { AnimatePresence, motion } from 'framer-motion';
+
+import Link from 'next/link';
+import { useMemo, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
+import NotesLayout from '@/layouts/NotesLayout';
+import { formatDate } from '@/lib/formatDate';
 import {
     ArrowUpRightIcon,
     CaretLeftIcon,
     CaretRightIcon,
 } from '@phosphor-icons/react';
-import { Separator } from '@/components/ui/separator';
-import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from 'framer-motion';
-import { formatDate } from '@/lib/formatDate';
-import { useState, useMemo } from 'react';
-import NotesLayout from '@/layouts/NotesLayout';
-import Link from 'next/link';
 import { allNotes } from 'contentlayer/generated';
-import { compareDesc } from 'date-fns';
 
 const ENTRIES_PER_PAGE = 10;
 

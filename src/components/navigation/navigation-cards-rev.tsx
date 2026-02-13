@@ -1,8 +1,9 @@
+import Link from 'next/link';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
-import * as motion from 'motion/react-client';
 import { NavigationData } from '@/utils/navigation-cards';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import Link from 'next/link';
+import * as motion from 'motion/react-client';
 
 export function NavigationCardsRev() {
     return (

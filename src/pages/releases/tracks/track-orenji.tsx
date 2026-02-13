@@ -1,5 +1,6 @@
-import ReleaseLayout from '@/layouts/ReleaseLayout';
 import { ChevronRight } from 'lucide-react';
+
+import ReleaseLayout from '@/layouts/ReleaseLayout';
 
 export default function TRACK_Orenji() {
     return (

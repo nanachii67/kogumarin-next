@@ -1,9 +1,11 @@
+import { gsap } from 'gsap';
+
+import Image from 'next/image';
+import Link from 'next/link';
 import type { CSSProperties, ReactNode } from 'react';
 import { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
+
 import useCursor from '@/hooks/useCursor';
-import Link from 'next/link';
-import Image from 'next/image';
 
 type MenuItem = {
     label: string;

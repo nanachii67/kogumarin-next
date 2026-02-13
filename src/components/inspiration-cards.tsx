@@ -1,10 +1,12 @@
 'use client';
 
+import { motion } from 'framer-motion';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
 import { InspirationData } from '@/utils/inspiration-cards';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export function InspirationCards() {
     return (

@@ -1,6 +1,7 @@
 // import { Link, useParams } from 'react-router-dom';
-import releases from '@/utils/releases.json';
 import Link from 'next/link';
+
+import releases from '@/utils/releases.json';
 
 interface ProductionSlug {
     iframe: { src: string; href: string; label: string };

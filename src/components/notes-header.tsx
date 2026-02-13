@@ -1,5 +1,6 @@
-import { ArrowLeftIcon } from '@phosphor-icons/react';
 import Link from 'next/link';
+
+import { ArrowLeftIcon } from '@phosphor-icons/react';
 
 interface PageHeaderProps {
     pageIndex?: string;

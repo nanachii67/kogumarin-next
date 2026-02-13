@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
+
+import React, { useEffect, useState } from 'react';
 
 interface MagneticCursorProps {
     children: React.ReactNode;

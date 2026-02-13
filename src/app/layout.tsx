@@ -1,10 +1,9 @@
-import '@/styles/globals.css';
-import '@/styles/fonts.css';
-
 import type { Metadata } from 'next';
-import { Inter, Gaegu, JetBrains_Mono } from 'next/font/google';
+import { Gaegu, Inter, JetBrains_Mono } from 'next/font/google';
 
 import Client from '@/app/client';
+import '@/styles/fonts.css';
+import '@/styles/globals.css';
 
 const inter = Inter({ variable: '--font-inter', subsets: ['latin'] });
 const gaegu = Gaegu({

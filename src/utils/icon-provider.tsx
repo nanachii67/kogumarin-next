@@ -1,14 +1,14 @@
 import {
+    DiscordLogoIcon,
+    GithubLogoIcon,
+    type Icon,
+    MusicNoteIcon,
+    SteamLogoIcon,
+} from '@phosphor-icons/react';
+import {
     FacebookLogoIcon,
     InstagramLogoIcon,
 } from '@phosphor-icons/react/dist/ssr';
-import {
-    DiscordLogoIcon,
-    GithubLogoIcon,
-    MusicNoteIcon,
-    SteamLogoIcon,
-    type Icon,
-} from '@phosphor-icons/react';
 
 export type AppIcons = { id: number; icon: Icon; socialMediaAppName: string };
 

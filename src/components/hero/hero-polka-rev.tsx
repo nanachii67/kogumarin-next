@@ -1,7 +1,8 @@
-import { ArrowDownIcon } from '@phosphor-icons/react';
+import { motion } from 'framer-motion';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
 import DotGrid from '@/components/react-bits/dot-grid';
-import { motion } from 'framer-motion';
+import { ArrowDownIcon } from '@phosphor-icons/react';
 
 export function HeroPolkaRev() {
     return (

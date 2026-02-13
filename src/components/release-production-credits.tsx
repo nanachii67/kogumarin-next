@@ -1,5 +1,5 @@
-import releases from '@/utils/releases.json';
 import { formatDate } from '@/lib/formatDate';
+import releases from '@/utils/releases.json';
 
 interface ProductionSlug {
     iframe: { src: string; href: string; label: string };
@@ -25,7 +25,11 @@ interface ProductionSlug {
     };
 }
 
-export default function ReleaseProductionCredits({ trackId }: { trackId: string }) {
+export default function ReleaseProductionCredits({
+    trackId,
+}: {
+    trackId: string;
+}) {
     const track: ProductionSlug | undefined = trackId
         ? releases[trackId as keyof typeof releases]
         : undefined;

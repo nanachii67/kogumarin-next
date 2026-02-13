@@ -15,7 +15,10 @@
         "incremental": true,
         "plugins": [{ "name": "next" }],
         "baseUrl": ".",
-        "paths": { "@/*": ["./src/*"], "contentlayer/generated": ["./.contentlayer/generated"] }
+        "paths": {
+            "@/*": ["./src/*"],
+            "contentlayer/generated": ["./.contentlayer/generated"]
+        }
     },
     "include": [
         "next-env.d.ts",

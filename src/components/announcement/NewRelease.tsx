@@ -1,10 +1,11 @@
-import { ExternalLink } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { NewRelease as releases } from '@/utils/new-release';
-import useCursor from '@/hooks/useCursor';
-
 import { motion } from 'framer-motion';
+import { ExternalLink } from 'lucide-react';
+
 import Link from 'next/link';
+
+import { Button } from '@/components/ui/button';
+import useCursor from '@/hooks/useCursor';
+import { NewRelease as releases } from '@/utils/new-release';
 
 export default function NewRelease() {
     const cursor = useCursor(({ instance }) => instance);

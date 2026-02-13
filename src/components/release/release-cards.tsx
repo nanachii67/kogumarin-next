@@ -1,10 +1,11 @@
 'use client';
 
+import Image from 'next/image';
+import Link from 'next/link';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
 import { ReleaseData } from '@/utils/release-cards';
 import * as motion from 'motion/react-client';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export function ReleaseCards() {
     return (

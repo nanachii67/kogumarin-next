@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
 import { ReleaseData } from '@/utils/release-cards';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export default function ReleaseDiscographyBar() {
     return (

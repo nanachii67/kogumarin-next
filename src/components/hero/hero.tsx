@@ -1,11 +1,13 @@
-import AnimatedContent from '@/components/react-bits/animated-content';
+import { ChevronRight } from 'lucide-react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
 import FloatingButton from '@/components/floating-button';
+import IconHero from '@/components/kogs_records_logo_hero';
+import AnimatedContent from '@/components/react-bits/animated-content';
 import Squares from '@/components/react-bits/squares';
 import { NewRelease } from '@/utils/new-release';
-import { ChevronRight } from 'lucide-react';
-import IconHero from '@/components/kogs_records_logo_hero';
-import Link from 'next/link';
-import Image from 'next/image';
 
 export function Hero() {
     return (
@@ -103,7 +105,7 @@ export function Hero() {
                         >
                             <div className="flex mx-auto justify-center items-center text-center mt-10">
                                 <Image
-                                    alt={"release cover"}
+                                    alt={'release cover'}
                                     src={item.releasecover}
                                     style={{
                                         animation:

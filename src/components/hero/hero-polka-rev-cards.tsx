@@ -1,8 +1,14 @@
 'use client';
 
-import { SocialCards } from '@/utils/social-cards';
+import { motion } from 'framer-motion';
+
+import Link from 'next/link';
+import { useState } from 'react';
+
 import AnimatedContent from '@/components/react-bits/animated-content';
 import DotGrid from '@/components/react-bits/dot-grid';
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
 import {
     Card,
     CardAction,
@@ -11,24 +17,19 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-
-import { Avatar, AvatarImage } from '@/components/ui/avatar';
-import {
-    ArrowCircleUpRightIcon,
-    CopyIcon,
-} from '@phosphor-icons/react/dist/ssr';
-import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import { Button } from '@/components/ui/button';
 import {
     Tooltip,
     TooltipContent,
     TooltipProvider,
     TooltipTrigger,
 } from '@/components/ui/tooltip';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { IconProvider } from '@/utils/icon-provider';
-import Link from 'next/link';
+import { SocialCards } from '@/utils/social-cards';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
+import {
+    ArrowCircleUpRightIcon,
+    CopyIcon,
+} from '@phosphor-icons/react/dist/ssr';
 
 export function HeroPolkaRevCards() {
     const [copiedId, setCopiedId] = useState<number | null>(null);

@@ -1,8 +1,9 @@
 'use client';
 
+import Link from 'next/link';
+
 import { KogsAlbum } from '@/utils/kogs-albums';
 import { KogsSingleEP } from '@/utils/kogs-single-ep';
-import Link from 'next/link';
 
 const generalLinks = [
     { label: 'Home', path: '/' },
@@ -45,7 +46,10 @@ export function SiteMap() {
                                         Singles
                                     </p>
                                     {KogsSingleEP.map((item) => (
-                                        <Link key={item.singepnum} href={item.link}>
+                                        <Link
+                                            key={item.singepnum}
+                                            href={item.link}
+                                        >
                                             <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
                                                 {item.title} {item?.subtitle}
                                             </p>
@@ -57,7 +61,10 @@ export function SiteMap() {
                                         Albums and EPs
                                     </p>
                                     {KogsAlbum.map((item) => (
-                                        <Link key={item.albumnum} href={item.link}>
+                                        <Link
+                                            key={item.albumnum}
+                                            href={item.link}
+                                        >
                                             <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
                                                 {item.title} {item?.subtitle}
                                             </p>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+
 import Icon from '@/components/kogs_records_logo_var';
 import BubbleMenu from '@/components/react-bits/bubble-menu';
 

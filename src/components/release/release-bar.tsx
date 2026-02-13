@@ -1,16 +1,17 @@
 import { ChevronRight } from 'lucide-react';
-import Link from 'next/link';
+
 import Image from 'next/image';
+import Link from 'next/link';
+
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselPrevious,
     CarouselNext,
+    CarouselPrevious,
 } from '@/components/ui/carousel';
-import { ReleaseData } from '@/utils/release-cards';
-
 import useCursor from '@/hooks/useCursor';
+import { ReleaseData } from '@/utils/release-cards';
 
 export function ReleaseBar() {
     const cursor = useCursor(({ instance }) => instance);

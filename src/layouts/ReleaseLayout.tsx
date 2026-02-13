@@ -1,7 +1,8 @@
+import { Easing, motion } from 'framer-motion';
+
 import { Footer } from '@/components/footer';
 import DotGrid from '@/components/react-bits/dot-grid';
 import ReleaseDiscographyBar from '@/components/release/release-bar-new';
-import { Easing, motion } from 'framer-motion';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },

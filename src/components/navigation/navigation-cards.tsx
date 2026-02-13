@@ -1,4 +1,8 @@
-import { NavigationData } from '@/utils/navigation-cards';
+import { motion } from 'framer-motion';
+
+import Link from 'next/link';
+
+import AnimatedContent from '@/components/react-bits/animated-content';
 import {
     Card,
     CardAction,
@@ -7,11 +11,8 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import AnimatedContent from '@/components/react-bits/animated-content';
-
+import { NavigationData } from '@/utils/navigation-cards';
 import { ArrowCircleUpRightIcon } from '@phosphor-icons/react';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 
 export function NavigationCards() {
     return (

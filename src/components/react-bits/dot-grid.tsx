@@ -1,6 +1,8 @@
 'use client';
-import React, { useRef, useEffect, useCallback, useMemo } from 'react';
 import { gsap } from 'gsap';
+
+import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
 
 gsap.registerPlugin(InertiaPlugin);

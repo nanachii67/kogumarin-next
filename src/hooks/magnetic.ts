@@ -5,7 +5,6 @@
  * @author Cuberto (cuberto.com)
  * @licence Copyright (c) 2020, Cuberto. All rights reserved.
  */
-
 import gsap from 'gsap';
 
 interface Options {

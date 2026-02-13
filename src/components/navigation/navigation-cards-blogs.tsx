@@ -1,3 +1,6 @@
+import Link from 'next/link';
+
+import AnimatedContent from '@/components/react-bits/animated-content';
 import {
     Card,
     CardAction,
@@ -6,11 +9,8 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import AnimatedContent from '@/components/react-bits/animated-content';
-
-import { ArrowCircleUpRightIcon } from '@phosphor-icons/react';
 import { BlogNavigationData } from '@/utils/blog-entries';
-import Link from 'next/link';
+import { ArrowCircleUpRightIcon } from '@phosphor-icons/react';
 
 export default function BlogNavigationCards() {
     return (

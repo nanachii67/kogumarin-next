@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+
 import type { ReactNode } from 'react';
 
 // Pure fade + subtle scale — no directional sliding

@@ -1,9 +1,10 @@
 'use client';
 
-import { Footer } from '@/components/footer';
-import { SiteMap } from '@/components/site-map';
-import { HeroPolkaRevHeader } from '@/components/hero/hero-polka-header';
 import { Easing, motion } from 'framer-motion';
+
+import { Footer } from '@/components/footer';
+import { HeroPolkaRevHeader } from '@/components/hero/hero-polka-header';
+import { SiteMap } from '@/components/site-map';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },

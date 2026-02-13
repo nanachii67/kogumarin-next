@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+
+import React, { useState } from 'react';
+
+import { Button } from '@/components/ui/button';
 
 const FloatingButton: React.FC = () => {
     const scrollToNextSection = () => {

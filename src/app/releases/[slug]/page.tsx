@@ -1,11 +1,12 @@
 'use client';
 
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
+import AnimatedContent from '@/components/react-bits/animated-content';
 import ReleaseLayout from '@/layouts/ReleaseLayout';
 import releases from '@/utils/releases.json';
-import AnimatedContent from '@/components/react-bits/animated-content';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
 
 interface ReleasesSlug {
     iframe: { src: string; href: string; label: string };

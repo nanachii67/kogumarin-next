@@ -1,8 +1,8 @@
 'use client';
 
-import { HeroPolkaRevCards } from '@/components/hero/hero-polka-rev-cards';
-
 import { Easing, motion } from 'framer-motion';
+
+import { HeroPolkaRevCards } from '@/components/hero/hero-polka-rev-cards';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },

@@ -1,9 +1,11 @@
+import { ChevronRight } from 'lucide-react';
+
+import Image from 'next/image';
+import Link from 'next/link';
+
+import IconHero from '@/components/kogs_records_logo_hero';
 import AnimatedContent from '@/components/react-bits/animated-content';
 import { NewRelease } from '@/utils/new-release';
-import { ChevronRight } from 'lucide-react';
-import IconHero from '@/components/kogs_records_logo_hero';
-import Image from 'next/image'
-import Link from 'next/link';
 
 export function HeroPolka() {
     return (

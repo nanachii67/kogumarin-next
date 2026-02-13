@@ -1,7 +1,8 @@
+import { Easing, motion } from 'framer-motion';
+
 import NewRelease from '@/components/announcement/NewRelease';
 import { Footer } from '@/components/footer';
 import { HeroPolkaRev } from '@/components/hero/hero-polka-rev';
-import { Easing, motion } from 'framer-motion';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },

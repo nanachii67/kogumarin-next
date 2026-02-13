@@ -1,12 +1,14 @@
 'use client';
 
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { AnimatePresence, motion } from 'framer-motion';
+import { gsap } from 'gsap';
+
 import { usePathname } from 'next/navigation';
 import { useLayoutEffect, useRef } from 'react';
+
 import { NavigationBar } from '@/components/navigation/navigation-bar';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 

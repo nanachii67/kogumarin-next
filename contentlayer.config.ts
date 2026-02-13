@@ -13,7 +13,6 @@ export const calculateReadingTime = (text: string) => {
     return `${minutes < 1 ? '<' : ''}${readTime} min read`;
 };
 
-
 export const Note = defineDocumentType(() => ({
     name: 'Note',
     filePathPattern: `**/*.mdx`,

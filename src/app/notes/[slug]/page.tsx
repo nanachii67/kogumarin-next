@@ -1,11 +1,13 @@
 'use client';
 
+import { compareDesc } from 'date-fns';
+
+import { notFound, useParams } from 'next/navigation';
+
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
-import { useParams, notFound } from 'next/navigation';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
 import { allNotes } from 'contentlayer/generated';
-import { compareDesc } from 'date-fns';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 
 export default function Blog() {
     const params = useParams<{ slug: string }>();

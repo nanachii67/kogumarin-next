@@ -42,9 +42,11 @@ export default function ReleaseDiscographyBar() {
                                         >
                                             <div className="flex flex-col">
                                                 <Image
+                                                    height={512}
+                                                    width={512}
                                                     src={item.imagelink}
                                                     alt={`${item.title} ${item?.subtitle} - ${item.description}`}
-                                                    className="w-full aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
+                                                    className="object-cover aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                                                 />
                                                 <div className="flex flex-col mt-2 space-y-[-2px] text-koguma-text">
                                                     <p className="text-xs opacity-80 font-inter">

@@ -3,6 +3,7 @@ import { Easing, motion } from 'framer-motion';
 import { Footer } from '@/components/footer';
 import DotGrid from '@/components/react-bits/dot-grid';
 import ReleaseDiscographyBar from '@/components/release/release-bar-new';
+import ReleaseProductionCredits from '@/components/release/release-production-credits';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },
@@ -14,8 +15,10 @@ const transition = { duration: 0.25, ease: 'easeOut' as Easing };
 
 export default function ReleaseLayout({
     children,
+    trackId,
 }: {
     children: React.ReactNode;
+    trackId: string;
 }) {
     return (
         <motion.div
@@ -41,7 +44,7 @@ export default function ReleaseLayout({
                 />
             </div>
             <main className="flex flex-col mx-auto">{children}</main>
-            {/*<ReleaseProductionCredits />*/}
+            <ReleaseProductionCredits trackId={trackId} />
             <ReleaseDiscographyBar />
             <Footer />
         </motion.div>

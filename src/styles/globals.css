@@ -12,10 +12,10 @@
     --font-inter-black: "Inter Display Black", sans-serif;
     --font-koguma: "Shorelines Script Bold", script; */
 
-    --font-inter: 'SF Pro Display Medium', sans-serif;
-    --font-inter-display: 'SF Pro Display Bold', sans-serif;
-    --font-title: 'SF Pro Display Heavy', sans-serif;
-    --font-inter-black: 'SF Pro Display Black', sans-serif;
+    --font-inter: 'Inter Display Medium', sans-serif;
+    --font-inter-display: 'Inter Display', sans-serif;
+    --font-title: 'Inter Display ExtraBold', sans-serif;
+    --font-inter-black: 'Inter Display Black', sans-serif;
     --font-koguma: 'Shorelines Script Bold', script;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);

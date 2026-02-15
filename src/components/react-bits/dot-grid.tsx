@@ -1,11 +1,20 @@
 'use client';
+
 import { gsap } from 'gsap';
 
-import React, { useCallback, useEffect, useMemo, useRef } from 'react';
+import React, {
+    useCallback,
+    useEffect,
+    useMemo,
+    useRef,
+    useState,
+} from 'react';
 
 import { InertiaPlugin } from 'gsap/InertiaPlugin';
 
-gsap.registerPlugin(InertiaPlugin);
+if (typeof window !== 'undefined') {
+    gsap.registerPlugin(InertiaPlugin);
+}
 
 const throttle = (func: (...args: any[]) => void, limit: number) => {
     let lastCall = 0;
@@ -67,6 +76,7 @@ const DotGrid: React.FC<DotGridProps> = ({
     className = '',
     style,
 }) => {
+    const [isMounted, setIsMounted] = useState(false);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const dotsRef = useRef<Dot[]>([]);
@@ -137,8 +147,14 @@ const DotGrid: React.FC<DotGridProps> = ({
         dotsRef.current = dots;
     }, [dotSize, gap]);
 
+    // Mount detection for SSR
     useEffect(() => {
-        if (!circlePath) return;
+        setIsMounted(true);
+    }, []);
+
+    // Drawing effect
+    useEffect(() => {
+        if (!isMounted || !circlePath) return;
 
         let rafId: number;
         const proxSq = proximity * proximity;
@@ -187,25 +203,34 @@ const DotGrid: React.FC<DotGridProps> = ({
 
         draw();
         return () => cancelAnimationFrame(rafId);
-    }, [proximity, baseColor, activeRgb, baseRgb, circlePath]);
+    }, [isMounted, proximity, baseColor, activeRgb, baseRgb, circlePath]);
 
+    // Grid building effect
     useEffect(() => {
+        if (!isMounted) return;
+
         buildGrid();
         let ro: ResizeObserver | null = null;
         if ('ResizeObserver' in window) {
             ro = new ResizeObserver(buildGrid);
             wrapperRef.current && ro.observe(wrapperRef.current);
         } else {
-            (window as Window).addEventListener('resize', buildGrid);
+            window.addEventListener('resize', buildGrid);
         }
         return () => {
             if (ro) ro.disconnect();
             else window.removeEventListener('resize', buildGrid);
         };
-    }, [buildGrid]);
+    }, [isMounted, buildGrid]);
 
+    // Event handlers effect
     useEffect(() => {
+        if (!isMounted) return;
+
         const onMove = (e: MouseEvent) => {
+            const canvas = canvasRef.current;
+            if (!canvas) return;
+
             const now = performance.now();
             const pr = pointerRef.current;
             const dt = pr.lastTime ? now - pr.lastTime : 16;
@@ -227,7 +252,7 @@ const DotGrid: React.FC<DotGridProps> = ({
             pr.vy = vy;
             pr.speed = speed;
 
-            const rect = canvasRef.current!.getBoundingClientRect();
+            const rect = canvas.getBoundingClientRect();
             pr.x = e.clientX - rect.left;
             pr.y = e.clientY - rect.top;
 
@@ -259,7 +284,10 @@ const DotGrid: React.FC<DotGridProps> = ({
         };
 
         const onClick = (e: MouseEvent) => {
-            const rect = canvasRef.current!.getBoundingClientRect();
+            const canvas = canvasRef.current;
+            if (!canvas) return;
+
+            const rect = canvas.getBoundingClientRect();
             const cx = e.clientX - rect.left;
             const cy = e.clientY - rect.top;
             for (const dot of dotsRef.current) {
@@ -295,6 +323,7 @@ const DotGrid: React.FC<DotGridProps> = ({
             window.removeEventListener('click', onClick);
         };
     }, [
+        isMounted,
         maxSpeed,
         speedTrigger,
         proximity,
@@ -303,6 +332,17 @@ const DotGrid: React.FC<DotGridProps> = ({
         shockRadius,
         shockStrength,
     ]);
+
+    if (!isMounted) {
+        return (
+            <section
+                className={`p-4 flex items-center justify-center h-full w-full relative ${className}`}
+                style={style}
+            >
+                <div className="w-full h-full relative" />
+            </section>
+        );
+    }
 
     return (
         <section

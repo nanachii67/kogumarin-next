@@ -23,29 +23,37 @@ export default function AboutPage() {
                             title will focus on synthpop, much like{' '}
                             <span className="font-inter-display  decoration-koguma-text-light/50 font-medium">
                                 <a
-                                    href="https://open.spotify.com/artist/29O9ZebFa65aIEvMaW5pQY"
+                                    href="https://music.apple.com/ph/artist/snails-house/1007737414"
                                     className="hover:underline underline-offset-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Snail&apos;s House
                                 </a>
                                 ,{' '}
                                 <a
-                                    href="https://open.spotify.com/artist/4YqfXU53VVYBunSuvrDZYO"
+                                    href="https://music.apple.com/ph/artist/synthion/978885336"
                                     className="hover:underline underline-offset-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Synthion
                                 </a>
                                 ,{' '}
                                 <a
-                                    href="https://open.spotify.com/artist/2RssKQtZRWjMjZT0Eu9a2Q"
+                                    href="https://music.apple.com/ph/artist/stessie/1439746986"
                                     className="hover:underline underline-offset-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Stessie
                                 </a>
                                 ,{' '}
                                 <a
-                                    href="https://open.spotify.com/artist/0cdpFI2dZC34peIkjI1rLs"
+                                    href="https://music.apple.com/ph/artist/mitsukiyo/1477210468"
                                     className="hover:underline underline-offset-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Mitsukiyo
                                 </a>
@@ -53,6 +61,8 @@ export default function AboutPage() {
                                 <a
                                     href="https://music.apple.com/ph/artist/kotomi/1702107932"
                                     className="hover:underline underline-offset-2"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
                                     Kotomi
                                 </a>
@@ -84,11 +94,8 @@ export default function AboutPage() {
                             Interacting with these cards redirects to Apple
                             Music and Apple Music Classical.{' '}
                             <span className="opacity-80">
-                                Apple Music is a trademark of Apple Inc.
-                            </span>{' '}
-                            <span className="opacity-80">
-                                Apple Music Classical is a trademark of Apple
-                                Inc.
+                                Apple Music, and Apple Music Classical are
+                                trademarks of Apple Inc.
                             </span>
                         </p>
                     </div>

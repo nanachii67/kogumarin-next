@@ -2,6 +2,7 @@
 import Link from 'next/link';
 
 import releases from '@/utils/releases.json';
+import { formatDate } from '@/lib/formatDate';
 
 interface ProductionSlug {
     iframe: { src: string; href: string; label: string };
@@ -35,20 +36,6 @@ export default function ReleaseProductionCredits({
     const track: ProductionSlug | undefined = trackId
         ? releases[trackId as keyof typeof releases]
         : undefined;
-
-    const formatReleaseDate = (dateString: string | undefined): string => {
-        if (!dateString) return 'TBA';
-
-        const date = new Date(dateString);
-
-        const options: Intl.DateTimeFormatOptions = {
-            day: 'numeric',
-            month: 'long',
-            year: 'numeric',
-        };
-
-        return date.toLocaleDateString('en-US', options);
-    };
 
     return (
         <div className="relative bg-koguma-card py-5 px-10">
@@ -145,7 +132,7 @@ export default function ReleaseProductionCredits({
                     )}
                 </div>
                 <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light/80">
-                    <p>Released on {formatReleaseDate(track?.releaseDate)}</p>
+                    <p>Released on {formatDate(track?.releaseDate)}</p>
                 </div>
 
                 {track?.coverCopyright && (

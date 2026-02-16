@@ -267,7 +267,7 @@ export function HeroPolkaRevCards() {
                                                                         }
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
-                                                                        className="font-inter-display text-xl leading-6 flex items-center gap-1 underline underline-offset-3 hover:text-rose-200 transition-colors"
+                                                                        className="font-inter-black leading-6 flex items-center gap-1 underline underline-offset-3 hover:text-rose-200 transition-colors"
                                                                         aria-label={
                                                                             link.relevantLinkName
                                                                         }

@@ -6,8 +6,21 @@ const nextConfig: NextConfig = {
     turbopack: {},
     images: {
         remotePatterns: [
-            new URL('https://is1-ssl.mzstatic.com/**'),
-            new URL('https://f4.bcbits.com/**')
+            {
+                protocol: 'https',
+                hostname: 'is1-ssl.mzstatic.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'f4.bcbits.com',
+                pathname: '/**',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.discordapp.com',
+                pathname: '/**',
+            },
         ],
     },
 };

@@ -10,7 +10,7 @@ export const calculateReadingTime = (text: string) => {
     const readTime = Math.ceil(minutes);
 
     // Step 5: Format the output
-    return `${minutes < 1 ? '<' : ''}${readTime} min read`;
+    return `${minutes < 1 ? '~' : ''}${readTime} min read`;
 };
 
 export const Note = defineDocumentType(() => ({

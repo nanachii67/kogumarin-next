@@ -2,7 +2,7 @@ import { Easing, motion } from 'framer-motion';
 
 import { Footer } from '@/components/footer';
 import { HeroPolkaRevHeader } from '@/components/hero/hero-polka-header';
-import { NotesHeader } from '@/components/notes-header';
+import { NotesHeader } from '@/components/notes/notes-header';
 import { SiteMap } from '@/components/site-map';
 
 const variants = {

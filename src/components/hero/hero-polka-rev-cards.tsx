@@ -26,10 +26,7 @@ import {
 import { IconProvider } from '@/utils/icon-provider';
 import { SocialCards } from '@/utils/social-cards';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
-import {
-    ArrowCircleUpRightIcon,
-    CopyIcon,
-} from '@phosphor-icons/react/dist/ssr';
+import { CopyIcon } from '@phosphor-icons/react/dist/ssr';
 
 export function HeroPolkaRevCards() {
     const [copiedId, setCopiedId] = useState<number | null>(null);
@@ -143,7 +140,7 @@ export function HeroPolkaRevCards() {
                                             stiffness: 200,
                                         }}
                                     >
-                                        <Card className="group cursor-pointer h-full lg:min-h-[350px] min-h-[275px] bg-indigo-500 hover:bg-indigo-600 text-koguma-text-light border-0 shadow-2xl shadow-koguma-text/50 rounded-lg transition-all relative overflow-hidden">
+                                        <Card className="group cursor-pointer h-full lg:min-h-87.5 min-h-68.75 bg-indigo-500 hover:bg-indigo-600 text-koguma-text-light border-0 shadow-2xl shadow-koguma-text/50 rounded-lg transition-all relative overflow-hidden">
                                             <div className="absolute top-0 left-0 w-full h-full about-background z-0" />
                                             <div className="relative container z-10 flex flex-col h-full">
                                                 <CardHeader className="-space-y-2 mb-9 lg:mb-27">
@@ -238,10 +235,7 @@ export function HeroPolkaRevCards() {
                                                                 asChild
                                                             >
                                                                 <div>
-                                                                    <ArrowCircleUpRightIcon
-                                                                        weight="fill"
-                                                                        className="w-6 h-6"
-                                                                    />
+                                                                    <ArrowUpRightIcon />
                                                                 </div>
                                                             </Button>
                                                         </Link>

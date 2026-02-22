@@ -43,7 +43,7 @@ export function ReleaseCards() {
                                             alt={`${item.title} ${item?.subtitle} - ${item.description}`}
                                             className="object-cover aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
                                         />
-                                        <div className="flex flex-col mt-2 space-y-[-2px]">
+                                        <div className="flex flex-col mt-2 -space-y-0.5">
                                             <p className="text-xs opacity-80 font-inter">
                                                 {item.catalogtype} •{' '}
                                                 {item.releaseyear}

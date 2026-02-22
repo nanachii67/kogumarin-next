@@ -37,9 +37,11 @@ export function NotesHeader({
                             </h1>
                         </div>
                         <div className="col-span-1 justify-self-center mt-3 md:mt-0 md:justify-self-end text-center md:text-right">
-                            <h2 className="text-lg font-inter leading-6">
-                                {pageDescription}
-                            </h2>
+                            {pageDescription && (
+                                <h2 className="text-lg font-inter leading-6">
+                                    {pageDescription}
+                                </h2>
+                            )}
                         </div>
                     </div>
                 </div>

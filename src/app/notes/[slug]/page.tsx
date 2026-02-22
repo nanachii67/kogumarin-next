@@ -42,11 +42,11 @@ export default function Blog() {
             noteTitle={note.title}
             noteDescription={`Written ${formatDate(note.date)}`}
         >
-            <article className="mx-auto w-full font-inter md:text-xl max-w-5xl leading-snug md:leading-snug prose prose-code:text-koguma-text-light prose-strong:text-koguma-text-light prose-a:no-underline prose-a:text-koguma-text-light prose-a:font-inter-display prose-a:hover:underline text-koguma-text-light prose-p:opacity-90 prose-h5:font-inter-display prose-h6:text-sm prose-h6:opacity-80 prose-h6:flex prose-h6:items-center prose-h6:gap-1 prose-img:md:max-w-125 prose-img:mx-auto prose-img:rounded-2xl">
+            <article className="mx-auto w-full font-inter md:text-xl max-w-5xl leading-snug md:leading-snug prose prose-code:text-koguma-text-light prose-strong:text-koguma-text-light prose-a:no-underline prose-a:text-koguma-text-light prose-a:font-inter-display prose-a:hover:underline text-koguma-text-light prose-p:opacity-90 prose-h4:text-koguma-text-light/60 prose-h4:font-inter-display prose-h4:text-sm prose-h5:font-inter-display prose-h6:text-sm prose-h6:opacity-80 prose-h6:flex prose-h6:items-center prose-h6:gap-1 prose-img:md:max-w-125 prose-img:mx-auto prose-img:rounded-2xl">
                 <MDXContent components={components} />
             </article>
         </NotesLayout>
     );
 }
 
-export const runtime = 'edge';
+// export const runtime = 'edge';

@@ -33,9 +33,11 @@ export function HeroPolkaRevHeader({
                             </h1>
                         </div>
                         <div className="col-span-1 justify-self-center md:justify-self-end text-center md:text-right">
-                            <h2 className="text-lg font-inter leading-6 w-96">
-                                {pageDescription}
-                            </h2>
+                            {pageDescription && (
+                                <h2 className="text-lg font-inter leading-6 w-96">
+                                    {pageDescription}
+                                </h2>
+                            )}
                         </div>
                     </div>
                 </div>

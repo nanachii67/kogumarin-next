@@ -1,5 +1,9 @@
+import { Metadata } from 'next';
+
 import { InspirationCards } from '@/components/inspiration-cards';
 import AboutLayout from '@/layouts/AboutLayout';
+
+export const metadata: Metadata = { title: 'About — Kogumarin' };
 
 export default function AboutPage() {
     return (

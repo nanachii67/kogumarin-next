@@ -6,16 +6,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    /* --font-inter: "Inter Display Medium", sans-serif;
-    --font-inter-display: "Inter Display", sans-serif;
-    --font-title: "Inter Display ExtraBold", sans-serif;
-    --font-inter-black: "Inter Display Black", sans-serif;
-    --font-koguma: "Shorelines Script Bold", script; */
-
-    --font-inter: 'Inter Display Medium', sans-serif;
-    --font-inter-display: 'Inter Display', sans-serif;
-    --font-title: 'Inter Display ExtraBold', sans-serif;
-    --font-inter-black: 'Inter Display Black', sans-serif;
+    --font-inter: var(--font-inter);
+    --font-title: var(--font-inter-title);
+    --font-inter-black: var(--font-inter-black);
     --font-koguma: 'Shorelines Script Bold', script;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);
@@ -147,6 +140,7 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: thin;
     /*scrollbar-color: #312e81 #6366f1;*/
+    font-optical-sizing: auto;
 }
 
 @theme inline {

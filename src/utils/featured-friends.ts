@@ -76,7 +76,7 @@ export const featuredFriends = [
         friend_id: 10,
         friend_name: 'Silence Suzuka Nasaktan Muli',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/462478650676084747/d8f44a4b71fcc34bdaad2aa55adc8849.webp?size=1024',
+            'https://cdn.discordapp.com/avatars/462478650676084747/9045a41d5266ee6fdb87607754b46fb0.webp?size=1024',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/kiyasu.xx',
     },

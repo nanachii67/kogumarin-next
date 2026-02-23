@@ -68,7 +68,7 @@ export const featuredFriends = [
         friend_id: 9,
         friend_name: 'Maru',
         friend_avatar:
-            'https://github.com/nanachii67/image-dumps/blob/main/public/assets/images/kogumarin-next/friends/maru.png?raw=true',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/maru.png',
         friend_desc: 'WEB',
         friend_link: 'https://www.facebook.com/ppolhi',
     },

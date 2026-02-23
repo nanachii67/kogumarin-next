@@ -11,14 +11,15 @@ const nextConfig: NextConfig = {
                 hostname: 'is1-ssl.mzstatic.com',
                 pathname: '/**',
             },
+            { protocol: 'https', hostname: 'f4.bcbits.com', pathname: '/**' },
             {
                 protocol: 'https',
-                hostname: 'f4.bcbits.com',
+                hostname: 'cdn.discordapp.com',
                 pathname: '/**',
             },
             {
                 protocol: 'https',
-                hostname: 'cdn.discordapp.com',
+                hostname: 'raw.githubusercontent.com',
                 pathname: '/**',
             },
         ],

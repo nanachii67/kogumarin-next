@@ -65,7 +65,7 @@ export function useImageBrightness(
 
                 // Saturate the color slightly for a more vivid scrim
                 const avg = (r + g + b) / 3;
-                const saturationBoost = 1.4;
+                const saturationBoost = 2;
                 const sr = Math.min(
                     255,
                     Math.round(avg + (r - avg) * saturationBoost),

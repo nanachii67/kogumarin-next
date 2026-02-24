@@ -83,4 +83,15 @@ export const InspirationData = [
         catalogtype: 'Album',
         description: 'Various Artists',
     },
+    {
+        id: 9,
+        title: `"Umamusume Pretty Derby" WINNING LIVE 06`,
+        releaseyear: '2022',
+        brandlink:
+            'https://music.apple.com/ph/album/%E3%82%A6%E3%83%9E%E5%A8%98-%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC-winning-live-06/1813828888',
+        imagelink:
+            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/d7/a2/85d7a21f-b6bb-d419-d127-eba1ff47bada/4540774908851.png/296x296bb.webp',
+        catalogtype: 'Album',
+        description: 'Various Artists',
+    },
 ];

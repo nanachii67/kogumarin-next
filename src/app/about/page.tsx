@@ -12,7 +12,7 @@ export default function AboutPage() {
             pageDescription="Revised 5th February 2026"
         >
             <div className="relative z-0">
-                <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-5xl font-inter text-center justify-center">
+                <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-5xl font-inter font-medium text-center justify-center">
                     <div className="flex flex-col mb-20 gap-6 md:text-2xl justify-center text-left mx-auto opacity-90">
                         <p>
                             Hewwo! I&apos;m Koguma Rin, and I make music, nice
@@ -25,7 +25,7 @@ export default function AboutPage() {
                             with time. So I finally took the shot to make one!
                             The styles I&apos;ve decided to work under this
                             title will focus on synthpop, much like{' '}
-                            <span className="font-inter-display  decoration-koguma-text-light/50 font-medium">
+                            <span className="font-inter font-bold  decoration-koguma-text-light/50">
                                 <a
                                     href="https://music.apple.com/ph/artist/snails-house/1007737414"
                                     className="hover:underline underline-offset-2"
@@ -92,9 +92,9 @@ export default function AboutPage() {
                             *
                         </p>
                     </div>
-                    <div className="flex opacity-75 gap-2">
-                        <p className="font-inter-display">*</p>
-                        <p className="text-xs font-inter text-start">
+                    <div className="flex opacity-75 gap-2 items-center">
+                        <p className="font-inter-display font-bold">*</p>
+                        <p className="text-xs font-inter font-medium text-start">
                             Interacting with these cards redirects to Apple
                             Music and Apple Music Classical.{' '}
                             <span className="opacity-80">

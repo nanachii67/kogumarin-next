@@ -23,10 +23,10 @@ export function SiteMap() {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 font-inter">
                         <div className="col-span-1 flex flex-col mb-4">
-                            <p className="font-inter-display">General</p>
+                            <p className="font-bold">General</p>
                             {generalLinks.map((link) => (
                                 <Link key={link.path} href={link.path}>
-                                    <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
+                                    <p className="font-medium text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
                                         {link.label}
                                     </p>
                                 </Link>
@@ -36,36 +36,32 @@ export function SiteMap() {
                             <div className="grid grid-cols-1 md:grid-cols-2">
                                 <Link
                                     href={'/releases'}
-                                    className="col-span-1 md:col-span-2 font-inter-display"
+                                    className="col-span-1 md:col-span-2 font-bold hover:underline underline-offset-2 decoration-0"
                                 >
                                     <p>Releases</p>
                                 </Link>
 
                                 <div className="col-span-1 flex flex-col mb-4">
-                                    <p className="font-inter-display">
-                                        Singles
-                                    </p>
+                                    <p className="font-bold">Singles</p>
                                     {KogsSingleEP.map((item) => (
                                         <Link
                                             key={item.singepnum}
                                             href={item.link}
                                         >
-                                            <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
+                                            <p className="font-medium text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
                                                 {item.title} {item?.subtitle}
                                             </p>
                                         </Link>
                                     ))}
                                 </div>
                                 <div className="col-span-1 flex flex-col mb-4">
-                                    <p className="font-inter-display">
-                                        Albums and EPs
-                                    </p>
+                                    <p className="font-bold">Albums and EPs</p>
                                     {KogsAlbum.map((item) => (
                                         <Link
                                             key={item.albumnum}
                                             href={item.link}
                                         >
-                                            <p className="text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
+                                            <p className="font-medium text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
                                                 {item.title} {item?.subtitle}
                                             </p>
                                         </Link>

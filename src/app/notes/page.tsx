@@ -129,14 +129,14 @@ export default function Blogs() {
                                                     </span>
 
                                                     {/* Date */}
-                                                    <span className="text-sm font-inter opacity-80 shrink-0">
+                                                    <span className="text-sm font-inter font-medium opacity-80 shrink-0">
                                                         {formatDate(
                                                             entry.value.date,
                                                         )}
                                                     </span>
 
                                                     {/* Read length + arrow */}
-                                                    <span className="text-sm md:text font-inter opacity-80 shrink-0">
+                                                    <span className="text-sm md:text font-inter font-medium opacity-80 shrink-0">
                                                         <span className="flex flex-row items-center gap-1">
                                                             {
                                                                 entry.value
@@ -198,7 +198,7 @@ export default function Blogs() {
                                                         stiffness: 300,
                                                     }}
                                                     className={[
-                                                        'w-8 h-8 rounded-md text-sm font-inter transition-all cursor-pointer',
+                                                        'w-8 h-8 rounded-md text-sm font-inter font-medium transition-all cursor-pointer',
                                                         currentPage === page
                                                             ? 'bg-koguma-card text-koguma-bg font-semibold opacity-100'
                                                             : 'opacity-50 hover:opacity-90 hover:bg-koguma-text-hover',
@@ -229,7 +229,7 @@ export default function Blogs() {
                                 </div>
 
                                 {/* Page counter */}
-                                <p className="text-xs opacity-40 font-inter select-none">
+                                <p className="text-xs opacity-40 font-inter font-medium select-none">
                                     Page {currentPage} of {totalPages} &mdash;{' '}
                                     {allNotes.length} entries total
                                 </p>

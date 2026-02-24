@@ -6,7 +6,7 @@ import { ArrowDownIcon } from '@phosphor-icons/react';
 
 export function HeroPolkaRev() {
     return (
-        <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 h-screen">
+        <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 h-screen font-inter">
             <div className="absolute inset-0 w-full opacity-50">
                 <DotGrid
                     dotSize={5}
@@ -43,7 +43,7 @@ export function HeroPolkaRev() {
                                 <h1 className="text-5xl font-koguma pt-5">
                                     kogumarin
                                 </h1>
-                                <p className="font-inter text-xs">EST. 2024</p>
+                                <p className="font-medium text-xs">EST. 2024</p>
                             </AnimatedContent>
                         </div>
                         <div className="col-span-1 text-left md:justify-self-end md:text-right">
@@ -75,7 +75,7 @@ export function HeroPolkaRev() {
                                 threshold={0}
                                 delay={0.6}
                             >
-                                <p className="text-xl font-inter leading-6 w-96 mx-auto">
+                                <p className="text-xl font-medium leading-6 w-96 mx-auto">
                                     A musician, a gamer, and a frontend
                                     developer, and here is my repository of
                                     personal projects!

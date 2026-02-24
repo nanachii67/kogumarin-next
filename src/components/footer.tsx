@@ -80,7 +80,7 @@ export function Footer() {
                                 <SteamLogoIcon weight="fill" size={24} />
                             </a>
                         </div>
-                        <p className="text-xs mt-2 text-center font-inter md:text-end">
+                        <p className="text-xs mt-2 text-center font-inter font-medium md:text-end">
                             © {new Date().getFullYear()}{' '}
                             <span>Kogs, on behalf of Kogumarin.</span>
                         </p>

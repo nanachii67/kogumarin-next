@@ -30,7 +30,7 @@ export default function NotesNamecard() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <div className="flex flex-row not-prose items-center">
+                                <div className="flex flex-row not-prose items-center font-inter">
                                     <div className="flex flex-row items-center gap-2 grow">
                                         <Image
                                             src={friend?.friend_avatar}
@@ -39,10 +39,10 @@ export default function NotesNamecard() {
                                             height={36}
                                             className="rounded-full"
                                         />
-                                        <p className="font-inter-display leading-4">
+                                        <p className="font-bold leading-4">
                                             {friend.friend_name}
                                         </p>
-                                        <p className="font-inter bg-koguma-text-light text-koguma-text px-1.5 rounded-full text-xs">
+                                        <p className="font-medium bg-koguma-text-light text-koguma-text px-1.5 rounded-full text-xs">
                                             {friend.friend_desc}
                                         </p>
                                     </div>

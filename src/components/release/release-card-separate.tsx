@@ -84,8 +84,8 @@ export function ReleaseCard({
                                         : 'linear-gradient(to top, rgba(0,0,0,0.75), transparent)',
                                     opacity:
                                         analysis?.brightness === 'light'
-                                            ? 0.4
-                                            : 0.5,
+                                            ? 0.3
+                                            : 0.3,
                                     mixBlendMode:
                                         analysis?.brightness === 'light'
                                             ? 'screen'
@@ -93,13 +93,10 @@ export function ReleaseCard({
                                 }}
                             />
 
-                            <div
-                                className="absolute bottom-0 left-0 right-0"
-                                style={{ zIndex: 20 }}
-                            >
-                                <div className="flex flex-col my-3 mx-4">
+                            <div className="absolute bottom-0 left-0 right-0 z-20">
+                                <div className="flex flex-col my-3 mx-4 font-inter">
                                     <div className={`text-left ${textColor}`}>
-                                        <div className="flex flex-row justify-between items-center opacity-80 font-normal">
+                                        <div className="flex flex-row justify-between items-center opacity-70 font-medium">
                                             <p className="text-xs">
                                                 {item.description}
                                             </p>
@@ -108,7 +105,7 @@ export function ReleaseCard({
                                                 {item.releaseyear}
                                             </p>
                                         </div>
-                                        <p className="text-xl font-medium leading-5.5 line-clamp-2">
+                                        <p className="text-xl font-semibold leading-5.5 line-clamp-2 opacity-90">
                                             {item.title}
                                         </p>
                                     </div>

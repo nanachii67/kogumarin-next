@@ -7,8 +7,6 @@
 
 @theme inline {
     --font-inter: var(--font-inter);
-    --font-title: var(--font-inter-title);
-    --font-inter-black: var(--font-inter-black);
     --font-koguma: 'Shorelines Script Bold', script;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);
@@ -141,6 +139,7 @@
     scrollbar-width: thin;
     /*scrollbar-color: #312e81 #6366f1;*/
     font-optical-sizing: auto;
+    font-feature-settings: 'cv04', 'cv11';
 }
 
 @theme inline {

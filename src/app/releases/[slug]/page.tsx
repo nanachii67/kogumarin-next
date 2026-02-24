@@ -72,7 +72,7 @@ export default function Track() {
                                 </div>
                                 <div className="space-y-2 justify-center">
                                     <iframe
-                                        className="w-full md:min-w-125 aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
+                                        className="w-full md:min-w-125 aspect-square rounded-xl shadow-2xl shadow-koguma-fonts/20"
                                         src={track.iframe.src}
                                         seamless
                                     >
@@ -80,10 +80,10 @@ export default function Track() {
                                         {track.iframe.label}
                                     </a>*/}
                                     </iframe>
-                                    <div className="flex flex-col my-5 text-start w-full md:min-w-125">
+                                    <div className="flex flex-col my-5 text-start w-full md:min-w-125 font-inter font-medium">
                                         <p>{track.artist}</p>
                                         <div className="flex flex-col md:flex-row items-start md:items-center gap-1">
-                                            <h1 className="text-4xl font-inter-display">
+                                            <h1 className="text-4xl font-bold">
                                                 {track.title}{' '}
                                             </h1>
                                             <h2 className="text-2xl md:text-4xl font-inter opacity-80">
@@ -116,16 +116,16 @@ export default function Track() {
                                                 delay={track.trackNumber * 0.1}
                                             >
                                                 <div key={track.trackNumber}>
-                                                    <div className="flex flex-row text-start items-center justify-between">
+                                                    <div className="flex flex-row text-start items-center justify-between font-inter">
                                                         <div className="flex flex-row gap-3 items-center">
                                                             <p className="opacity-75">
                                                                 {
                                                                     track.trackNumber
                                                                 }
                                                             </p>
-                                                            <h3 className="md:text-2xl font-inter-display items-center">
+                                                            <h3 className="md:text-2xl font-bold items-center">
                                                                 {track.title}{' '}
-                                                                <span className="font-inter opacity-75">
+                                                                <span className="font-medium opacity-75">
                                                                     {
                                                                         track.subtitle
                                                                     }

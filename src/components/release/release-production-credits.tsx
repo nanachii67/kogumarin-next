@@ -39,17 +39,17 @@ export default function ReleaseProductionCredits({
 
     return (
         <div className="relative bg-koguma-card py-5 px-10">
-            <div className="container max-w-9xl mx-auto">
-                <div className="flex flex-row gap-2 items-center font-inter-display text-lg text-koguma-text-light/80">
+            <div className="container max-w-9xl mx-auto font-inter">
+                <div className="flex flex-row gap-2 items-center font-inter font-bold text-lg text-koguma-text-light/80">
                     <p>
                         Production of{' '}
-                        <span className="font-inter opacity-90">
+                        <span className="font-medium opacity-90">
                             {track?.title} {track?.subtitle}
                         </span>
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4">
+                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4 tracking-wide">
                     {track?.production?.producer && (
                         <div className="col-span-1">
                             <p className="text-xs text-koguma-fonts uppercase opacity-75">
@@ -131,22 +131,22 @@ export default function ReleaseProductionCredits({
                         </div>
                     )}
                 </div>
-                <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light/80">
+                <div className="flex flex-row gap-2 items-center font-medium text-sm text-koguma-text-light/80">
                     <p>Released on {formatDate(track?.releaseDate)}</p>
                 </div>
 
                 {track?.coverCopyright && (
-                    <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light opacity-50">
+                    <div className="flex flex-row gap-2 items-center font-medium text-sm text-koguma-text-light opacity-50">
                         <p>℗ {track?.coverCopyright}</p>
                     </div>
                 )}
-                <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light opacity-75">
+                <div className="flex flex-row gap-2 items-center font-medium text-sm text-koguma-text-light opacity-75">
                     <p>℗ {track?.releaseLabel}</p>
                 </div>
-                <div className="flex flex-row gap-2 items-center font-inter text-sm text-koguma-text-light/80">
+                <div className="flex flex-row gap-2 items-center font-medium text-sm text-koguma-text-light/80">
                     <p>
                         Source:{' '}
-                        <span className="font-inter-display">
+                        <span className="font-bold">
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"

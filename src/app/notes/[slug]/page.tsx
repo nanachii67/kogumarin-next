@@ -4,12 +4,12 @@ import { compareDesc } from 'date-fns';
 
 import { notFound, useParams } from 'next/navigation';
 
+import NotesNamecard from '@/components/notes/notes-namecard';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
 import { allNotes } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
-import NotesNamecard from '@/components/notes/notes-namecard';
 
 export default function Blog() {
     const params = useParams<{ slug: string }>();
@@ -30,10 +30,7 @@ export default function Blog() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const MDXContent = useMDXComponent(note.body.code);
 
-    const components = {
-      ArrowUpRightIcon,
-      NotesNamecard,
-    };
+    const components = { ArrowUpRightIcon, NotesNamecard };
 
     return (
         <NotesLayout
@@ -42,7 +39,7 @@ export default function Blog() {
             noteTitle={note.title}
             noteDescription={`Written ${formatDate(note.date)}`}
         >
-            <article className="mx-auto w-full font-inter md:text-xl max-w-5xl leading-snug md:leading-snug prose prose-code:text-koguma-text-light prose-strong:text-koguma-text-light prose-a:no-underline prose-a:text-koguma-text-light prose-a:font-inter-display prose-a:hover:underline text-koguma-text-light prose-p:opacity-90 prose-h4:text-koguma-text-light/60 prose-h4:font-inter-display prose-h4:text-sm prose-h5:font-inter-display prose-h6:text-sm prose-h6:opacity-80 prose-h6:flex prose-h6:items-center prose-h6:gap-1 prose-img:md:max-w-125 prose-img:mx-auto prose-img:rounded-2xl">
+            <article className="mx-auto w-full font-inter font-medium md:text-xl max-w-5xl leading-snug md:leading-snug prose prose-code:text-koguma-text-light prose-strong:text-koguma-text-light prose-a:no-underline prose-a:text-koguma-text-light prose-a:font-bold prose-a:hover:underline text-koguma-text-light prose-p:opacity-90 prose-h4:text-koguma-text-light/60 prose-h4:font-bold prose-h4:text-sm prose-h5:font-bold prose-h6:text-sm prose-h6:opacity-80 prose-h6:flex prose-h6:items-center prose-h6:gap-1 prose-img:md:max-w-125 prose-img:mx-auto prose-img:rounded-2xl">
                 <MDXContent components={components} />
             </article>
         </NotesLayout>

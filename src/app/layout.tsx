@@ -5,20 +5,9 @@ import Client from '@/app/client';
 import '@/styles/fonts.css';
 import '@/styles/globals.css';
 
-const interMedium = Inter_Tight({
+const inter = Inter_Tight({
     variable: '--font-inter',
     subsets: ['latin'],
-    weight: '500',
-});
-const interExtraBold = Inter_Tight({
-    variable: '--font-inter-title',
-    subsets: ['latin'],
-    weight: '800',
-});
-const interBlack = Inter_Tight({
-    variable: '--font-inter-black',
-    subsets: ['latin'],
-    weight: '900',
 });
 const gaegu = Gaegu({
     variable: '--font-gaegu',
@@ -42,9 +31,7 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={`
-                          ${interMedium.variable}
-                          ${interExtraBold.variable}
-                          ${interBlack.variable}
+                          ${inter.variable}
                           ${gaegu.variable}
                           ${mono.variable}
                           antialiased

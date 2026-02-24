@@ -39,7 +39,7 @@ export function HeroPolkaRevCards() {
     };
 
     return (
-        <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 min-h-screen py-10 px-10">
+        <div className="relative z-0 bg-indigo-700 flex flex-col justify-center text-indigo-950 min-h-screen py-10 px-10 font-inter">
             <div className="absolute inset-0 w-full opacity-50">
                 <DotGrid
                     dotSize={5}
@@ -72,7 +72,7 @@ export function HeroPolkaRevCards() {
                                 <p className="text-5xl font-koguma pt-5">
                                     kogumarin
                                 </p>
-                                <p className="font-inter text-xs">EST. 2024</p>
+                                <p className="font-medium text-xs">EST. 2024</p>
                             </AnimatedContent>
                         </div>
                         <div className="col-span-1 text-left md:justify-self-end md:text-right">
@@ -104,7 +104,7 @@ export function HeroPolkaRevCards() {
                                 threshold={0}
                                 delay={0.6}
                             >
-                                <p className="text-xl font-inter leading-6 w-96">
+                                <p className="text-xl font-medium leading-6 w-96">
                                     Feel free to look at these platforms, and
                                     consider giving a follow!~
                                 </p>
@@ -159,13 +159,13 @@ export function HeroPolkaRevCards() {
                                                             />
                                                         </Avatar>
                                                     </div>
-                                                    <CardTitle className="font-title text-3xl">
+                                                    <CardTitle className="font-extrabold text-3xl">
                                                         {
                                                             item.socialMediaAppName
                                                         }
                                                     </CardTitle>
-                                                    <CardDescription className="font-inter text-lg opacity-80 -space-y-1">
-                                                        <p className="font-inter-display">
+                                                    <CardDescription className="font-medium text-lg opacity-80 -space-y-1">
+                                                        <p className="font-bold">
                                                             {
                                                                 item.socialMediaHandlerFullName
                                                             }
@@ -261,7 +261,7 @@ export function HeroPolkaRevCards() {
                                                                         }
                                                                         target="_blank"
                                                                         rel="noopener noreferrer"
-                                                                        className="font-inter-black leading-6 flex items-center gap-1 underline underline-offset-3 hover:text-rose-200 transition-colors"
+                                                                        className="font-bold leading-6 flex items-center gap-1 underline underline-offset-3 hover:text-rose-200 transition-colors"
                                                                         aria-label={
                                                                             link.relevantLinkName
                                                                         }

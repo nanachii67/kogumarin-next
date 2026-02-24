@@ -3,8 +3,6 @@
 import { compareDesc } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
 
-import { Metadata } from 'next';
-import Head from 'next/head';
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
@@ -80,9 +78,6 @@ export default function Blogs() {
 
     return (
         <>
-            <Head>
-                <title>kKEW</title>
-            </Head>
             <NotesLayout
                 pageTitle="notes"
                 pageDescription="Koguma Rin's Journal Entries"

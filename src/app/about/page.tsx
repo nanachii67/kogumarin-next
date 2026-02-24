@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 
-import { InspirationCards } from '@/components/inspiration-cards';
+import { InspirationCardsRev } from '@/components/inspiration/inspiration-cards-rev';
 import AboutLayout from '@/layouts/AboutLayout';
 
 export const metadata: Metadata = { title: 'About — Kogumarin' };
@@ -104,7 +104,7 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div>
-                        <InspirationCards />
+                        <InspirationCardsRev />
                     </div>
                 </div>
             </div>

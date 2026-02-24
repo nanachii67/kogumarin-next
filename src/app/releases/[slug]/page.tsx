@@ -72,7 +72,7 @@ export default function Track() {
                                 </div>
                                 <div className="space-y-2 justify-center">
                                     <iframe
-                                        className="w-[350px] md:min-w-[500px] aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
+                                        className="w-full md:min-w-125 aspect-square font-inter rounded-xl shadow-2xl shadow-koguma-fonts/20"
                                         src={track.iframe.src}
                                         seamless
                                     >
@@ -80,7 +80,7 @@ export default function Track() {
                                         {track.iframe.label}
                                     </a>*/}
                                     </iframe>
-                                    <div className="flex flex-col my-5 text-start">
+                                    <div className="flex flex-col my-5 text-start w-full md:min-w-125">
                                         <p>{track.artist}</p>
                                         <div className="flex flex-col md:flex-row items-start md:items-center gap-1">
                                             <h1 className="text-4xl font-inter-display">

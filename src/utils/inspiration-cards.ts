@@ -72,4 +72,15 @@ export const InspirationData = [
         catalogtype: 'Album',
         description: 'Yu-Peng Chen',
     },
+    {
+        id: 8,
+        title: 'Cosmic Princess Kaguya!',
+        releaseyear: '2026',
+        brandlink:
+            'https://music.apple.com/ph/album/cosmic-princess-kaguya/1869843536',
+        imagelink:
+            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b3/1b/50/b31b50d3-c70b-3272-bfea-e370638593b3/4550752693389_cover.png/296x296bb.webp',
+        catalogtype: 'Album',
+        description: 'Various Artists',
+    },
 ];

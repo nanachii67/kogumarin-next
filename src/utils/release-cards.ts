@@ -1,7 +1,7 @@
 export const ReleaseData = [
     {
         id: 1,
-        title: `Blue Archive Drum Covers 1`,
+        title: `Blue Archive 3rd Ani Drum Covers 1`,
         releaseyear: '2024',
         brandlink: '/releases/blue-archive-3rd-anniversary-drum-covers/',
         imagelink: 'https://f4.bcbits.com/img/a1863888366_10.jpg',

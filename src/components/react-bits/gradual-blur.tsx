@@ -1,5 +1,3 @@
-import * as math from 'mathjs';
-
 import React, {
     CSSProperties,
     PropsWithChildren,
@@ -52,6 +50,8 @@ type GradualBlurProps = PropsWithChildren<{
     className?: string;
     style?: CSSProperties;
 }>;
+
+const round1 = (n: number) => Math.round(n * 10) / 10;
 
 const DEFAULT_CONFIG: Partial<GradualBlurProps> = {
     position: 'bottom',
@@ -233,18 +233,16 @@ const GradualBlur: React.FC<GradualBlurProps> = (props) => {
             let blurValue: number;
             if (config.exponential) {
                 blurValue =
-                    Number(math.pow(2, progress * 4)) *
-                    0.0625 *
-                    currentStrength;
+                    Math.pow(2, progress * 4) * 0.0625 * currentStrength;
             } else {
                 blurValue =
                     0.0625 * (progress * config.divCount + 1) * currentStrength;
             }
 
-            const p1 = math.round((increment * i - increment) * 10) / 10;
-            const p2 = math.round(increment * i * 10) / 10;
-            const p3 = math.round((increment * i + increment) * 10) / 10;
-            const p4 = math.round((increment * i + increment * 2) * 10) / 10;
+            const p1 = round1(increment * i - increment);
+            const p2 = round1(increment * i);
+            const p3 = round1(increment * i + increment);
+            const p4 = round1(increment * i + increment * 2);
 
             let gradient = `transparent ${p1}%, black ${p2}%`;
             if (p3 <= 100) gradient += `, black ${p3}%`;
@@ -319,15 +317,17 @@ const GradualBlur: React.FC<GradualBlurProps> = (props) => {
     return (
         <div
             ref={containerRef}
-            className={`gradual-blur relative isolate ${config.target === 'page' ? 'gradual-blur-page' : 'gradual-blur-parent'} ${config.className}`}
+            className={`gradual-blur relative rounded-xl isolate ${config.target === 'page' ? 'gradual-blur-page' : 'gradual-blur-parent'} ${config.className}`}
             style={containerStyle}
             onMouseEnter={hoverIntensity ? () => setIsHovered(true) : undefined}
             onMouseLeave={
                 hoverIntensity ? () => setIsHovered(false) : undefined
             }
         >
-            <div className="relative w-full h-full">{blurDivs}</div>
-            {props.children && <div className="relative">{props.children}</div>}
+            <div className="relative w-full h-full rounded-xl">{blurDivs}</div>
+            {props.children && (
+                <div className="relative rounded-xl">{props.children}</div>
+            )}
         </div>
     );
 };

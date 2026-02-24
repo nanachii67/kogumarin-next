@@ -1,9 +1,4 @@
-import { motion } from 'framer-motion';
-
-import Image from 'next/image';
-import Link from 'next/link';
-
-import AnimatedContent from '@/components/react-bits/animated-content';
+import { ReleaseCard } from './release-card-separate';
 import { ReleaseData } from '@/utils/release-cards';
 
 export default function ReleaseDiscographyBar() {
@@ -19,51 +14,11 @@ export default function ReleaseDiscographyBar() {
                         {ReleaseData.slice()
                             .reverse()
                             .map((item, index) => (
-                                <Link href={item.brandlink} key={index}>
-                                    <AnimatedContent
-                                        distance={50}
-                                        direction="vertical"
-                                        reverse={true}
-                                        duration={1}
-                                        ease="power3.out"
-                                        initialOpacity={0.0}
-                                        animateOpacity
-                                        scale={1.0}
-                                        threshold={0.1}
-                                        delay={item.id * 0.1}
-                                    >
-                                        <motion.div
-                                            whileHover={{ scale: 1.025 }}
-                                            whileTap={{ scale: 0.975 }}
-                                            transition={{
-                                                type: 'spring',
-                                                stiffness: 200,
-                                            }}
-                                        >
-                                            <div className="flex flex-col">
-                                                <Image
-                                                    height={512}
-                                                    width={512}
-                                                    src={item.imagelink}
-                                                    alt={`${item.title} ${item?.subtitle} - ${item.description}`}
-                                                    className="object-cover aspect-square rounded-xl hover:bg-koguma-text-hover hover:opacity-90 shadow-xl"
-                                                />
-                                                <div className="flex flex-col mt-2 -space-y-0.5 text-koguma-text">
-                                                    <p className="text-xs opacity-80 font-inter">
-                                                        {item.catalogtype} •{' '}
-                                                        {item.releaseyear}
-                                                    </p>
-                                                    <p className="font-inter-display text-xl leading-6">
-                                                        {item.title}{' '}
-                                                        <span className="font-inter">
-                                                            {item?.subtitle}
-                                                        </span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </motion.div>
-                                    </AnimatedContent>
-                                </Link>
+                                <ReleaseCard
+                                    key={item.id}
+                                    item={item}
+                                    index={index}
+                                />
                             ))}
                     </div>
                 </div>

@@ -114,7 +114,7 @@ export default function Blogs() {
                                                 href={entry.value.url}
                                                 className="block w-full"
                                             >
-                                                <div className="flex flex-col md:flex-row md:items-baseline gap-1 lg:gap-4 lg:min-w-5xl py-3">
+                                                <div className="flex flex-col md:flex-row md:items-center gap-1 lg:gap-4 lg:min-w-5xl py-3">
                                                     {/* Global index */}
                                                     <span className="text-sm opacity-80 md:w-24 shrink-0">
                                                         Entry #
@@ -124,7 +124,7 @@ export default function Blogs() {
                                                     </span>
 
                                                     {/* Title */}
-                                                    <span className="flex-1 text-4xl md:text-3xl font-gaegu font-bold tracking-tight md:leading-7">
+                                                    <span className="flex-1 text-4xl md:text-2xl font-inter font-semibold md:leading-7">
                                                         {entry.value.title}
                                                     </span>
 

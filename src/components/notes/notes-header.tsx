@@ -32,13 +32,13 @@ export function NotesHeader({
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-5 mt-5 md:mt-0">
                         <div className="col-span-1 justify-self-center md:justify-self-start self-center">
-                            <h1 className="text-5xl font-gaegu font-bold leading-11 text-center md:text-left">
+                            <h1 className="text-5xl font-inter font-semibold leading-13 text-center md:text-left">
                                 {pageTitle}
                             </h1>
                         </div>
                         <div className="col-span-1 justify-self-center mt-3 md:mt-0 md:justify-self-end text-center md:text-right">
                             {pageDescription && (
-                                <h2 className="text-lg font-inter leading-6">
+                                <h2 className="text-lg font-inter font-medium leading-6">
                                     {pageDescription}
                                 </h2>
                             )}

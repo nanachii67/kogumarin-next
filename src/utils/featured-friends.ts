@@ -3,13 +3,20 @@ export const featuredFriends = [
         friend_id: 1,
         friend_name: 'Ruri Yoshinova',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/934336760157192242/cab21e984e73b7a21d21b650a9c26c0a.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/ruri-feb-2026.webp',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/ruri.one',
     },
-
     {
         friend_id: 2,
+        friend_name: 'Izumi Yuuki',
+        friend_avatar:
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/yuki-feb-2026.jpg',
+        friend_desc: 'GOGS',
+        friend_link: 'https://www.facebook.com/yuukizuumi',
+    },
+    {
+        friend_id: 3,
         friend_name: 'Jane Cerys',
         friend_avatar:
             'https://cdn.discordapp.com/avatars/314978345777627146/a7857627b7b15d417a325b99ff537382.webp?size=1024',
@@ -17,18 +24,10 @@ export const featuredFriends = [
         friend_link: 'https://www.facebook.com/renia.asphyre',
     },
     {
-        friend_id: 3,
-        friend_name: 'Izumi Yuuki',
-        friend_avatar:
-            'https://cdn.discordapp.com/avatars/1228330337596346409/c5cedc9e714823bfc533b897244b5aac.webp?size=1024',
-        friend_desc: 'GOGS',
-        friend_link: 'https://www.facebook.com/yuukizuumi',
-    },
-    {
         friend_id: 4,
         friend_name: 'Kinoshita Kaede',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/409287360946372619/7535105e242341b35513a0ea865a582a.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kaede-feb-2026.jpg',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/suzukase.aoba',
     },
@@ -69,7 +68,7 @@ export const featuredFriends = [
         friend_name: 'Maru',
         friend_avatar:
             'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/maru.png',
-        friend_desc: 'WEB',
+        friend_desc: 'WEB DEVELOPMENT',
         friend_link: 'https://www.facebook.com/ppolhi',
     },
     {
@@ -89,3 +88,5 @@ export const featuredFriends = [
         friend_link: 'https://www.facebook.com/jasneer.payabyab',
     },
 ];
+
+//https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/ruri-feb-2026.webp

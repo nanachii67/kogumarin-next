@@ -21,7 +21,7 @@ export function HeroPolkaRev() {
                 />
             </div>
             <div className="container max-w-9xl mx-auto z-10 my-10 lg:my-0 px-10 xl:px-0">
-                <div className="relative h-110 md:h-128 rounded-2xl overflow-hidden">
+                <div className="relative h-50 sm:h-110 md:h-128 rounded-2xl overflow-hidden">
                     <div className="absolute top-0 left-0 w-full h-full about-background z-10"></div>
                     <div className="absolute top-0 left-0 w-full h-full bg-indigo-500 z-0" />
                 </div>
@@ -59,7 +59,7 @@ export function HeroPolkaRev() {
                                 threshold={0}
                                 delay={0.4}
                             >
-                                <h1 className="text-5xl font-koguma py-5">
+                                <h1 className="text-3xl md:text-5xl font-koguma py-5">
                                     hi there.
                                 </h1>
                             </AnimatedContent>
@@ -75,7 +75,7 @@ export function HeroPolkaRev() {
                                 threshold={0}
                                 delay={0.6}
                             >
-                                <p className="text-xl font-medium leading-6 w-96 mx-auto">
+                                <p className="text-xl font-medium leading-6 md:w-96 mx-auto">
                                     A musician, a gamer, and a frontend
                                     developer, and here is my repository of
                                     personal projects!

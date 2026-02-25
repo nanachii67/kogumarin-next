@@ -39,12 +39,18 @@ export default function NotesNamecard() {
                                             height={36}
                                             className="rounded-full"
                                         />
-                                        <p className="font-bold leading-4">
-                                            {friend.friend_name}
-                                        </p>
-                                        <p className="font-medium bg-koguma-text-light text-koguma-text px-1.5 rounded-full text-xs">
+                                        <div className="flex flex-col gap-0.5 justify-center">
+                                            <p className="font-semibold leading-4">
+                                                {friend.friend_name}
+                                            </p>
+                                            <p className="font-medium text-xs opacity-80">
+                                                {friend.friend_desc}
+                                            </p>
+                                        </div>
+
+                                        {/*<p className="font-medium bg-koguma-text-light text-koguma-text px-1.5 rounded-full text-xs">
                                             {friend.friend_desc}
-                                        </p>
+                                        </p>*/}
                                     </div>
                                     <div className="flex flex-row ml-2">
                                         <FacebookLogoIcon

@@ -16,12 +16,12 @@ export function SiteMap() {
     return (
         <>
             <div className="relative bg-indigo-600 text-koguma-text-light py-5 px-10 lg:px-0">
-                <div className="container max-w-5xl mx-auto px-10 lg:px-0">
+                <div className="container max-w-5xl mx-auto">
                     <div className="flex flex-row gap-2 items-center text-3xl font-koguma my-4 ">
                         <h2>site map</h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 font-inter">
+                    <div className="grid grid-cols-1 md:grid-cols-3 md:gap-8 font-inter">
                         <div className="col-span-1 flex flex-col mb-4">
                             <p className="font-bold">General</p>
                             {generalLinks.map((link) => (

@@ -104,7 +104,7 @@ export function HeroPolkaRevCards() {
                                 threshold={0}
                                 delay={0.6}
                             >
-                                <p className="text-xl font-medium leading-6 w-96">
+                                <p className="text-xl font-medium leading-6 md:w-96">
                                     Feel free to look at these platforms, and
                                     consider giving a follow!~
                                 </p>

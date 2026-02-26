@@ -70,6 +70,8 @@ export const SocialCards = [
         socialMediaEmail: 'rinkoguma313@gmail.com',
         socialMediaHandlerFullName: 'Koguma Rin',
         SocialMediaIcon: 'SpotifyLogoIcon',
+        socialMediaLink:
+            'https://open.spotify.com/artist/2UJ6tareXcfvx0yhEV4Zk6?si=gHkBHkgtRxWGQ6qmLQONgw',
     },
     // {
     //     id: 6,

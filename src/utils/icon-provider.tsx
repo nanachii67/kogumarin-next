@@ -1,8 +1,8 @@
 import {
     DiscordLogoIcon,
-    GithubLogoIcon,
     type Icon,
     MusicNoteIcon,
+    SpotifyLogoIcon,
     SteamLogoIcon,
 } from '@phosphor-icons/react';
 import {
@@ -17,6 +17,6 @@ export const IconProvider: AppIcons[] = [
     { id: 2, icon: InstagramLogoIcon, socialMediaAppName: 'Instagram' },
     { id: 3, icon: DiscordLogoIcon, socialMediaAppName: 'Discord' },
     { id: 4, icon: MusicNoteIcon, socialMediaAppName: 'Bandcamp' },
-    { id: 5, icon: GithubLogoIcon, socialMediaAppName: 'GitHub' },
+    { id: 5, icon: SpotifyLogoIcon, socialMediaAppName: 'Spotify' },
     { id: 6, icon: SteamLogoIcon, socialMediaAppName: 'Steam' },
 ];

@@ -66,22 +66,19 @@ export const SocialCards = [
     },
     {
         id: 5,
-        socialMediaAppName: 'GitHub',
-        socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Nana Hiiragi',
-        socialMediaLink: 'https://github.com/nanachii67',
-        SocialMediaIcon: 'FacebookLogoIcon',
-        socialMediaCurrentAvatar:
-            'https://avatars.githubusercontent.com/u/210362622?v=4',
+        socialMediaAppName: 'Spotify',
+        socialMediaEmail: 'rinkoguma313@gmail.com',
+        socialMediaHandlerFullName: 'Koguma Rin',
+        SocialMediaIcon: 'SpotifyLogoIcon',
     },
-    {
-        id: 6,
-        socialMediaAppName: 'Steam',
-        socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Transcend',
-        socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
-        SocialMediaIcon: 'FacebookLogoIcon',
-        socialMediaCurrentAvatar:
-            'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',
-    },
+    // {
+    //     id: 6,
+    //     socialMediaAppName: 'Steam',
+    //     socialMediaHandler: 'nanachii67',
+    //     socialMediaHandlerFullName: 'Transcend',
+    //     socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
+    //     SocialMediaIcon: 'FacebookLogoIcon',
+    //     socialMediaCurrentAvatar:
+    //         'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',
+    // },
 ];

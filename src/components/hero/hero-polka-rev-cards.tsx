@@ -170,76 +170,87 @@ export function HeroPolkaRevCards() {
                                                                 item.socialMediaHandlerFullName
                                                             }
                                                         </p>
-                                                        <p className="flex flex-row items-center gap-2">
-                                                            @
-                                                            {
-                                                                item.socialMediaHandler
-                                                            }
-                                                            <Tooltip
-                                                                open={
-                                                                    copiedId ===
-                                                                    item.id
-                                                                        ? true
-                                                                        : undefined
+                                                        {item.socialMediaHandler && (
+                                                            <p className="flex flex-row items-center gap-2">
+                                                                @
+                                                                {
+                                                                    item.socialMediaHandler
                                                                 }
-                                                            >
-                                                                <TooltipTrigger
-                                                                    asChild
-                                                                    className="bg-koguma-card"
-                                                                >
-                                                                    <Button
-                                                                        size="icon-xs"
-                                                                        variant="link"
-                                                                        aria-label="Copy username"
-                                                                        className="text-koguma-text-light opacity-0 group-hover:opacity-100 transition-opacity"
-                                                                        onClick={(
-                                                                            e,
-                                                                        ) =>
-                                                                            handleCopy(
-                                                                                item.socialMediaHandler,
-                                                                                item.id,
-                                                                                e,
-                                                                            )
-                                                                        }
-                                                                    >
-                                                                        <CopyIcon weight="fill" />
-                                                                    </Button>
-                                                                </TooltipTrigger>
-                                                                <TooltipContent
-                                                                    side="bottom"
-                                                                    className=" text-koguma-text-light select-none shadow"
-                                                                >
-                                                                    <p>
-                                                                        {copiedId ===
+                                                                <Tooltip
+                                                                    open={
+                                                                        copiedId ===
                                                                         item.id
-                                                                            ? 'Copied!'
-                                                                            : 'Copy'}
-                                                                    </p>
-                                                                </TooltipContent>
-                                                            </Tooltip>
-                                                        </p>
+                                                                            ? true
+                                                                            : undefined
+                                                                    }
+                                                                >
+                                                                    <TooltipTrigger
+                                                                        asChild
+                                                                        className="bg-koguma-card"
+                                                                    >
+                                                                        <Button
+                                                                            size="icon-xs"
+                                                                            variant="link"
+                                                                            aria-label="Copy username"
+                                                                            className="text-koguma-text-light opacity-0 group-hover:opacity-100 transition-opacity"
+                                                                            onClick={(
+                                                                                e,
+                                                                            ) =>
+                                                                                handleCopy(
+                                                                                    item.socialMediaHandler,
+                                                                                    item.id,
+                                                                                    e,
+                                                                                )
+                                                                            }
+                                                                        >
+                                                                            <CopyIcon weight="fill" />
+                                                                        </Button>
+                                                                    </TooltipTrigger>
+                                                                    <TooltipContent
+                                                                        side="bottom"
+                                                                        className=" text-koguma-text-light select-none shadow"
+                                                                    >
+                                                                        <p>
+                                                                            {copiedId ===
+                                                                            item.id
+                                                                                ? 'Copied!'
+                                                                                : 'Copy'}
+                                                                        </p>
+                                                                    </TooltipContent>
+                                                                </Tooltip>
+                                                            </p>
+                                                        )}
+                                                        {item.socialMediaEmail && (
+                                                            <p>
+                                                                {
+                                                                    item.socialMediaEmail
+                                                                }
+                                                            </p>
+                                                        )}
                                                     </CardDescription>
-                                                    <CardAction>
-                                                        <Link
-                                                            href={
-                                                                item.socialMediaLink
-                                                            }
-                                                            target="_blank"
-                                                            rel="noopener noreferrer"
-                                                        >
-                                                            <Button
-                                                                size="icon"
-                                                                className="text-koguma-text-light bg-koguma-card/75 rounded-full hover:bg-koguma-card"
-                                                                aria-label="Open externally"
-                                                                title="Open externally"
-                                                                asChild
+                                                    {item.socialMediaLink && (
+                                                        <CardAction>
+                                                            <Link
+                                                                href={
+                                                                    item.socialMediaLink
+                                                                }
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
                                                             >
-                                                                <div>
-                                                                    <ArrowUpRightIcon />
-                                                                </div>
-                                                            </Button>
-                                                        </Link>
-                                                    </CardAction>
+                                                                <Button
+                                                                    size="icon"
+                                                                    className="text-koguma-text-light bg-koguma-card/75 rounded-full hover:bg-koguma-card"
+                                                                    aria-label="Open externally"
+                                                                    title="Open externally"
+                                                                    asChild
+                                                                >
+                                                                    <div>
+                                                                        <ArrowUpRightIcon />
+                                                                    </div>
+                                                                </Button>
+                                                            </Link>
+                                                        </CardAction>
+                                                    )}
                                                 </CardHeader>
                                                 <CardFooter className="flex-none items-end">
                                                     {item.relevantLinks &&

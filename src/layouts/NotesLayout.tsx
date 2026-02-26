@@ -48,7 +48,7 @@ export default function AboutLayout({
                     pageDescription={noteDescription}
                 />
             )}
-            <section className="container max-w-9xl my-10 mx-auto z-10 px-10 md:px-0 min-h-[calc(100vh-50vh)]">
+            <section className="container md:max-w-9xl my-10 mx-auto z-10 px-10 md:px-0 min-h-[calc(100vh-50vh)]">
                 {children}
             </section>
             <SiteMap />

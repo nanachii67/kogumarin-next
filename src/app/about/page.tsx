@@ -12,7 +12,8 @@ export default function AboutPage() {
             pageDescription="Revised 5th February 2026"
         >
             <div className="relative z-0">
-                <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light max-w-5xl font-inter font-medium text-center justify-center">
+                <div className="relative z-1 flex flex-col mx-auto pt-5 pb-10 text-koguma-text-light md:max-w-5xl font-inter font-medium text-center justify-center w-full">
+                  
                     <div className="flex flex-col mb-20 gap-6 md:text-2xl justify-center text-left mx-auto opacity-90">
                         <p>
                             Hewwo! I&apos;m Koguma Rin, and I make music, nice
@@ -85,7 +86,7 @@ export default function AboutPage() {
                         <p>Koguma Rin&apos;s</p>
                     </div>
                     <div className="flex mx-auto gap-2">
-                        <h1 className="text-5xl md:text-7xl font-koguma py-10">
+                        <h1 className="text-4xl md:text-7xl font-koguma py-5 md:py-10">
                             Inspirations
                         </h1>
                         <p className="font-inter opacity-75 translate-y-10">

@@ -5,7 +5,6 @@ export const SocialCards = [
         socialMediaHandler: 'nanachii67',
         socialMediaHandlerFullName: 'Nana Hiiragi',
         socialMediaLink: 'https://www.facebook.com/nanachii67',
-        SocialMediaIcon: 'FacebookLogoIcon',
         socialMediaCurrentAvatar:
             'https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024',
         relevantLinks: [
@@ -13,18 +12,16 @@ export const SocialCards = [
                 relevantLinkId: 1,
                 relevantLinkAppName: 'Official Facebook Page',
                 relevantLinkName: 'Kogumarin Music',
-                relevantLinkReferral:
-                    'https://www.facebook.com/profile.php?id=61564931836041',
+                relevantLinkReferral: 'https://www.facebook.com/kogumarinmusic',
             },
         ],
     },
     {
         id: 2,
         socialMediaAppName: 'Instagram',
-        socialMediaHandler: 'nanachii67_',
-        socialMediaHandlerFullName: 'Nana Hiiragi',
-        socialMediaLink: 'https://www.instagram.com/nanachii67_/',
-        SocialMediaIcon: 'FacebookLogoIcon',
+        socialMediaHandler: 'kogskogskogs',
+        socialMediaHandlerFullName: 'Koguma Rin',
+        socialMediaLink: 'https://www.instagram.com/kogskogskogs/',
         socialMediaCurrentAvatar:
             'https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024',
     },
@@ -34,9 +31,8 @@ export const SocialCards = [
         socialMediaHandler: 'nanachii67',
         socialMediaHandlerFullName: 'Nanahira',
         socialMediaLink: 'https://discord.com/users/1254241295652880458',
-        SocialMediaIcon: 'FacebookLogoIcon',
         socialMediaCurrentAvatar:
-            'https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024',
+            'https://cdn.discordapp.com/avatars/1254241295652880458/60f5dfa602ae78728f3a5bdc0b48cee5.webp?size=1024',
         relevantLinks: [
             {
                 relevantLinkId: 1,
@@ -52,7 +48,6 @@ export const SocialCards = [
         socialMediaHandler: 'kogumarin',
         socialMediaHandlerFullName: 'Kogumarin',
         socialMediaLink: 'https://kogumarin.bandcamp.com/',
-        SocialMediaIcon: 'FacebookLogoIcon',
         socialMediaCurrentAvatar: 'https://f4.bcbits.com/img/0038132641_20.jpg',
         relevantLinks: [
             {
@@ -69,18 +64,17 @@ export const SocialCards = [
         socialMediaAppName: 'Spotify',
         socialMediaEmail: 'rinkoguma313@gmail.com',
         socialMediaHandlerFullName: 'Koguma Rin',
-        SocialMediaIcon: 'SpotifyLogoIcon',
+        socialMediaCurrentAvatar: 'https://f4.bcbits.com/img/0038132641_20.jpg',
         socialMediaLink:
             'https://open.spotify.com/artist/2UJ6tareXcfvx0yhEV4Zk6?si=gHkBHkgtRxWGQ6qmLQONgw',
     },
-    // {
-    //     id: 6,
-    //     socialMediaAppName: 'Steam',
-    //     socialMediaHandler: 'nanachii67',
-    //     socialMediaHandlerFullName: 'Transcend',
-    //     socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
-    //     SocialMediaIcon: 'FacebookLogoIcon',
-    //     socialMediaCurrentAvatar:
-    //         'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',
-    // },
+    {
+        id: 6,
+        socialMediaAppName: 'Steam',
+        socialMediaHandler: 'nanachii67',
+        socialMediaHandlerFullName: 'Transcend',
+        socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
+        socialMediaCurrentAvatar:
+            'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',
+    },
 ];

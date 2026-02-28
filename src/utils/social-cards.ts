@@ -6,7 +6,7 @@ export const SocialCards = [
         socialMediaHandlerFullName: 'Nana Hiiragi',
         socialMediaLink: 'https://www.facebook.com/nanachii67',
         socialMediaCurrentAvatar:
-            'https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kogs-fb-feb-2026.jpg',
         relevantLinks: [
             {
                 relevantLinkId: 1,
@@ -23,7 +23,7 @@ export const SocialCards = [
         socialMediaHandlerFullName: 'Koguma Rin',
         socialMediaLink: 'https://www.instagram.com/kogskogskogs/',
         socialMediaCurrentAvatar:
-            'https://cdn.discordapp.com/avatars/1254241295652880458/e51a6e880a4f80223fefc3bfc02d003b.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kogs-fb-feb-2026.jpg',
     },
     {
         id: 3,
@@ -32,7 +32,7 @@ export const SocialCards = [
         socialMediaHandlerFullName: 'Nanahira',
         socialMediaLink: 'https://discord.com/users/1254241295652880458',
         socialMediaCurrentAvatar:
-            'https://cdn.discordapp.com/avatars/1254241295652880458/60f5dfa602ae78728f3a5bdc0b48cee5.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kogs-dc-march-2026.webp',
         relevantLinks: [
             {
                 relevantLinkId: 1,

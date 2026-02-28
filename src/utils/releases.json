@@ -172,5 +172,30 @@
                 "duration": "2:21"
             }
         ]
+    },
+    "you-never-left-my-head-acoustic": {
+        "iframe": {
+            "src": "https://bandcamp.com/EmbeddedPlayer/track=1023220326/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/",
+            "href": "https://kogumarin.bandcamp.com/track/you-never-left-my-head-acoustic",
+            "label": "you never left my head - Acoustic by kotomi and kogumarin"
+        },
+        "title": "you never left my head",
+        "subtitle": "(Acoustic)",
+        "artist": "Kotomi & Koguma Rin",
+        "releaseDate": "2026-02-14",
+        "releaseYear": "2026",
+        "releaseLabel": "2026 Jane Cerys",
+        "releaseType": "Single",
+        "coverImage": "https://f4.bcbits.com/img/a3156129443_10.jpg",
+        "streamingLinks": {
+            "bandcamp": "https://kogumarin.bandcamp.com/track/you-never-left-my-head-acoustic"
+        },
+        "production": {
+            "producer": "Jane Cerys",
+            "programming": "Koguma Rin",
+            "recording_engineer": "Koguma Rin",
+            "mix_mastering_engineer": "Hotarusento Ei",
+            "record_label": "Jane Cerys"
+        }
     }
 }

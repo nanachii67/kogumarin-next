@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
-import { useRouter } from 'next/router';
 
 import AnimatedContent from '@/components/react-bits/animated-content';
 import ReleaseLayout from '@/layouts/ReleaseLayout';
@@ -82,11 +81,11 @@ export default function Track() {
                                     </iframe>
                                     <div className="flex flex-col my-5 text-start w-full md:min-w-125 font-inter font-medium">
                                         <p>{track.artist}</p>
-                                        <div className="flex flex-col md:flex-row items-start md:items-center gap-1">
+                                        <div className="flex flex-col items-start">
                                             <h1 className="text-4xl font-bold">
                                                 {track.title}{' '}
                                             </h1>
-                                            <h2 className="text-2xl md:text-4xl font-inter opacity-80">
+                                            <h2 className="text-2xl font-inter opacity-80">
                                                 {track.subtitle}
                                             </h2>
                                         </div>

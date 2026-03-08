@@ -2,8 +2,12 @@
 
 import Link from 'next/link';
 
+import StaggeredMenu from '../react-bits/staggered-menu';
 import Icon from '@/components/kogs_records_logo_var';
 import BubbleMenu from '@/components/react-bits/bubble-menu';
+
+// this is the constant for the BubbleMenu component.
+// since I have put StaggeredMenu component, I will be using a new set constant.
 
 const items = [
     {
@@ -24,7 +28,7 @@ const items = [
         label: 'releases',
         href: '/releases',
         ariaLabel: 'Releases',
-        rotation: 8,
+        rotation: -8,
         hoverStyles: { bgColor: '#fda4af', textColor: '#312e81' },
     },
     {
@@ -42,6 +46,16 @@ const items = [
         hoverStyles: { bgColor: '#fda4af', textColor: '#312e81' },
     },
 ];
+
+// const menuItems = [
+//     { label: 'Home', ariaLabel: 'Home', link: '/' },
+//     { label: 'About', ariaLabel: 'About', link: '/about' },
+//     { label: 'Releases', ariaLabel: 'Releases', link: '/releases' },
+//     { label: 'Notes', ariaLabel: 'Notes', link: '/notes' },
+//     { label: 'Socials', ariaLabel: 'Socials', link: '/socials' },
+// ];
+
+// const socialItems = [{ label: 'Twitter', link: 'https://twitter.com' }];
 
 export const NavigationBar = () => (
     <>
@@ -63,5 +77,21 @@ export const NavigationBar = () => (
                 staggerDelay={0.12}
             />
         </div>
+
+        {/*<div className="h-screen fixed inset-0 z-10 pointer-events-none">
+            <StaggeredMenu
+                position="right"
+                items={menuItems}
+                socialItems={socialItems}
+                displaySocials
+                displayItemNumbering={true}
+                menuButtonColor="#ffe4e6"
+                openMenuButtonColor="#ffe4e6"
+                changeMenuColorOnOpen={true}
+                colors={['#B19EEF', '#5227FF']}
+                logoElement={<Icon />}
+                accentColor="#1e1b4b"
+            />
+        </div>*/}
     </>
 );

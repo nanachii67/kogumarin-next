@@ -1,7 +1,7 @@
 const Icon: React.FC = () => {
     return (
         <svg
-            className={`w-10 aspect-square stroke-rose-50`}
+            className={`w-10 aspect-square stroke-rose-50 opacity-75 hover:opacity-100`}
             fill="none"
             viewBox="0 0 500 500"
         >

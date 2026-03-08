@@ -6,7 +6,7 @@ export const InspirationData = [
         brandlink:
             'https://music.apple.com/ph/album/pixel-galaxy-single/1304454906',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/f0/6b/d4/f06bd48f-a10f-cbca-3028-ca367befcfc7/859723844848_cover.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music124/v4/f0/6b/d4/f06bd48f-a10f-cbca-3028-ca367befcfc7/859723844848_cover.jpg',
         catalogtype: 'Single',
         description: "Snail's House",
     },
@@ -17,7 +17,7 @@ export const InspirationData = [
         brandlink:
             'https://music.apple.com/ph/album/ma-chouchoute-single/1534367047',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c4/b8/ff/c4b8ff7e-2d28-b4d8-1c4a-971bd57b9f04/00859715016314_Cover.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music115/v4/c4/b8/ff/c4b8ff7e-2d28-b4d8-1c4a-971bd57b9f04/00859715016314_Cover.jpg',
         catalogtype: 'Single',
         description: "Snail's House",
     },
@@ -28,7 +28,7 @@ export const InspirationData = [
         brandlink:
             'https://music.apple.com/ph/album/temporal-ring-ep/1806539029',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/4b/45/72/4b45722b-0d45-0e22-1854-be09f6e5792a/4550707435859_cover.png/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music221/v4/4b/45/72/4b45722b-0d45-0e22-1854-be09f6e5792a/4550707435859_cover.png',
         catalogtype: 'Extended Play',
         description: 'Mitsukiyo',
     },
@@ -38,7 +38,7 @@ export const InspirationData = [
         releaseyear: '2019',
         brandlink: 'https://music.apple.com/ph/album/friends-ep/1457971928',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/3c/80/aa/3c80aa15-66a7-53d9-54c1-4759248be85e/artwork.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music221/v4/3c/80/aa/3c80aa15-66a7-53d9-54c1-4759248be85e/artwork.jpg',
         catalogtype: 'Extended Play',
         description: 'Stessie',
     },
@@ -48,7 +48,7 @@ export const InspirationData = [
         releaseyear: '2023',
         brandlink: 'https://music.apple.com/ph/album/sonority/1727937128',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/4d/c1/2d/4dc12d6c-e1d7-a27b-ac98-de9ff5c7d369/artwork.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music126/v4/4d/c1/2d/4dc12d6c-e1d7-a27b-ac98-de9ff5c7d369/artwork.jpg',
         catalogtype: 'Album',
         description: 'Kotomi',
     },
@@ -58,7 +58,7 @@ export const InspirationData = [
         releaseyear: '2020',
         brandlink: 'https://music.apple.com/ph/album/imaginarium/1536308190',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/95/5b/da/955bdae3-b285-04a0-7c1f-331a35477fd7/859756249801_cover.png/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music114/v4/95/5b/da/955bdae3-b285-04a0-7c1f-331a35477fd7/859756249801_cover.png',
         catalogtype: 'Album',
         description: "Snail's House",
     },
@@ -68,7 +68,7 @@ export const InspirationData = [
         releaseyear: '2025',
         brandlink: 'https://classical.music.apple.com/ph/album/1846732266',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/6b/02/c4/6b02c447-b773-ceb5-7cf4-063227aec996/25UMGIM86886.rgb.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music221/v4/6b/02/c4/6b02c447-b773-ceb5-7cf4-063227aec996/25UMGIM86886.rgb.jpg',
         catalogtype: 'Album',
         description: 'Yu-Peng Chen',
     },
@@ -79,7 +79,7 @@ export const InspirationData = [
         brandlink:
             'https://music.apple.com/ph/album/cosmic-princess-kaguya/1869843536',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/b3/1b/50/b31b50d3-c70b-3272-bfea-e370638593b3/4550752693389_cover.png/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music221/v4/b3/1b/50/b31b50d3-c70b-3272-bfea-e370638593b3/4550752693389_cover.png',
         catalogtype: 'Album',
         description: 'Various Artists',
     },
@@ -90,7 +90,7 @@ export const InspirationData = [
         brandlink:
             'https://music.apple.com/ph/album/%E3%82%A6%E3%83%9E%E5%A8%98-%E3%83%97%E3%83%AA%E3%83%86%E3%82%A3%E3%83%BC%E3%83%80%E3%83%BC%E3%83%93%E3%83%BC-winning-live-06/1813828888',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/85/d7/a2/85d7a21f-b6bb-d419-d127-eba1ff47bada/4540774908851.png/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music221/v4/85/d7/a2/85d7a21f-b6bb-d419-d127-eba1ff47bada/4540774908851.png',
         catalogtype: 'Album',
         description: 'Various Artists',
     },

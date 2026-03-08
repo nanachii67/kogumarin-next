@@ -6,11 +6,7 @@ const nextConfig: NextConfig = {
     turbopack: {},
     images: {
         remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'is1-ssl.mzstatic.com',
-                pathname: '/**',
-            },
+            { protocol: 'https', hostname: '**.mzstatic.com', pathname: '/**' },
             { protocol: 'https', hostname: 'f4.bcbits.com', pathname: '/**' },
             {
                 protocol: 'https',

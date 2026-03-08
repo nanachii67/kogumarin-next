@@ -3,9 +3,10 @@ export const FeatureData = [
         id: 1,
         title: `you never left my head (Acoustic)`,
         releaseyear: '2026',
-        brandlink: 'https://open.spotify.com/album/79qv2IOpePdNOVvxlFirnJ',
+        brandlink:
+            'https://music.apple.com/ph/album/you-never-left-my-head-feat-koguma-rin-acoustic-single/1881260649',
         imagelink:
-            'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/13/7f/2d/137f2d3d-3083-fed3-48d6-f0f959c2db62/artwork.jpg/592x592bb.webp',
+            'https://a5.mzstatic.com/us/r1000/0/Music211/v4/20/4c/91/204c91c1-3f4f-b637-cfeb-92bc0caa786e/artwork.jpg',
         catalogtype: 'Single',
         description: 'Kotomi & Koguma Rin',
     },

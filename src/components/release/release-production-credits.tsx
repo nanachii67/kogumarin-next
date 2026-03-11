@@ -1,8 +1,8 @@
 // import { Link, useParams } from 'react-router-dom';
 import Link from 'next/link';
 
-import releases from '@/utils/releases.json';
 import { formatDate } from '@/lib/formatDate';
+import releases from '@/utils/releases.json';
 
 interface ProductionSlug {
     iframe: { src: string; href: string; label: string };
@@ -15,7 +15,7 @@ interface ProductionSlug {
     releaseLabel: string;
     releaseType: string;
     coverImage: string;
-    streamingLinks: { bandcamp: string };
+    streamingLinks: { bandcamp: string; applemusic?: string; spotify?: string };
     production?: {
         producer?: string;
         orchestrator?: string;
@@ -23,8 +23,10 @@ interface ProductionSlug {
         programming?: string;
         synthesizer?: string;
         recording_engineer?: string;
+        remixing_engineer?: string;
         mix_mastering_engineer?: string;
         record_label?: string;
+        sampled_artist?: string;
     };
 }
 
@@ -110,6 +112,16 @@ export default function ReleaseProductionCredits({
                             </p>
                         </div>
                     )}
+                    {track?.production?.remixing_engineer && (
+                        <div className="col-span-1">
+                            <p className="text-xs text-koguma-fonts uppercase opacity-75">
+                                {track?.production?.remixing_engineer}
+                            </p>
+                            <p className="text-sm items-center capitalize">
+                                Remixing engineer
+                            </p>
+                        </div>
+                    )}
                     {track?.production?.mix_mastering_engineer && (
                         <div className="col-span-1">
                             <p className="text-xs text-koguma-fonts uppercase opacity-75">
@@ -117,6 +129,16 @@ export default function ReleaseProductionCredits({
                             </p>
                             <p className="text-sm items-center capitalize">
                                 mixing engineer, mastering engineer
+                            </p>
+                        </div>
+                    )}
+                    {track?.production?.sampled_artist && (
+                        <div className="col-span-1">
+                            <p className="text-xs text-koguma-fonts uppercase opacity-75">
+                                {track?.production?.sampled_artist}
+                            </p>
+                            <p className="text-sm items-center capitalize">
+                                Sampled Artist
                             </p>
                         </div>
                     )}
@@ -146,14 +168,37 @@ export default function ReleaseProductionCredits({
                 <div className="flex flex-row gap-2 items-center font-medium text-sm text-koguma-text-light/80">
                     <p>
                         Source:{' '}
-                        <span className="font-bold">
+                        <span className="font-bold space-x-1">
                             <Link
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href={track?.streamingLinks.bandcamp || '#'}
+                                className="hover:underline underline-offset-2 decoration-1"
                             >
                                 Bandcamp
                             </Link>
+                            {track?.streamingLinks?.applemusic && (
+                                <Link
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={
+                                        track?.streamingLinks.applemusic || '#'
+                                    }
+                                    className="hover:underline underline-offset-2 decoration-1"
+                                >
+                                    Apple Music
+                                </Link>
+                            )}
+                            {track?.streamingLinks?.spotify && (
+                                <Link
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    href={track?.streamingLinks.spotify || '#'}
+                                    className="hover:underline underline-offset-2 decoration-1"
+                                >
+                                    Spotify
+                                </Link>
+                            )}
                         </span>
                     </p>
                 </div>

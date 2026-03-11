@@ -10,4 +10,15 @@ export const FeatureData = [
         catalogtype: 'Single',
         description: 'Kotomi & Koguma Rin',
     },
+    {
+        id: 2,
+        title: `Extraordinary`,
+        releaseyear: '2026',
+        brandlink:
+            'https://music.apple.com/us/album/extraordinary-feat-koguma-rin-single/1884110908',
+        imagelink:
+            'https://a5.mzstatic.com/us/r1000/0/Music211/v4/31/a0/6d/31a06df3-be25-8328-1e51-a54978b565b4/artwork.jpg',
+        catalogtype: 'Single',
+        description: 'Kotomi & Koguma Rin',
+    },
 ];

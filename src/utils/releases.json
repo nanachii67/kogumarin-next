@@ -188,7 +188,9 @@
         "releaseType": "Single",
         "coverImage": "https://f4.bcbits.com/img/a3156129443_10.jpg",
         "streamingLinks": {
-            "bandcamp": "https://kogumarin.bandcamp.com/track/you-never-left-my-head-acoustic"
+            "bandcamp": "https://kogumarin.bandcamp.com/track/you-never-left-my-head-acoustic",
+            "applemusic": "https://music.apple.com/ph/album/you-never-left-my-head-feat-koguma-rin-acoustic-single/1881260649",
+            "spotify": "https://open.spotify.com/album/79qv2IOpePdNOVvxlFirnJ"
         },
         "production": {
             "producer": "Jane Cerys",
@@ -196,6 +198,35 @@
             "recording_engineer": "Koguma Rin",
             "mix_mastering_engineer": "Hotarusento Ei",
             "record_label": "Jane Cerys"
+        }
+    },
+    "extraordinary": {
+        "iframe": {
+            "src": "https://bandcamp.com/EmbeddedPlayer/track=1496785851/size=large/bgcol=333333/linkcol=9a64ff/minimal=true/transparent=true/",
+            "href": "https://kogumarin.bandcamp.com/track/extraordinary",
+            "label": "extraordinary by kotomi and kogumarin"
+        },
+        "title": "Extraordinary",
+        "artist": "Kotomi & Koguma Rin",
+        "releaseDate": "2026-03-09",
+        "releaseYear": "2026",
+        "releaseLabel": "2026 Jane Cerys",
+        "releaseType": "Single",
+        "coverImage": "https://f4.bcbits.com/img/a2045670629_10.jpg",
+        "streamingLinks": {
+            "bandcamp": "https://kogumarin.bandcamp.com/track/extraordinary",
+            "applemusic": "https://music.apple.com/ph/album/extraordinary-feat-koguma-rin-single/1884110908",
+            "spotify": "https://open.spotify.com/track/1Vdi5KnlsO02GEyQwC1692?si=4b47263927134565"
+        },
+        "production": {
+            "producer": "Jane Cerys",
+            "programming": "Koguma Rin",
+            "synthesizer": "Jane Cerys",
+            "recording_engineer": "Koguma Rin",
+            "remixing_engineer": "Jane Cerys",
+            "mix_mastering_engineer": "Hotarusento Ei",
+            "record_label": "Jane Cerys",
+            "sampled_artist": "Eric George Lopez"
         }
     }
 }

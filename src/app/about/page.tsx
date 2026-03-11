@@ -11,7 +11,7 @@ export default function AboutPage() {
                 <title>About — Kogumarin</title>
                 <meta
                     property="og:image"
-                    content="https://kogumarin.vercel.app/api/static"
+                    content="https://kogumarin.vercel.app/api/og"
                 />
             </head>
             <AboutLayout

@@ -20,33 +20,68 @@ async function loadGoogleFont(font: string, text: string) {
     throw new Error('failed to load font data');
 }
 
-export async function GET() {
-    const text = 'Hello world!';
+export async function GET(request: Request) {
+    try {
+        const { searchParams } = new URL(request.url);
 
-    return new ImageResponse(
-        <div
-            style={{
-                backgroundColor: 'white',
-                height: '100%',
-                width: '100%',
-                fontSize: 100,
-                fontFamily: 'Inter Tight',
-                paddingTop: '100px',
-                paddingLeft: '50px',
-            }}
-        >
-            {text}
-        </div>,
-        {
-            width: 1200,
-            height: 630,
-            fonts: [
-                {
-                    name: 'Inter+Tight',
-                    data: await loadGoogleFont('Inter+Tight', text),
-                    style: 'normal',
-                },
-            ],
-        },
-    );
+        const title = searchParams.get('title')?.slice(0, 100) ?? 'Kogumarin';
+
+        return new ImageResponse(
+            <div
+                style={{
+                    backgroundColor: '#312c85',
+                    backgroundSize: '150px 150px',
+                    height: '100%',
+                    width: '100%',
+                    display: 'flex',
+                    textAlign: 'center',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexDirection: 'column',
+                    flexWrap: 'nowrap',
+                }}
+            >
+                <div
+                    style={{
+                        color: '#fce7f3',
+                        fontSize: 60,
+                        fontFamily: 'Inter Tight',
+                        padding: '0 120px',
+                        lineHeight: 1.4,
+                        whiteSpace: 'pre-wrap',
+                    }}
+                >
+                    {title}
+                </div>
+                <div
+                    style={{
+                        color: '#a5b4fc',
+                        fontSize: 30,
+                        fontFamily: 'Inter Tight',
+                        fontWeight: 500,
+                        padding: '0 120px',
+                        lineHeight: 1.4,
+                        whiteSpace: 'pre-wrap',
+                    }}
+                >
+                    @kogumarin
+                </div>
+            </div>,
+            {
+                width: 1200,
+                height: 630,
+                fonts: [
+                    {
+                        name: 'Inter+Tight',
+                        data: await loadGoogleFont('Inter+Tight', title),
+                        style: 'normal',
+                    },
+                ],
+            },
+        );
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (e: any) {
+        console.log(`${e.message}`);
+        return new Response(`Failed to generate the image`, { status: 500 });
+    }
 }

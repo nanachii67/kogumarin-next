@@ -17,7 +17,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-    title: 'Koguma Rin',
+    title: 'Kogumarin',
     description: 'The Official Portfolio of Koguma Rin.',
 };
 

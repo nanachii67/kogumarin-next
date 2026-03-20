@@ -7,10 +7,20 @@ import Link from 'next/link';
 import { useMemo, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
+import {
+    Card,
+    CardAction,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
 import {
+    ArrowRightIcon,
     ArrowUpRightIcon,
     CaretLeftIcon,
     CaretRightIcon,
@@ -97,12 +107,12 @@ export default function Blogs() {
                                         type: 'spring',
                                         stiffness: 100,
                                     }}
-                                    className="flex flex-col w-full"
+                                    className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full items-stretch"
                                 >
                                     {paginatedEntries.map((entry) => (
                                         <motion.div
-                                            whileHover={{ scale: 1.00625 }}
-                                            whileTap={{ scale: 0.9625 }}
+                                            whileHover={{ scale: 1.025 }}
+                                            whileTap={{ scale: 0.975 }}
                                             transition={{
                                                 type: 'spring',
                                                 stiffness: 200,
@@ -112,42 +122,46 @@ export default function Blogs() {
                                         >
                                             <Link
                                                 href={entry.value.url}
-                                                className="block w-full"
+                                                className="block"
                                             >
-                                                <div className="flex flex-col md:flex-row md:items-center gap-1 lg:gap-4 lg:min-w-5xl py-3">
-                                                    {/* Global index */}
-                                                    <span className="text-sm opacity-80 md:w-24 shrink-0">
-                                                        Entry #
-                                                        {globalStartIndex +
-                                                            entry.index +
-                                                            1}
-                                                    </span>
+                                                <Card className="bg-koguma-card border-0 text-koguma-text-light flex flex-col h-full">
+                                                    <CardHeader className="flex-none h-25 items-start justify-start content-start flex">
+                                                        <div className="w-full">
+                                                            <CardDescription className="w-full font-medium opacity-80">
+                                                                Entry #
+                                                                {globalStartIndex +
+                                                                    entry.index +
+                                                                    1}
+                                                            </CardDescription>
+                                                            <CardTitle className="text-2xl font-semibold line-clamp-2 w-full self-start leading-tight">
+                                                                {
+                                                                    entry.value
+                                                                        .title
+                                                                }
+                                                            </CardTitle>
+                                                        </div>
 
-                                                    {/* Title */}
-                                                    <span className="flex-1 text-3xl md:text-2xl font-inter font-semibold leading-8 md:leading-7">
-                                                        {entry.value.title}
-                                                    </span>
-
-                                                    {/* Date */}
-                                                    <span className="text-sm font-inter font-medium opacity-80 shrink-0">
-                                                        {formatDate(
-                                                            entry.value.date,
-                                                        )}
-                                                    </span>
-
-                                                    {/* Read length + arrow */}
-                                                    <span className="text-sm md:text font-inter font-medium opacity-80 shrink-0">
-                                                        <span className="flex flex-row items-center gap-1">
-                                                            {
-                                                                entry.value
-                                                                    .readingTime
-                                                            }
-                                                            <ArrowUpRightIcon />
-                                                        </span>
-                                                    </span>
-                                                </div>
-
-                                                <Separator className="opacity-50" />
+                                                        <CardAction>
+                                                            <ArrowRightIcon />
+                                                        </CardAction>
+                                                    </CardHeader>
+                                                    <CardFooter className="mt-auto">
+                                                        <div className="flex flex-1 text-xs font-bold opacity-60 justify-between">
+                                                            <p>
+                                                                {formatDate(
+                                                                    entry.value
+                                                                        .date,
+                                                                )}
+                                                            </p>
+                                                            <p>
+                                                                {
+                                                                    entry.value
+                                                                        .readingTime
+                                                                }
+                                                            </p>
+                                                        </div>
+                                                    </CardFooter>
+                                                </Card>
                                             </Link>
                                         </motion.div>
                                     ))}

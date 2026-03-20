@@ -1,15 +1,13 @@
-// import { Metadata } from 'next';
+import { Metadata } from 'next';
+
 import { InspirationCardsRev } from '@/components/inspiration/inspiration-cards-rev';
 import AboutLayout from '@/layouts/AboutLayout';
 
-// export const metadata: Metadata = { title: 'About — Kogumarin' };
+export const metadata: Metadata = { title: 'About — Kogumarin' };
 
 export default function AboutPage() {
     return (
         <>
-            <head>
-                <title>About — Kogumarin</title>
-            </head>
             <AboutLayout
                 pageTitle="about"
                 pageDescription="Revised 5th February 2026"

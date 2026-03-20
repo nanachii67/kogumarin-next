@@ -16,10 +16,7 @@ const mono = JetBrains_Mono({
     subsets: ['latin'],
 });
 
-export const metadata: Metadata = {
-    title: 'Kogumarin',
-    description: 'The Official Portfolio of Koguma Rin.',
-};
+export const metadata: Metadata = { title: 'Home — Kogumarin' };
 
 export default function RootLayout({
     children,

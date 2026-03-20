@@ -73,7 +73,7 @@ export const featuredFriends = [
     },
     {
         friend_id: 10,
-        friend_name: 'Silence Suzuka Nasaktan Muli',
+        friend_name: 'Phrolova Binitawan',
         friend_avatar:
             'https://cdn.discordapp.com/avatars/462478650676084747/9045a41d5266ee6fdb87607754b46fb0.webp?size=1024',
         friend_desc: 'GOGS',

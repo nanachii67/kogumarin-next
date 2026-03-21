@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-import { Card } from '../ui/card';
 import AnimatedContent from '@/components/react-bits/animated-content';
 import { NavigationData } from '@/utils/navigation-cards';
 import { ArrowUpRightIcon } from '@phosphor-icons/react';

@@ -69,7 +69,7 @@ export function HeroPolkaRevCards() {
                                 threshold={0}
                                 delay={0.2}
                             >
-                                <p className="text-6xl font-gaegu font-bold pt-5">
+                                <p className="text-5xl font-koguma pt-5">
                                     kogumarin
                                 </p>
                                 <p className="font-medium text-xs">EST. 2024</p>
@@ -88,7 +88,7 @@ export function HeroPolkaRevCards() {
                                 threshold={0}
                                 delay={0.4}
                             >
-                                <p className="text-6xl font-gaegu font-bold py-5">
+                                <p className="text-5xl font-koguma py-5">
                                     socials
                                 </p>
                             </AnimatedContent>

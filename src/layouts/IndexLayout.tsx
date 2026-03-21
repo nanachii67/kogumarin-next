@@ -2,7 +2,7 @@ import { Easing, motion } from 'framer-motion';
 
 import NewRelease from '@/components/announcement/NewRelease';
 import { Footer } from '@/components/footer';
-import { HeroPolkaRev } from '@/components/hero/hero-polka-rev';
+import { HeroPolkaRevApril2026 } from '@/components/hero/hero-polka-rev-april-2026';
 
 const variants = {
     initial: { opacity: 0, filter: 'blur(2px)' },
@@ -26,7 +26,7 @@ export default function IndexLayout({
             exit="exit"
             transition={transition}
         >
-            <HeroPolkaRev />
+            <HeroPolkaRevApril2026 />
             <NewRelease />
             {/*<NavigationBar />*/}
             <div className="relative z-1 bg-koguma-text-hover mx-auto">

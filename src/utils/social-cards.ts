@@ -67,6 +67,15 @@ export const SocialCards = [
         socialMediaCurrentAvatar: 'https://f4.bcbits.com/img/0038132641_20.jpg',
         socialMediaLink:
             'https://open.spotify.com/artist/2UJ6tareXcfvx0yhEV4Zk6?si=gHkBHkgtRxWGQ6qmLQONgw',
+        relevantLinks: [
+            {
+                relevantLinkId: 1,
+                relevantLinkAppName: "Koguma's Apple Music Discography",
+                relevantLinkName: 'Apple Music',
+                relevantLinkReferral:
+                    'https://music.apple.com/ph/artist/koguma-rin/1881260650',
+            },
+        ],
     },
     {
         id: 6,

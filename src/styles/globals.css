@@ -6,7 +6,6 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-inter: var(--font-inter);
     --font-koguma: 'Shorelines Script Bold', script;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);
@@ -79,6 +78,11 @@
     animation: scrollDown 15s linear infinite;
 }
 
+.font-inter {
+    font-family: 'Instrument Sans', sans-serif;
+    font-variation-settings: 'wdth' 87.5;
+}
+
 @keyframes scrollDown {
     0% {
         background-position-y: 0px;
@@ -139,7 +143,6 @@
     scrollbar-width: thin;
     /*scrollbar-color: #312e81 #6366f1;*/
     font-optical-sizing: auto;
-    font-feature-settings: 'cv04', 'cv11';
 }
 
 @theme inline {

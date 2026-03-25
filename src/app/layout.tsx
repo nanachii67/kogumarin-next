@@ -1,5 +1,10 @@
 import type { Metadata } from 'next';
-import { Gaegu, Inter_Tight, JetBrains_Mono } from 'next/font/google';
+import {
+    Gaegu,
+    Instrument_Sans,
+    Inter_Tight,
+    JetBrains_Mono,
+} from 'next/font/google';
 
 import Client from '@/app/client';
 import '@/styles/fonts.css';
@@ -15,6 +20,10 @@ const mono = JetBrains_Mono({
     variable: '--font-jetbrains-mono',
     subsets: ['latin'],
 });
+const instrument = Instrument_Sans({
+    variable: '--font-instrument-sans',
+    subsets: ['latin'],
+});
 
 export const metadata: Metadata = { title: 'Home — Kogumarin' };
 
@@ -28,6 +37,7 @@ export default function RootLayout({
                           ${inter.variable}
                           ${gaegu.variable}
                           ${mono.variable}
+                          ${instrument.variable}
                           antialiased
                       `}
             >

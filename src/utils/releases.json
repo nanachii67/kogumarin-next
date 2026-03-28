@@ -105,11 +105,13 @@
         "artist": "Koguma Rin",
         "releaseDate": "2024-12-20",
         "releaseYear": "2024",
-        "releaseLabel": "2024 Kogs, on behalf of Kogumarin.",
+        "releaseLabel": "2024 Kogs, on behalf of Kogumarin. 2026 KOGS/Kogumarin.",
         "releaseType": "Album",
         "coverImage": "https://f4.bcbits.com/img/a3613598989_10.jpg",
         "streamingLinks": {
-            "bandcamp": "https://kogumarin.bandcamp.com/track/orenji"
+            "bandcamp": "https://kogumarin.bandcamp.com/track/orenji",
+            "applemusic": "https://music.apple.com/ph/album/macarons-energy-drinks-single/1888707791",
+            "spotify": "https://open.spotify.com/album/5NqxIiUG63uqTGE3elVqmE?si=0PJ4LajKR1yyzpdqkdXmaQ"
         },
         "production": {
             "producer": "Koguma Rin",

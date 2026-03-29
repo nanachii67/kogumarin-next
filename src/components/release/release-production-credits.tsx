@@ -42,7 +42,7 @@ export default function ReleaseProductionCredits({
     return (
         <div className="relative bg-koguma-card py-5 px-10">
             <div className="container max-w-9xl mx-auto font-inter">
-                <div className="flex flex-row gap-2 items-center font-inter font-bold text-lg text-koguma-text-light/80">
+                <div className="flex flex-row gap-2 items-center font-inter font-bold text-lg text-koguma-text-light/80 leading-5">
                     <p>
                         Production of{' '}
                         <span className="font-medium opacity-90">
@@ -51,7 +51,7 @@ export default function ReleaseProductionCredits({
                     </p>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4 tracking-wide">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 text-koguma-text-light my-5 space-y-4 tracking-wide">
                     {track?.production?.producer && (
                         <div className="col-span-1">
                             <p className="text-xs text-koguma-fonts uppercase opacity-75">

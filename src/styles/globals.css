@@ -80,7 +80,8 @@
 
 .font-inter {
     font-family: 'Instrument Sans', sans-serif;
-    font-variation-settings: 'wdth' 87.5;
+    font-variation-settings: 'wdth' 95;
+    font-feature-settings: 'ss01';
 }
 
 @keyframes scrollDown {

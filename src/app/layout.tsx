@@ -23,6 +23,7 @@ const mono = JetBrains_Mono({
 const instrument = Instrument_Sans({
     variable: '--font-instrument-sans',
     subsets: ['latin'],
+    axes: ['wdth'],
 });
 
 export const metadata: Metadata = { title: 'Home — Kogumarin' };

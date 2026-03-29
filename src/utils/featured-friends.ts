@@ -19,7 +19,7 @@ export const featuredFriends = [
         friend_id: 3,
         friend_name: 'Jane Cerys',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/314978345777627146/a7857627b7b15d417a325b99ff537382.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/ed689cc6aa89d6c1830a72ea429ae6cd4752b0c7/public/assets/images/kogumarin-next/friends/kotomi-fb-apr-2026.png',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/renia.asphyre',
     },
@@ -43,7 +43,7 @@ export const featuredFriends = [
         friend_id: 6,
         friend_name: 'Poru Romi',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/797704936581496832/773298c3688e7013411fc520ca2493a9.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/ed689cc6aa89d6c1830a72ea429ae6cd4752b0c7/public/assets/images/kogumarin-next/friends/poru-fb-apr-2026.jpg',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/poru.romi.1',
     },
@@ -75,7 +75,7 @@ export const featuredFriends = [
         friend_id: 10,
         friend_name: 'Phrolova Binitawan',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/462478650676084747/9045a41d5266ee6fdb87607754b46fb0.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/ed689cc6aa89d6c1830a72ea429ae6cd4752b0c7/public/assets/images/kogumarin-next/friends/phorolova-fb-apr-2026.jpg',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/kiyasu.xx',
     },

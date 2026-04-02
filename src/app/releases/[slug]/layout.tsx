@@ -1,18 +1,25 @@
-// app/releases/[slug]/layout.tsx
+import type { Metadata } from 'next';
+
 import releases from '@/utils/releases.json';
 
 export async function generateMetadata({
     params,
 }: {
     params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
     const { slug } = await params;
     const track = releases[slug as keyof typeof releases];
 
+    const title = track?.title
+        ? `${track.title} — Kogumarin`
+        : 'Releases — Kogumarin';
+
     return {
-        title: track?.title
-            ? `${track.title} — Kogumarin`
-            : 'Releases — Kogumarin',
+        title,
+        openGraph: {
+            title,
+            images: track?.coverImage ? [track.coverImage] : ['/opengraph-image'],
+        },
     };
 }
 

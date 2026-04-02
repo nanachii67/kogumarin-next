@@ -1,15 +1,18 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import CardsLayout from '@/layouts/CardsLayout';
 
 export const metadata: Metadata = {
     title: 'Socials — Kogumarin',
-    openGraph: { title: 'Kogumarin', images: ['/opengraph-image'] },
+    openGraph: {
+        title: 'Kogumarin',
+        images: ['/socials/opengraph-image'],
+    },
 };
 
 export default function SocialCardsPage() {
     return (
-        <CardsLayout>
+        <CardsLayout metadata={metadata}>
             <></>
         </CardsLayout>
     );

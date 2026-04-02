@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import { InspirationCardsRev } from '@/components/inspiration/inspiration-cards-rev';
 import AboutLayout from '@/layouts/AboutLayout';
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: 'About — Kogumarin',
     openGraph: {
         title: 'Kogumarin',
-        images: ['/opengraph-image'],
+        images: ['/about/opengraph-image'],
     },
 };
 
@@ -15,6 +15,7 @@ export default function AboutPage() {
     return (
         <>
             <AboutLayout
+                metadata={metadata}
                 pageTitle="about"
                 pageDescription="Revised 5th February 2026"
             >

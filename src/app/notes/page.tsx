@@ -2,6 +2,7 @@
 
 import { compareDesc } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
+import type { Metadata } from 'next';
 
 import Link from 'next/link';
 import { useMemo, useState } from 'react';
@@ -28,6 +29,14 @@ const ENTRIES_PER_PAGE = 10;
 
 export default function Blogs() {
     const [currentPage, setCurrentPage] = useState(1);
+    const metadata: Metadata = {
+        title: 'Notes — Kogumarin',
+        openGraph: {
+            title: 'Notes — Kogumarin',
+            images: ['/notes/opengraph-image'],
+        },
+    };
+
     const totalPages = Math.ceil(allNotes.length / ENTRIES_PER_PAGE);
     const paginatedEntries = useMemo(() => {
         const posts = allNotes
@@ -86,6 +95,7 @@ export default function Blogs() {
     return (
         <>
             <NotesLayout
+                metadata={metadata}
                 pageTitle="notes"
                 pageDescription="Koguma Rin's Journal Entries"
             >

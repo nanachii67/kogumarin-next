@@ -1,14 +1,21 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import { ReleaseCardsRev } from '@/components/release/release-cards-rev';
 import FeatureDiscographyBar from '@/components/release/release-feature-bar';
 import AboutLayout from '@/layouts/AboutLayout';
 
-export const metadata: Metadata = { title: 'Releases — Kogumarin' };
+export const metadata: Metadata = {
+    title: 'Releases — Kogumarin',
+    openGraph: {
+        title: 'Kogumarin',
+        images: ['/releases/opengraph-image'],
+    },
+};
 
 export default function ReleasesPage() {
     return (
         <AboutLayout
+            metadata={metadata}
             pageTitle="releases"
             pageDescription="All major music releases of Koguma Rin!"
         >

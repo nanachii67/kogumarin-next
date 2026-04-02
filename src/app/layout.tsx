@@ -7,6 +7,7 @@ import {
 } from 'next/font/google';
 
 import Client from '@/app/client';
+import { defaultMetadata } from '@/hooks/metadata';
 import '@/styles/fonts.css';
 import '@/styles/globals.css';
 
@@ -26,10 +27,7 @@ const instrument = Instrument_Sans({
     axes: ['wdth'],
 });
 
-export const metadata: Metadata = {
-    title: 'Home — Kogumarin',
-    openGraph: { title: 'Kogumarin', images: ['/opengraph-image'] },
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
     children,

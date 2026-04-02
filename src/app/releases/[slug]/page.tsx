@@ -148,5 +148,3 @@ export default function Track() {
         </>
     );
 }
-
-export const runtime = 'edge';

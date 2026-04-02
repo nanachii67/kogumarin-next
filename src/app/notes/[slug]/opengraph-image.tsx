@@ -1,12 +1,11 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
-
 import { ImageResponse } from 'next/og';
 
 import { allNotes } from 'contentlayer/generated';
+import { loadOgFonts } from '@/utils/opengraph';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
+export const runtime = 'nodejs';
 
 export default async function OgImage({
     params,
@@ -16,12 +15,7 @@ export default async function OgImage({
     const { slug } = await params;
     const note = allNotes.find((n) => n._raw.flattenedPath === `notes/${slug}`);
 
-    const fontData = readFileSync(
-        join(process.cwd(), 'public/fonts/shorelines_script_bold.ttf'),
-    );
-    const instrumentSans = readFileSync(
-        join(process.cwd(), 'public/fonts/InstrumentSans-Medium.ttf'),
-    );
+    const fonts = await loadOgFonts();
 
     return new ImageResponse(
         <div
@@ -77,14 +71,7 @@ export default async function OgImage({
         </div>,
         {
             ...size,
-            fonts: [
-                { name: 'Shorelines Script', data: fontData, style: 'normal' },
-                {
-                    name: 'Instrument Sans',
-                    data: instrumentSans,
-                    style: 'normal',
-                },
-            ],
+            fonts,
         },
     );
 }

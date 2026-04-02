@@ -10,18 +10,15 @@ import { Button } from '@/components/ui/button';
 import {
     Card,
     CardAction,
-    CardContent,
     CardDescription,
     CardFooter,
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
 import {
     ArrowRightIcon,
-    ArrowUpRightIcon,
     CaretLeftIcon,
     CaretRightIcon,
 } from '@phosphor-icons/react';

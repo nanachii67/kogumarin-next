@@ -7,7 +7,7 @@ import { notFound, useParams } from 'next/navigation';
 import { allNotes } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
 
-import { ArrowUpRightIcon } from '@phosphor-icons/react';
+import PretextParagraph from '@/components/mdx/pretext-paragraph';
 import NotesNamecard from '@/components/notes/notes-namecard';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
@@ -36,7 +36,7 @@ export default function Blog() {
 
     const MDXContent = useMDXComponent(note.body.code);
 
-    const components = { ArrowUpRightIcon, NotesNamecard };
+    const components = { ArrowUpRightIcon, NotesNamecard, PretextParagraph };
 
     return (
         <NotesLayout

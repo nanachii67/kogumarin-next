@@ -20,6 +20,13 @@ Migrated from Vite to NEXT.JS (v16)
         ```
 
     - You want to add more and customize it? See [contentlayer.config.ts](./contentlayer.config.ts)
+    - MDX notes can use the `PretextParagraph` client component for text blocks that need Pretext.js measurement:
+
+        ```mdx
+        <PretextParagraph showMetrics>
+          This block is rendered through Contentlayer MDX, then measured on the client with Pretext.js.
+        </PretextParagraph>
+        ```
 
 ### Must read
 

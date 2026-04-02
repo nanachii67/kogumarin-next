@@ -4,8 +4,10 @@ import { compareDesc } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
+import { defaultMetadata } from '@/hooks/metadata';
+import useMetadata from '@/hooks/metadata';
 import { Button } from '@/components/ui/button';
 import {
     Card,
@@ -27,7 +29,21 @@ import { allNotes } from 'contentlayer/generated';
 const ENTRIES_PER_PAGE = 10;
 
 export default function Blogs() {
+    const setMetadata = useMetadata((state) => state.setMetadata);
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        setMetadata({
+            title: 'Notes — Kogumarin',
+            openGraph: {
+                title: 'Notes — Kogumarin',
+                images: ['/opengraph-image'],
+            },
+        });
+
+        return () => setMetadata(defaultMetadata);
+    }, [setMetadata]);
+
     const totalPages = Math.ceil(allNotes.length / ENTRIES_PER_PAGE);
     const paginatedEntries = useMemo(() => {
         const posts = allNotes

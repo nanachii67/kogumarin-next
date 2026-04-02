@@ -1,5 +1,3 @@
-export const metadata = { title: 'Notes — Kogumarin' };
-
 export default function NotesLayout({
     children,
 }: {

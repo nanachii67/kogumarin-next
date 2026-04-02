@@ -1,17 +1,27 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useEffect } from 'react';
 
 import { InspirationCardsRev } from '@/components/inspiration/inspiration-cards-rev';
+import { defaultMetadata } from '@/hooks/metadata';
+import useMetadata from '@/hooks/metadata';
 import AboutLayout from '@/layouts/AboutLayout';
 
-export const metadata: Metadata = {
-    title: 'About — Kogumarin',
-    openGraph: {
-        title: 'Kogumarin',
-        images: ['/opengraph-image'],
-    },
-};
-
 export default function AboutPage() {
+    const setMetadata = useMetadata((state) => state.setMetadata);
+
+    useEffect(() => {
+        setMetadata({
+            title: 'About — Kogumarin',
+            openGraph: {
+                title: 'Kogumarin',
+                images: ['/opengraph-image'],
+            },
+        });
+
+        return () => setMetadata(defaultMetadata);
+    }, [setMetadata]);
+
     return (
         <>
             <AboutLayout

@@ -4,6 +4,7 @@ import { compareDesc } from 'date-fns';
 
 import { notFound, useParams } from 'next/navigation';
 
+import PretextParagraph from '@/components/mdx/pretext-paragraph';
 import NotesNamecard from '@/components/notes/notes-namecard';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
@@ -30,7 +31,7 @@ export default function Blog() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const MDXContent = useMDXComponent(note.body.code);
 
-    const components = { ArrowUpRightIcon, NotesNamecard };
+    const components = { ArrowUpRightIcon, NotesNamecard, PretextParagraph };
 
     return (
         <NotesLayout

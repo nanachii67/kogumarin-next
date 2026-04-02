@@ -3,7 +3,13 @@ import { Metadata } from 'next';
 import { InspirationCardsRev } from '@/components/inspiration/inspiration-cards-rev';
 import AboutLayout from '@/layouts/AboutLayout';
 
-export const metadata: Metadata = { title: 'About — Kogumarin' };
+export const metadata: Metadata = {
+    title: 'About — Kogumarin',
+    openGraph: {
+        title: 'Kogumarin',
+        images: ['/opengraph-image'],
+    },
+};
 
 export default function AboutPage() {
     return (

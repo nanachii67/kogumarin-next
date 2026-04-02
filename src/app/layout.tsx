@@ -26,7 +26,10 @@ const instrument = Instrument_Sans({
     axes: ['wdth'],
 });
 
-export const metadata: Metadata = { title: 'Home — Kogumarin' };
+export const metadata: Metadata = {
+    title: 'Home — Kogumarin',
+    openGraph: { title: 'Kogumarin', images: ['/opengraph-image'] },
+};
 
 export default function RootLayout({
     children,

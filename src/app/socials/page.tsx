@@ -2,7 +2,10 @@ import { Metadata } from 'next';
 
 import CardsLayout from '@/layouts/CardsLayout';
 
-export const metadata: Metadata = { title: 'Socials — Kogumarin' };
+export const metadata: Metadata = {
+    title: 'Socials — Kogumarin',
+    openGraph: { title: 'Kogumarin', images: ['/opengraph-image'] },
+};
 
 export default function SocialCardsPage() {
     return (

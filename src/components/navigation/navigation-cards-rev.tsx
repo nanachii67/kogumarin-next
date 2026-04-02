@@ -44,9 +44,11 @@ export function NavigationCardsRev() {
                                         <h1 className="w-full min-h-40 py-8 text-5xl font-koguma leading-[0.9]">
                                             {item.title}
                                         </h1>
-                                        <p className="mt-auto text-sm">
-                                            {item.description}
-                                        </p>
+                                        <div className="mt-auto flex min-h-12 items-end">
+                                            <p className="text-sm">
+                                                {item.description}
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

@@ -1,4 +1,3 @@
-// app/notes/[slug]/layout.tsx
 import { allNotes } from 'contentlayer/generated';
 
 export async function generateMetadata({
@@ -11,6 +10,12 @@ export async function generateMetadata({
 
     return {
         title: note?.title ? `${note.title} — Kogumarin` : 'Notes — Kogumarin',
+        openGraph: {
+            title: note?.title
+                ? `${note.title} — Kogumarin`
+                : 'Notes — Kogumarin',
+            images: [`/notes/${slug}/opengraph-image`],
+        },
     };
 }
 

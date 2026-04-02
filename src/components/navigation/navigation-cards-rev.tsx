@@ -7,9 +7,13 @@ import * as motion from 'motion/react-client';
 
 export function NavigationCardsRev() {
     return (
-        <div className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 w-full my-5 px-0">
+        <div className="relative grid grid-cols-1 gap-8 w-full my-5 px-0 md:grid-cols-2 xl:grid-cols-4">
             {NavigationData.map((item, index) => (
-                <Link href={item.brandlink} key={index} className="w-full">
+                <Link
+                    href={item.brandlink}
+                    key={index}
+                    className="block h-full w-full"
+                >
                     <AnimatedContent
                         distance={50}
                         direction="vertical"
@@ -23,25 +27,26 @@ export function NavigationCardsRev() {
                         delay={item.id * 0.1}
                     >
                         <motion.div
+                            className="h-full"
                             whileHover={{ scale: 1.025 }}
                             whileTap={{ scale: 0.975 }}
                             transition={{ type: 'spring', stiffness: 200 }}
                         >
-                            <div className="flex flex-col w-full h-full">
-                                <div className="flex flex-row rounded-2xl bg-koguma-text shadow-2xl p-6 w-full h-full">
-                                    <div className="flex flex-col font-inter grow">
+                            <div className="flex h-full w-full flex-col">
+                                <div className="flex h-full min-h-50 w-full flex-col rounded-2xl bg-koguma-text p-6 shadow-2xl">
+                                    <div className="flex items-start justify-between gap-4">
                                         <p className="font-inter-display">
                                             {item.entry}
                                         </p>
-                                        <h1 className="text-5xl font-koguma py-8 grow w-full">
+                                        <ArrowUpRightIcon />
+                                    </div>
+                                    <div className="flex grow flex-col font-inter">
+                                        <h1 className="w-full min-h-40 py-8 text-5xl font-koguma leading-[0.9]">
                                             {item.title}
                                         </h1>
-                                        <p className="text-sm">
+                                        <p className="mt-auto text-sm">
                                             {item.description}
                                         </p>
-                                    </div>
-                                    <div>
-                                        <ArrowUpRightIcon />
                                     </div>
                                 </div>
                             </div>

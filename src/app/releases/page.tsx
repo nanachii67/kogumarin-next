@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Releases — Kogumarin',
     openGraph: {
         title: 'Kogumarin',
-        images: ['/opengraph-image'],
+        images: ['/releases/opengraph-image'],
     },
 };
 

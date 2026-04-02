@@ -33,7 +33,7 @@ export default function Blogs() {
         title: 'Notes — Kogumarin',
         openGraph: {
             title: 'Notes — Kogumarin',
-            images: ['/opengraph-image'],
+            images: ['/notes/opengraph-image'],
         },
     };
 

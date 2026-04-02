@@ -1,5 +1,4 @@
 import { createOgImage } from '@/components/og';
-import { siteConfig } from '@/utils/site';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
@@ -7,7 +6,7 @@ export const runtime = 'nodejs';
 
 export default async function OgImage() {
     return createOgImage({
-        section: 'home',
-        description: siteConfig.description,
+        section: 'socials',
+        description: 'Where to find Koguma Rin!',
     });
 }

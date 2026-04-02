@@ -4,7 +4,7 @@ const baseTitle = 'Kogumarin';
 
 export const siteConfig = {
     name: baseTitle,
-    description: 'Kogumarin.',
+    description: 'Music, notes, and releases by Koguma Rin.',
     title: (pageName?: string) => {
         return pageName ? `${pageName} — ${baseTitle}` : baseTitle;
     },

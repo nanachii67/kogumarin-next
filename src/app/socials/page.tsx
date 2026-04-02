@@ -6,7 +6,7 @@ export const metadata: Metadata = {
     title: 'Socials — Kogumarin',
     openGraph: {
         title: 'Kogumarin',
-        images: ['/opengraph-image'],
+        images: ['/socials/opengraph-image'],
     },
 };
 

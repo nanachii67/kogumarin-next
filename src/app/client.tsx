@@ -45,6 +45,19 @@ function getImage(
     return image.url.toString();
 }
 
+function getFirstImage(
+    images:
+        | string
+        | URL
+        | { url: string | URL }
+        | Array<string | URL | { url: string | URL }>
+        | undefined,
+) {
+    if (!images) return null;
+
+    return getImage(Array.isArray(images) ? images[0] : images);
+}
+
 export default function Client({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -73,7 +86,7 @@ export default function Client({
 
     useEffect(() => {
         const title = getTitle(metadata.title);
-        const image = getImage(metadata.openGraph?.images?.[0]);
+        const image = getFirstImage(metadata.openGraph?.images);
 
         if (title) {
             document.title = title;

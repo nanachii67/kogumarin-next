@@ -7,7 +7,7 @@ import {
 } from 'next/font/google';
 
 import Client from '@/app/client';
-import useMetadata from '@/hooks/metadata';
+import { defaultMetadata } from '@/hooks/metadata';
 import '@/styles/fonts.css';
 import '@/styles/globals.css';
 
@@ -27,7 +27,7 @@ const instrument = Instrument_Sans({
     axes: ['wdth'],
 });
 
-export const metadata: Metadata = useMetadata.getState().metadata;
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
     children,

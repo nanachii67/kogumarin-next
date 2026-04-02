@@ -1,22 +1,19 @@
 'use client';
 
 import { compareDesc } from 'date-fns';
+import type { Metadata } from 'next';
 
 import { notFound, useParams } from 'next/navigation';
 import { allNotes } from 'contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer2/hooks';
-import { useEffect } from 'react';
 
 import { ArrowUpRightIcon } from '@phosphor-icons/react';
 import NotesNamecard from '@/components/notes/notes-namecard';
-import { defaultMetadata } from '@/hooks/metadata';
-import useMetadata from '@/hooks/metadata';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
 
 export default function Blog() {
     const params = useParams<{ slug: string }>();
-    const setMetadata = useMetadata((state) => state.setMetadata);
     const slug = params?.slug ?? '';
 
     const note = allNotes.find((n) => n._raw.flattenedPath === `notes/${slug}`);
@@ -27,21 +24,15 @@ export default function Blog() {
         (n) => n._raw.flattenedPath === `notes/${slug}`,
     );
 
-    useEffect(() => {
-        if (!note) return;
-
-        setMetadata({
-            title: `${note.title} — Kogumarin`,
-            openGraph: {
-                title: `${note.title} — Kogumarin`,
-                images: [`/notes/${slug}/opengraph-image`],
-            },
-        });
-
-        return () => setMetadata(defaultMetadata);
-    }, [note, setMetadata, slug]);
-
     if (!note) notFound();
+
+    const metadata: Metadata = {
+        title: `${note.title} — Kogumarin`,
+        openGraph: {
+            title: `${note.title} — Kogumarin`,
+            images: [`/notes/${slug}/opengraph-image`],
+        },
+    };
 
     const MDXContent = useMDXComponent(note.body.code);
 
@@ -49,6 +40,7 @@ export default function Blog() {
 
     return (
         <NotesLayout
+            metadata={metadata}
             pageTitle="notes"
             noteIndex={`Entry #${index + 1}`}
             noteTitle={note.title}

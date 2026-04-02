@@ -1,16 +1,17 @@
 'use client';
 
 import { compareDesc } from 'date-fns';
-import type { Metadata } from 'next';
 
+import type { Metadata } from 'next';
 import { notFound, useParams } from 'next/navigation';
-import { allNotes } from 'contentlayer/generated';
-import { useMDXComponent } from 'next-contentlayer2/hooks';
 
 import PretextParagraph from '@/components/mdx/pretext-paragraph';
 import NotesNamecard from '@/components/notes/notes-namecard';
 import NotesLayout from '@/layouts/NotesLayout';
 import { formatDate } from '@/lib/formatDate';
+import { ArrowUpRightIcon } from '@phosphor-icons/react';
+import { allNotes } from 'contentlayer/generated';
+import { useMDXComponent } from 'next-contentlayer2/hooks';
 
 export default function Blog() {
     const params = useParams<{ slug: string }>();

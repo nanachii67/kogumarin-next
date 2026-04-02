@@ -1,9 +1,13 @@
 'use client';
 
+import { useEffect } from 'react';
+
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 
 import AnimatedContent from '@/components/react-bits/animated-content';
+import { defaultMetadata } from '@/hooks/metadata';
+import useMetadata from '@/hooks/metadata';
 import ReleaseLayout from '@/layouts/ReleaseLayout';
 import releases from '@/utils/releases.json';
 import { ArrowLeftIcon } from '@phosphor-icons/react';
@@ -40,15 +44,25 @@ interface ReleasesSlug {
 
 export default function Track() {
     const params = useParams<{ slug: string }>();
-
-    if (!params?.slug) {
-        return null; // or redirect
-    }
-
-    const trackId = params.slug;
+    const setMetadata = useMetadata((state) => state.setMetadata);
+    const trackId = params?.slug ?? '';
 
     const track: ReleasesSlug | undefined =
         releases[trackId as keyof typeof releases];
+
+    useEffect(() => {
+        if (!track) return;
+
+        setMetadata({
+            title: `${track.title} — Kogumarin`,
+            openGraph: {
+                title: `${track.title} — Kogumarin`,
+                images: [track.coverImage],
+            },
+        });
+
+        return () => setMetadata(defaultMetadata);
+    }, [setMetadata, track]);
 
     if (!track) {
         return null; // or redirect to /releases

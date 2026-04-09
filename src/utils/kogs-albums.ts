@@ -1,9 +1,9 @@
 export const KogsAlbum = [
     {
         albumnum: 1,
-        title: "Rin's Small Tunes",
+        title: 'Silly Moosic 1',
         subtitle: '-Set 1-',
-        link: '/releases/rins-small-tunes-1',
+        link: '/releases/silly-moosic-1',
     },
     {
         albumnum: 2,

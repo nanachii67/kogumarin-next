@@ -73,7 +73,7 @@ export const featuredFriends = [
     },
     {
         friend_id: 10,
-        friend_name: 'Phrolova Binitawan',
+        friend_name: 'Silence Suzuka Nasaktan Muli',
         friend_avatar:
             'https://raw.githubusercontent.com/nanachii67/image-dumps/ed689cc6aa89d6c1830a72ea429ae6cd4752b0c7/public/assets/images/kogumarin-next/friends/phorolova-fb-apr-2026.jpg',
         friend_desc: 'GOGS',

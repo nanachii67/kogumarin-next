@@ -21,4 +21,15 @@ export const FeatureData = [
         catalogtype: 'Single',
         description: 'Kotomi & Koguma Rin',
     },
+    {
+        id: 3,
+        title: `Soul Escape`,
+        releaseyear: '2026',
+        brandlink:
+            'https://music.apple.com/ph/album/soul-escape-feat-caylune-koguma-rin-single/1893833716',
+        imagelink:
+            'https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/c5/79/21/c57921c9-564b-ebdf-f704-c011334dbbb7/artwork.jpg/1000x1000bb.jpg',
+        catalogtype: 'Single',
+        description: `Kotomi (feat. Caylune & Koguma Rin)`,
+    },
 ];

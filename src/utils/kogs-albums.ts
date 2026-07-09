@@ -1,10 +1,5 @@
 export const KogsAlbum = [
-    {
-        albumnum: 1,
-        title: 'Silly Moosic 1',
-        subtitle: '-Set 1-',
-        link: '/releases/silly-moosic-1',
-    },
+    { albumnum: 1, title: 'Gogselection I', link: '/releases/gogselection-i' },
     {
         albumnum: 2,
         title: 'Macarons / Energy Drinks',

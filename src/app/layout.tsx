@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import {
     Gaegu,
-    Instrument_Sans,
+    Google_Sans_Flex,
     Inter_Tight,
     JetBrains_Mono,
 } from 'next/font/google';
@@ -21,10 +21,11 @@ const mono = JetBrains_Mono({
     variable: '--font-jetbrains-mono',
     subsets: ['latin'],
 });
-const instrument = Instrument_Sans({
-    variable: '--font-instrument-sans',
+const googleSans = Google_Sans_Flex({
+    variable: '--font-google-sans',
     subsets: ['latin'],
-    axes: ['wdth'],
+    axes: ['wdth', 'ROND'],
+    fallback: ['system-ui', 'sans-serif'],
 });
 
 export const metadata: Metadata = defaultMetadata;
@@ -39,7 +40,7 @@ export default function RootLayout({
                           ${inter.variable}
                           ${gaegu.variable}
                           ${mono.variable}
-                          ${instrument.variable}
+                          ${googleSans.variable}
                           antialiased
                       `}
             >

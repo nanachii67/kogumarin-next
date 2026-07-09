@@ -79,8 +79,8 @@
 }
 
 .font-inter {
-    font-family: 'Instrument Sans', sans-serif;
-    font-variation-settings: 'wdth' 95;
+    font-family: 'Google Sans Flex', sans-serif;
+    font-variation-settings: 'wdth' 90, 'ROND' 50;
     font-feature-settings: 'ss01';
 }
 

@@ -58,7 +58,7 @@ export async function createOgImage({
                 style={{
                     fontSize: 64,
                     margin: '16px 0 0',
-                    fontFamily: 'Instrument Sans',
+                    fontFamily: 'Google Sans Flex',
                 }}
             >
                 {description}

@@ -17,6 +17,7 @@ interface ProductionSlug {
     coverImage: string;
     streamingLinks: { bandcamp: string; applemusic?: string; spotify?: string };
     production?: {
+        background_vocals?: string;
         producer?: string;
         orchestrator?: string;
         executive_producer?: string;
@@ -69,6 +70,16 @@ export default function ReleaseProductionCredits({
                             </p>
                             <p className="text-sm items-center capitalize">
                                 executive producer
+                            </p>
+                        </div>
+                    )}
+                    {track?.production?.background_vocals && (
+                        <div className="col-span-1">
+                            <p className="text-xs text-koguma-fonts uppercase opacity-75">
+                                {track?.production?.background_vocals}
+                            </p>
+                            <p className="text-sm items-center capitalize">
+                                Background Vocals
                             </p>
                         </div>
                     )}

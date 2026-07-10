@@ -49,7 +49,7 @@ export function SiteMap() {
                                             href={item.link}
                                         >
                                             <p className="font-medium text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
-                                                {item.title} {item?.subtitle}
+                                                {item.title}{item.subtitle ? ` ${item.subtitle}` : ''}
                                             </p>
                                         </Link>
                                     ))}
@@ -62,7 +62,7 @@ export function SiteMap() {
                                             href={item.link}
                                         >
                                             <p className="font-medium text-sm opacity-90 hover:underline underline-offset-2 decoration-0">
-                                                {item.title} {item?.subtitle}
+                                                {item.title}{item.subtitle ? ` ${item.subtitle}` : ''}
                                             </p>
                                         </Link>
                                     ))}

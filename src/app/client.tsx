@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { gsap } from 'gsap';
 
 import { usePathname } from 'next/navigation';
@@ -62,11 +62,13 @@ export default function Client({
     children,
 }: Readonly<{ children: React.ReactNode }>) {
     const pathname = usePathname();
+    const prefersReducedMotion = useReducedMotion();
     const metadata = useMetadata((state) => state.metadata);
     const wrapperRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
+        if (prefersReducedMotion) return;
         if (!wrapperRef.current || !contentRef.current) return;
 
         ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -82,7 +84,7 @@ export default function Client({
         }, wrapperRef);
 
         return () => ctx.revert();
-    }, [pathname]);
+    }, [pathname, prefersReducedMotion]);
 
     useEffect(() => {
         const title = getTitle(metadata.title);
@@ -99,6 +101,17 @@ export default function Client({
             getMetaContent(image, 'meta[name="twitter:image"]', 'name', 'twitter:image');
         }
     }, [metadata]);
+
+    if (prefersReducedMotion) {
+        return (
+            <div id="smooth-wrapper" ref={wrapperRef}>
+                <div id="smooth-content" ref={contentRef}>
+                    <NavigationBar />
+                    {children}
+                </div>
+            </div>
+        );
+    }
 
     return (
         <AnimatePresence mode="wait">

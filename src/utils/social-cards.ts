@@ -3,7 +3,7 @@ export const SocialCards = [
         id: 1,
         socialMediaAppName: 'Facebook',
         socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Nana Hiiragi',
+        socialMediaHandlerFullName: 'Rin Koguma',
         socialMediaLink: 'https://www.facebook.com/nanachii67',
         socialMediaCurrentAvatar:
             'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kogs-fb-feb-2026.jpg',
@@ -81,7 +81,7 @@ export const SocialCards = [
         id: 6,
         socialMediaAppName: 'Steam',
         socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Transcend',
+        socialMediaHandlerFullName: 'Nicole',
         socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
         socialMediaCurrentAvatar:
             'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',

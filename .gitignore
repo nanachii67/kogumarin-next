@@ -23,3 +23,9 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Build output
+.next
+.contentlayer
+next-env.d.ts
+tsconfig.tsbuildinfo

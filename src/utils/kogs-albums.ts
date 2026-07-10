@@ -1,4 +1,11 @@
-export const KogsAlbum = [
+export interface KogsAlbumItem {
+    albumnum: number;
+    title: string;
+    link: string;
+    subtitle?: string;
+}
+
+export const KogsAlbum: KogsAlbumItem[] = [
     { albumnum: 1, title: 'Gogselection I', link: '/releases/gogselection-i' },
     {
         albumnum: 2,

@@ -1,5 +1,32 @@
 {
-    "gogselection-i": {
+  "stars-beneath-the-cosmos": {
+      "iframe": {
+          "src": "https://bandcamp.com/EmbeddedPlayer/track=4056892012/size=large/bgcol=333333/linkcol=0687f5/tracklist=false/transparent=true/",
+          "href": "https://kogumarin.bandcamp.com/track/stars-beneath-the-cosmos",
+          "label": "stars beneath the cosmos by project//aspyr and kogumarin"
+      },
+      "title": "Stars Beneath The Cosmos",
+      "artist": "project//aspyr & Koguma Rin",
+      "releaseDate": "2026-08-01",
+      "releaseYear": "2026",
+      "releaseLabel": "2026 project//aspyr",
+      "releaseType": "Single",
+      "coverImage": "https://f4.bcbits.com/img/a3543959136_10.jpg",
+      "streamingLinks": {
+          "bandcamp": "https://kogumarin.bandcamp.com/track/stars-beneath-the-cosmos"
+      },
+      "production": {
+          "producer": "Koguma Rin",
+          "programming": "Koguma Rin",
+          "synthesizer": "Koguma Rin",
+          "sampled_artist": "Jane Cerys",
+          "orchestrator": "Koguma Rin",
+          "recording_engineer": "Koguma Rin",
+          "mix_mastering_engineer": "Hotarusento Ei",
+          "record_label": "project//aspyr"
+      }
+  },
+  "gogselection-i": {
         "iframe": {
             "src": "https://bandcamp.com/EmbeddedPlayer/album=1954732371/size=large/bgcol=333333/linkcol=fe7eaf/minimal=true/transparent=true/",
             "href": "https://kogumarin.bandcamp.com/album/rins-small-tunes-1",

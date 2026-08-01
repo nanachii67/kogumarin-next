@@ -46,4 +46,13 @@ export const ReleaseData = [
         catalogtype: 'Extended Play',
         description: 'Koguma Rin',
     },
+    {
+        id: 6,
+        title: `Stars Beneath The Cosmos`,
+        releaseyear: '2026',
+        brandlink: '/releases/stars-beneath-the-cosmos/',
+        imagelink: 'https://f4.bcbits.com/img/a3543959136_10.jpg',
+        catalogtype: 'Extended Play',
+        description: 'Koguma Rin',
+    },
 ];

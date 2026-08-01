@@ -18,13 +18,13 @@ export default function NewRelease() {
                         key={item.title}
                         className="grid grid-cols-1 md:grid-cols-2 text-koguma-text-light gap-2 md:gap-0 font-inter"
                     >
-                        <div className="col-span-1 -space-y-2">
+                        <div className="col-span-1">
                             <div className="flex flex-row gap-2 items-center font-medium text-neutral-500 mix-blend-plus-lighter justify-left">
                                 <p>New Release</p>
                                 <p>•</p>
                                 <p>{item.releasedate}</p>
                             </div>
-                            <h1 className="font-bold text-3xl">
+                            <h1 className="font-bold text-3xl leading-7">
                                 {item.title}{' '}
                                 <span className="text-neutral-400 mix-blend-plus-lighter font-medium">
                                     {item.subtitle}

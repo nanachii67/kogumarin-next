@@ -1,4 +1,12 @@
-export const NewRelease = [
+export interface NewReleaseItem {
+    title: string;
+    releaselink: string;
+    releasecover: string;
+    releasedate: string;
+    subtitle?: string;
+}
+
+export const NewRelease: NewReleaseItem[] = [
     {
         title: `Stars Beneath The Cosmos`,
         releaselink: '/releases/stars-beneath-the-cosmos',

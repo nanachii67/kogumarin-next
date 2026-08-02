@@ -26,9 +26,11 @@ export default function NewRelease() {
                             </div>
                             <h1 className="font-bold text-3xl leading-7">
                                 {item.title}{' '}
-                                <span className="text-neutral-400 mix-blend-plus-lighter font-medium">
-                                    {item.subtitle}
-                                </span>
+                                {item.subtitle ? (
+                                    <span className="text-neutral-400 mix-blend-plus-lighter font-medium">
+                                        {item.subtitle}
+                                    </span>
+                                ) : null}
                             </h1>
                         </div>
                         <div className="col-span-1 justify-self-start md:justify-self-end flex items-center">

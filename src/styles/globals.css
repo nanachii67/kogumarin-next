@@ -7,6 +7,7 @@
 
 @theme inline {
     --font-koguma: 'Shorelines Script Bold', script;
+    --font-inter: 'Sunghyun Sans Disambiguated', sans-serif;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);
 
@@ -79,9 +80,9 @@
 }
 
 .font-inter {
-    font-family: 'Google Sans Flex', sans-serif;
-    font-variation-settings: 'wdth' 90, 'ROND' 50;
-    font-feature-settings: 'ss01';
+    /*font-family: var(--font-inter);*/
+    font-feature-settings: 'ss01', "salt";
+    font-variation-settings: "opsz" 32;
 }
 
 @keyframes scrollDown {

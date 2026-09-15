@@ -5,14 +5,14 @@ const shorelinesFont = readFile(
     join(process.cwd(), 'public/fonts/shorelines_script_bold.ttf'),
 );
 
-const googleSansFont = readFile(
-    join(process.cwd(), 'public/fonts/GoogleSansFlex-Medium.ttf'),
+const sunghyunSansFont = readFile(
+    join(process.cwd(), 'public/fonts/SunghyunSansDisambiguated-Medium.ttf'),
 );
 
 export async function loadOgFonts() {
-    const [shorelinesScript, googleSans] = await Promise.all([
+    const [shorelinesScript, sunghyunSans] = await Promise.all([
         shorelinesFont,
-        googleSansFont,
+        sunghyunSansFont,
     ]);
 
     return [
@@ -22,8 +22,8 @@ export async function loadOgFonts() {
             style: 'normal' as const,
         },
         {
-            name: 'Google Sans Flex',
-            data: googleSans,
+            name: 'Sunghyun Sans Disambiguated',
+            data: sunghyunSans,
             style: 'normal' as const,
         },
     ];

@@ -29,7 +29,7 @@ export const SocialCards = [
         id: 3,
         socialMediaAppName: 'Discord',
         socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Nanahira',
+        socialMediaHandlerFullName: 'Nanachii',
         socialMediaLink: 'https://discord.com/users/1254241295652880458',
         socialMediaCurrentAvatar:
             'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/kogs-dc-march-2026.webp',
@@ -37,7 +37,7 @@ export const SocialCards = [
             {
                 relevantLinkId: 1,
                 relevantLinkAppName: "Koguma's Discord Server",
-                relevantLinkName: 'Cogs and Gears Factory',
+                relevantLinkName: 'Gogs\' Waffle House',
                 relevantLinkReferral: 'https://discord.gg/M6upQzKuJ5',
             },
         ],
@@ -81,7 +81,7 @@ export const SocialCards = [
         id: 6,
         socialMediaAppName: 'Steam',
         socialMediaHandler: 'nanachii67',
-        socialMediaHandlerFullName: 'Nicole',
+        socialMediaHandlerFullName: 'Ukinami Yuzuha',
         socialMediaLink: 'https://steamcommunity.com/id/nanachii67/',
         socialMediaCurrentAvatar:
             'https://avatars.fastly.steamstatic.com/5918cbe46170229f8616965d32b7ea66661fd5de_full.jpg',

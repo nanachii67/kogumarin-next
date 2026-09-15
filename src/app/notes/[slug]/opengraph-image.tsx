@@ -63,7 +63,7 @@ export default async function OgImage({
                 style={{
                     fontSize: 64,
                     margin: '16px 0 0',
-                    fontFamily: 'Google Sans Flex',
+                    fontFamily: 'Sunghyun Sans Disambiguated',
                 }}
             >
                 {note?.title ?? 'Notes'}

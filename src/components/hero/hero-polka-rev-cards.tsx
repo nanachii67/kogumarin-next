@@ -320,7 +320,7 @@ export function HeroPolkaRevCards() {
                 >
                     <p className="text-xs md:text-base">
                         © {new Date().getFullYear()}{' '}
-                        <span>Kogs, on behalf of Kogumarin.</span>{' '}
+                        <span>KOGS, on behalf of Kogumarin.</span>{' '}
                     </p>
                 </AnimatedContent>
             </div>

@@ -17,8 +17,8 @@ export function NotesHeader({
         <div className="relative z-1 bg-indigo-900 flex flex-col justify-center text-indigo-950 font-inter">
             <div className="container max-w-9xl mx-auto z-10 px-10 md:px-0">
                 <div className="flex flex-col text-koguma-text-light">
-                    <div className="flex flex-col md:flex-row text-koguma-text-light/80">
-                        <div className='flex flex-row mb-2 justify-start items-center gap-2 '>
+                    <div className="flex flex-col md:flex-row text-koguma-text-light/80 md:gap-2">
+                        <div className='flex flex-row justify-start items-center gap-2'>
                             <ArrowLeftIcon />
                                 <Link href="/notes">
                                     <div className="flex flex-row gap-2 items-center">
@@ -32,15 +32,15 @@ export function NotesHeader({
                     </div>
 
               {pageDescription && (
-                  <p className="font-inter font-medium">
+                  <p className="font-inter font-bold">
                       {pageDescription}
                   </p>
               )}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-1 md:gap-5 mt-5 md:mt-0">
+                    <div className="grid grid-cols-1 gap-1 md:gap-5 mt-5 md:mt-0">
                         <div className="col-span-1 justify-self-center md:justify-self-start self-center">
-                            <h1 className="text-5xl font-inter font-semibold leading-13 text-center md:text-left">
+                            <h1 className="text-5xl font-inter font-extrabold leading-13 text-center md:text-left">
                                 {pageTitle}
                             </h1>
                         </div>

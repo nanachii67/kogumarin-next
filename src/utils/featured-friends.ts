@@ -1,11 +1,11 @@
 export const featuredFriends = [
     {
         friend_id: 1,
-        friend_name: 'Ruri Yoshinova',
+        friend_name: 'Yumi Kazumi',
         friend_avatar:
-            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/ruri-feb-2026.webp',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/yumi-fb-may-2026.jpg',
         friend_desc: 'GOGS',
-        friend_link: 'https://www.facebook.com/ruri.one',
+        friend_link: 'https://www.facebook.com/profile.php?id=61571975683678',
     },
     {
         friend_id: 2,
@@ -33,11 +33,11 @@ export const featuredFriends = [
     },
     {
         friend_id: 5,
-        friend_name: 'Llennsie San',
+        friend_name: 'Llennsíe Chii',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/1217802783659524279/a_723b263ed4cc64f557b029670f289685.webp?size=1024&animated=false',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/llennsie-fb-aug-2026.jpg',
         friend_desc: 'GOGS',
-        friend_link: 'https://www.facebook.com/Llennsie',
+        friend_link: 'https://www.facebook.com/Reilyn.mie',
     },
     {
         friend_id: 6,
@@ -59,7 +59,7 @@ export const featuredFriends = [
         friend_id: 8,
         friend_name: 'Shido Natsuken',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/740374250128408667/1918fd1d7819e7278d47c4a66df8b028.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/shido-fb-june-2026.jpeg',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/shidonats',
     },
@@ -73,7 +73,7 @@ export const featuredFriends = [
     },
     {
         friend_id: 10,
-        friend_name: 'Silence Suzuka Nasaktan Muli',
+        friend_name: 'Ashumi',
         friend_avatar:
             'https://raw.githubusercontent.com/nanachii67/image-dumps/ed689cc6aa89d6c1830a72ea429ae6cd4752b0c7/public/assets/images/kogumarin-next/friends/phorolova-fb-apr-2026.jpg',
         friend_desc: 'GOGS',
@@ -83,10 +83,18 @@ export const featuredFriends = [
         friend_id: 11,
         friend_name: 'Jasuniru',
         friend_avatar:
-            'https://cdn.discordapp.com/avatars/951391927981441044/4b09be682d563a8cb4ae3c3972b0ebe3.webp?size=1024',
+            'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/jasneer-fb-july-2026.jpg',
         friend_desc: 'GOGS',
         friend_link: 'https://www.facebook.com/jasneer.payabyab',
-    },
+  },
+  {
+      friend_id: 12,
+      friend_name: 'CyrusGaming Ch',
+      friend_avatar:
+          'https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/cyrus-fb-aug-2026.jpeg',
+      friend_desc: 'GOGS',
+      friend_link: 'https://www.facebook.com/cyrus.pacatang.3',
+  },
 ];
 
 //https://raw.githubusercontent.com/nanachii67/image-dumps/refs/heads/main/public/assets/images/kogumarin-next/friends/ruri-feb-2026.webp

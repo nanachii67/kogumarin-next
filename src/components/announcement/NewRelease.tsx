@@ -24,7 +24,7 @@ export default function NewRelease() {
                                 <p>•</p>
                                 <p>{item.releasedate}</p>
                             </div>
-                            <h1 className="font-bold text-3xl leading-7">
+                            <h1 className="font-extrabold text-3xl leading-7">
                                 {item.title}{' '}
                                 {item.subtitle ? (
                                     <span className="text-neutral-400 mix-blend-plus-lighter font-medium">

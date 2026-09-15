@@ -17,11 +17,12 @@ export function Footer() {
                 <div className="flex flex-col gap-3 mx-auto max-w-xl text-center">
                     <div className="flex flex-col pt-6">
                         <Image
-                            src="/assets/gogs-new-logo-new-site.svg"
-                            alt="kogumarin."
+                            src="/assets/gogs-new-logo-new-site-fix.svg"
+                            alt="kogumarin logo"
                             width={480}
                             height={160}
-                            className="w-full"
+                className="w-full"
+                loading='eager'
               />
               <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className="flex flex-row justify-center md:justify-start gap-4">

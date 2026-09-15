@@ -35,7 +35,7 @@ export function NavigationCardsRev() {
                             <div className="flex h-full w-full flex-col">
                                 <div className="flex h-full min-h-50 w-full flex-col rounded-2xl bg-koguma-text p-6 shadow-2xl">
                                     <div className="flex items-start justify-between gap-4">
-                                        <p className="font-inter-display">
+                                        <p className="font-inter opacity-80">
                                             {item.entry}
                                         </p>
                                         <ArrowUpRightIcon />
@@ -44,7 +44,7 @@ export function NavigationCardsRev() {
                                         <h1 className="w-full min-h-40 py-8 text-5xl font-koguma leading-[0.9]">
                                             {item.title}
                                         </h1>
-                                        <div className="mt-auto flex min-h-12 items-end">
+                                        <div className="mt-auto flex min-h-12 items-end font-medium">
                                             <p className="text-sm">
                                                 {item.description}
                                             </p>

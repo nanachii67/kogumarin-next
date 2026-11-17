@@ -38,6 +38,9 @@ importers:
       '@types/three':
         specifier: ^0.182.0
         version: 0.182.0
+      allo-font:
+        specifier: ^1.0.0
+        version: 1.0.0
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -2372,6 +2375,9 @@ packages:
 
   ajv@8.18.0:
     resolution: {integrity: sha512-PlXPeEWMXMZ7sPYOHqmDyCJzcfNrUr3fGNKtezX14ykXOEIvyK81d+qydx89KY5O71FKMPaQ2vBfBFI5NHR63A==}
+
+  allo-font@1.0.0:
+    resolution: {integrity: sha512-lHuzg9QRgC7pJVWH2JHmmg530v6b2kF9g3PdctfN9N1EtVI5j3rD9esAZ6ZXDgM5hrZe6HdVbTXFZyOCU9/VrA==}
 
   ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -7446,6 +7452,8 @@ snapshots:
       fast-uri: 3.1.0
       json-schema-traverse: 1.0.0
       require-from-string: 2.0.2
+
+  allo-font@1.0.0: {}
 
   ansi-regex@5.0.1: {}
 

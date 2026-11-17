@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'allo-font';
 @plugin "@tailwindcss/typography";
 
 /*@import 'tw-animate-css';*/
@@ -7,7 +8,7 @@
 
 @theme inline {
     --font-koguma: 'Shorelines Script Bold', script;
-    --font-inter: 'Sunghyun Sans Disambiguated', sans-serif;
+    --font-inter: 'Allo', 'Sunghyun Sans Disambiguated', sans-serif;
     --font-mono: var(--font-jetbrains-mono);
     --font-gaegu: var(--font-gaegu);
 
@@ -81,8 +82,8 @@
 
 .font-inter {
     /*font-family: var(--font-inter);*/
-    font-feature-settings: 'ss01', "salt";
-    font-variation-settings: "opsz" 32;
+    font-feature-settings: 'ss01';
+    font-variation-settings: "opsz" 23;
 }
 
 @keyframes scrollDown {

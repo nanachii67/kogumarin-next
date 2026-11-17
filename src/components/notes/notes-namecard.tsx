@@ -52,7 +52,7 @@ export default function NotesNamecard() {
                                                     alt={`${friend.friend_name}'s Facebook`}
                                                     width={100}
                                                     height={100}
-                                                    className="rounded-full shadow-2xl"
+                                                    className="rounded-full shadow-2xl aspect-square"
                                                 />
                                                 <div className="flex flex-col gap-0.5 justify-center items-center text-center">
                                                     <p className="font-medium text-[0.6rem] opacity-80">
